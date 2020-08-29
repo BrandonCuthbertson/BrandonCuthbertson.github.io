@@ -13,17 +13,20 @@ body.welcome{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.95);
 }
 .welcome-tron {
     position: relative;
     width: 350px;
     height: 350px;
-    background: rgba(0, 0, 0, 0.6);
-    font-size: 32px;
-    text-align: center;
-    line-height: 350px;
-    text-transform: uppercase;
+    background:#002B36 ;
 }
+    .welcome-tron p {
+        text-transform: uppercase;
+        font-size: 32px;
+        text-align: center;
+        line-height: 350px;
+    }
     .welcome-tron::before, .welcome-tron::after {
         z-index: -1;
         content: '';
@@ -32,9 +35,10 @@ body.welcome{
         height: calc(100% + 6px);
         top: -3px;
         left: -3px;
-        background: linear-gradient(45deg, #cb4b16, #dc322f, #d33682, #6c71c4, #268bd2, #2aa198,#859900);
+
+        background: linear-gradient(45deg, #6c71c4, #268bd2, #2aa198, #859900, #b58900, #cb4b16, #dc322f, #d33682, #dc322f, #cb4b16, #b58900, #2aa198,#268bd2,#6c71c4 );
         background-size: 300%;
-        animation: shadow 20s linear infinite;
+        animation: welcome-tron 10s linear infinite;
     }
     .welcome-tron::after {
         filter:blur(30px);
@@ -45,6 +49,7 @@ body.welcome{
         50% { background-position: 300%;}
         100% {background-position: 0 0;}
         }
+
 .icon-color {
     color: white;
     text-shadow: 1px 1px 1px #ccc;
