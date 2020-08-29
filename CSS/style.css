@@ -1,8 +1,16 @@
 /*Solarize Theme*/
 body {
-    /*background-color: #002B36;*/
+    background-color: #000000;
+    color: white;
 }
-
+header {
+    border-bottom: 1px solid currentColor;
+}
+.icon-color {
+    color: white;
+    text-shadow: 1px 1px 1px #ccc;
+    font-size: 1em;
+}
 
 .header-logo {
     font-size: 36px;
