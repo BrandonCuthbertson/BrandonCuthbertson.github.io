@@ -27,6 +27,13 @@ body.welcome{
         text-align: center;
         line-height: 350px;
     }
+    .welcome-tron a {
+        color: white;
+        font-size: 16px;
+        text-align: right;
+        position: absolute;
+        right: 0px;
+    }
     .welcome-tron::before, .welcome-tron::after {
         z-index: -1;
         content: '';
