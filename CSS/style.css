@@ -1,17 +1,56 @@
 /*Solarize Theme*/
 body {
-    background-color: #000000;
+    background-color: #002B36;
     color: white;
 }
 header {
     border-bottom: 1px solid currentColor;
 }
+
+/*Welcome Page Glow*/
+body.welcome{
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-tron {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.6);
+    font-size: 32px;
+    text-align: center;
+    line-height: 350px;
+    text-transform: uppercase;
+}
+    .welcome-tron::before, .welcome-tron::after {
+        z-index: -1;
+        content: '';
+        position: absolute;
+        width: calc(100% + 6px);
+        height: calc(100% + 6px);
+        top: -3px;
+        left: -3px;
+        background: linear-gradient(45deg, #cb4b16, #dc322f, #d33682, #6c71c4, #268bd2, #2aa198,#859900);
+        background-size: 300%;
+        animation: shadow 20s linear infinite;
+    }
+    .welcome-tron::after {
+        filter:blur(30px);
+
+    }
+    @keyframes welcome-tron{
+        0% {background-position: 0 0;}
+        50% { background-position: 300%;}
+        100% {background-position: 0 0;}
+        }
 .icon-color {
     color: white;
     text-shadow: 1px 1px 1px #ccc;
     font-size: 1em;
 }
-
+/*site header*/
 .header-logo {
     font-size: 36px;
     color: #cb4b16;
@@ -20,4 +59,3 @@ header {
         color: #cb4b16;
         text-decoration: none;
     }
-    /*Site Header*/
