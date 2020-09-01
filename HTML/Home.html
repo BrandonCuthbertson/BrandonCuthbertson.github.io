@@ -13,10 +13,10 @@
     <!--SITE FAVICON-->
     <link rel="icon" type="image/x-icon" href="../Favicon/favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="../Favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
-        <link rel="manifest" href="../Favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../Favicon/site.webmanifest">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!--Font Awesome -->
@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
 
 
-    
+
 
 </head>
 
@@ -36,12 +36,12 @@
     <div class="container py-1">
         <div id="nav-placeholder"></div>
 
-        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+        <div class="jumbotron  p-4 p-md-5 text-white rounded bg-dark">
             <div class="row">
                 <div class="col-md-6 px-0">
                     <h1 class="display-4 font-italic text-left">Hello!</h1>
                     <h2 class="font-italic text-left"> I'm Brandon Cuthbertson</h2>
-                    <p class="lead my-3">I'm a junior full stack developer based in Calgary, AB Canada. Welcome to my website, I hope you like it, if you want to check out my portfolio <a>CLICK HERE</a>, and if you want to get to know me better click below. </p>
+                    <p class="lead my-3">I'm a junior full stack developer based in Calgary, AB Canada. Welcome to my website, I hope you like it.</p>
                     <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
                 </div>
                 <div class="col-6 d-none d-md-block px-0">
@@ -49,25 +49,78 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <!--Bootstrap Card Row-->
+
+
+
+
+        </div>
 
     </div> <!--"HEADER CONTAINER END-->
+    <main role="main" class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h3 class="pb-4 mb-4 font-italic border-bottom">
+                    Word
+                </h3>
 
-    <div class="container">
-        <main>
+                <div>
+                    <h2>Sample blog post</h2>
+                    <p>Subheading</p>
 
-        </main>
+                    <p></p>
+                    <hr>
+                    <p></p>
+                    <blockquote><p><strong>STRONG Block Quote</strong></p></blockquote>
+                    <blockquote><p><em>Weak Block Quote</em></p></blockquote>
+
+                    <h2>Heading</h2>
+                    <h3>Sub-heading</h3>
+
+                    <pre><code style="color:blue;">Example code block</code></pre>
+                    <ul>
+                        <li>list </li>
+                        <li>list </li>
+                        <li>list </li>
+                    </ul>
+                    <ol>
+                        <li>list </li>
+                        <li>list </li>
+                        <li>list </li>
+                    </ol>
+                
+                </div>
+            </div>
+
+            <aside class="col-md-4 blog-sidebar">
+                <div class="p-4 mb-3 bg-dark rounded">
+                    <h4 class="font-italic">About</h4>
+                    <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                </div>
 
 
-    </div><!--"MAIN CONTAINER END-->
+            </aside>
+
+        </div><!--row -->
+
+    </main>
+
+
+
+
+
+
     <!---->
     <div id="footer-placeholder" class="container"></div>
     <!-- JQuery, Poper and Bootstrap.js-->
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Use this instead of slim or else some functions wont work-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">//Calls the Nav.html Page as a header
+    <script type="text/javascript">
+        //Calls the Nav.html Page as a header
         $(document).ready(function () {
             $('#nav-placeholder').load('Sub-page/Nav.html');
             $('#footer-placeholder').load('Sub-page/Footer.html');
