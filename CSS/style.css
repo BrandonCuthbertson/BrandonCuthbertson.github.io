@@ -14,13 +14,18 @@ body.welcome{
     display: flex;
     align-items: center;
     justify-content: center;
+
    
 }
+
 .welcome-tron {
     position: relative;
     width: 350px;
     height: 350px;
-    background:#002B36 ;
+    background:#002B36;
+
+
+
 }
     .welcome-tron p {
         text-transform: uppercase;
@@ -61,14 +66,23 @@ body.welcome{
 .icon-color {
     color: white;
     text-shadow: 1px 1px 1px #ccc;
-    font-size: 1em;
+    font-size: 1.5em;
+    padding: 1px;
 }
 /*site header*/
 .header-logo {
     font-size: 36px;
+    font-size-adjust: inherit;
     color: #cb4b16;
+
 }
     .header-logo:hover {
         color: #cb4b16;
         text-decoration: none;
     }
+
+
+/*Rhombus*/
+.rhombus {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
