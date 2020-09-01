@@ -60,7 +60,7 @@
 
     </div><!--"MAIN CONTAINER END-->
     <!---->
-    <footer></footer>
+    <footer id="footer-placeholder"></footer>
     <!-- JQuery, Poper and Bootstrap.js-->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Use this instead of slim or else some functions wont work-->
@@ -69,7 +69,8 @@
 
     <script type="text/javascript">//Calls the Nav.html Page as a header
         $(document).ready(function () {
-            $('#nav-placeholder').load('Nav.html');
+            $('#nav-placeholder').load('Sub-page/Nav.html');
+            $('#footer-placeholder').load('Sub-page/Footer.html');
         });
     </script>
 </body>
