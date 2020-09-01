@@ -11,19 +11,20 @@
     <meta name="author" content="Brandon Cuthbertson">
 
     <!--SITE FAVICON-->
-    <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico" />
-    <link rel="shortcut icon" type="image/x-icon" href="Favicon/favicon.ico" />
-    <!--    <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png" />
-        <link rel="manifest" href="Favicon/site.webmanifest">-->
+    <link rel="icon" type="image/x-icon" href="../Favicon/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../Favicon/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="../Favicon/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="../Favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="../Favicon/favicon-16x16.png" />
+        <link rel="manifest" href="../Favicon/site.webmanifest">
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <!--Font Awesome -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
-    <!-- My styles sheet CSS-->
-    <link rel="stylesheet" href="../CSS/style.css" />
+    <!-- My styles sheet CSS/JS-->
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
+
 
 
 
@@ -33,75 +34,25 @@
 
 
     <div class="container">
-        <header class="py-3">
-            <div class="row flex-nowrap justify-content-between align-items-center">
-                <!--Hides on Screens smaller than medium-->
-                <div class="col-8 d-none d-md-block">
-                    <a class="header-logo text-center " href="Home.html">Brandon Cuthbertson</a>
-                </div>
-                <!--NAV BAR-->
-                <div class="col-4 d-none d-md-block">
+        <div id="nav-placeholder">
 
-                    <nav class="nav-scroller d-flex justify-content-end ">
-                        <a class="p-2 text-muted" href="Home.html">Home</a>
-                        <a class="p-2 text-muted" href="Portfolio.html">Portfolio</a>
-                        <a class="p-2 text-muted" href="Resume.html">Resume</a>
-                    </nav>
-
-                </div>
-                <!--Visable on Screens smaller then medium but bigger then xs-->
-                <div class="col-10 d-none d-sm-block d-md-none">
-                    <a class="header-logo text-center " href="Home.html">Brandon Cuthbertson</a>
-                </div>
-                <!--Vissable on xs-->
-                <div class="col-9 d-block d-sm-none ">
-                    <a class="header-logo text-center " href="Home.html">BC</a>
-                </div>
-                <!--NAV BAR-->
-                <div class="col-4 col-sm-2 d-md-none ">
-                    <div class="btn-group justify-content-end">
-                        <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="far fa-caret-square-down icon-color"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-right">
-                            <a class="p-2 text-muted dropdown-item" href="Home.html"><i class="fas fa-home"></i> Home </a>
-                            <a class="p-2 text-muted dropdown-item" href="Portfolio.html"> <i class="fas fa-code"></i> Portfolio</a>
-                            <a class="p-2 text-muted dropdown-item" href="Resume.html"><i class="fas fa-file"></i> Resume</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        
-        <div class="row py-2">
-
-            <div class="col-9 d-flex justify-content-start">
-                <a href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw icon-color"></i></a>
-                <a href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw icon-color"></i></a>
-                <a href="https://www.freecodecamp.org/brandoncuthbertson"><i class="fab fa-free-code-camp icon-color"></i></a>
-            </div>
-            
-            <div class="col-3 d-flex justify-content-end ">
-                <a class="btn btn-primary d-none d-md-block" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
-            </div>
         </div>
 
-        <!--NAV BAR END-->
+
+
         <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
             <div class="row">
-            <div class="col-md-6 px-0">
-                <h1 class="display-4 font-italic text-left">Hello!</h1>
-                <h2 class="font-italic text-left"> I'm Brandon Cuthbertson</h2>
-                <p class="lead my-3">I'm a junior full stack developer based in Calgary, AB Canada. Welcome to my website, I hope you like it, if you want to check out my portfolio <a>CLICK HERE</a>, and if you want to get to know me better click below. </p>
-                <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
-            </div>
-            <div class="col-6 d-none d-md-block px-0">
-               
+                <div class="col-md-6 px-0">
+                    <h1 class="display-4 font-italic text-left">Hello!</h1>
+                    <h2 class="font-italic text-left"> I'm Brandon Cuthbertson</h2>
+                    <p class="lead my-3">I'm a junior full stack developer based in Calgary, AB Canada. Welcome to my website, I hope you like it, if you want to check out my portfolio <a>CLICK HERE</a>, and if you want to get to know me better click below. </p>
+                    <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+                </div>
+                <div class="col-6 d-none d-md-block px-0">
+
+                </div>
             </div>
         </div>
-            </div>
 
     </div> <!--"HEADER CONTAINER END-->
 
@@ -115,8 +66,15 @@
     <!---->
     <footer></footer>
     <!-- JQuery, Poper and Bootstrap.js-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#nav-placeholder').load('Nav.html');
+        });
+    </script>
 </body>
 </html>
