@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Bootstrap",
-    "\\Bootstrap\\css",
-    "\\Bootstrap\\js",
-    "\\CSS"
+    "\\CSS",
+    "\\HTML",
+    "\\HTML\\Sub-page",
+    "\\IMG",
+    "\\JS"
   ],
-  "SelectedNode": "\\Bootstrap\\js",
+  "SelectedNode": "\\IMG",
   "PreviewInSolutionExplorer": false
 }
