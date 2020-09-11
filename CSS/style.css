@@ -5,8 +5,8 @@ body {
     color: white;
 }
 header {
-    border-bottom: 1px solid;
-    border-image-source: linear-gradient(to left, #6c71c4, #268bd2, #2aa198, #859900, #b58900, #cb4b16, #dc322f, #d33682, #dc322f, #cb4b16, #b58900, #2aa198,#268bd2,#6c71c4);
+    border-bottom: 1px solid currentColor;
+
 }
 footer {
     text-align: center;
@@ -30,8 +30,9 @@ footer {
         color: #cb4b16;
         text-decoration: none;
     }
-.welcome-image{
-
+.welcome-image {
+    /*clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0 0, 0 70%);*/
+    border-radius: 1em;
 }
 .myNeon {
     position: relative;
@@ -66,4 +67,61 @@ footer {
     100% {
         background-position: 300%;
     }
+}
+/*Overlay*/
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+    .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay {
+        overflow-y: auto;
+    }
+
+        .overlay a {
+            font-size: 20px
+        }
+
+        .overlay .closebtn {
+            font-size: 40px;
+            top: 15px;
+            right: 35px;
+        }
 }
