@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿<!DOCTYPE html>
 
 <html lang="en">
 <head>
@@ -22,116 +22,98 @@
     <!--Font Awesome -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
-    <!-- My styles sheet CSS/JS-->
+    <!-- My styles sheet CSS-->
     <link rel="stylesheet" type="text/css" href="../CSS/style.css" />
-    <script src="../JS/myScript.js" type="text/javascript"></script>
-
-
-
-
-
 </head>
 
 <body>
 
 
-    <!--<div class="container py-1">
-        <div id="nav-placeholder"></div>-->
-    <script>console.log("GitHub: Log Update 0.8");</script>
-    <header class="py-3">
-        <div class="row flex-nowrap justify-content-between align-items-center">
-            <!--Hides on Screens smaller than medium-->
-            <div class="col-10 col-md-8 d-none d-sm-block">
-                <a class="header-logo text-center " href="Home.html">Brandon Cuthbertson</a>
-            </div>
-            <!--NAV BAR-->
-            <div class="col-4 d-none d-md-block">
+    <div class="container py-1">
+        <!--<div id="nav-placeholder"></div>-->
+        <script>console.log("GitHub: Log Update 0.8");</script>
+        <header class="py-3">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <!--Hides on Screens smaller than medium-->
+                <div class="col-10 col-md-8 d-none d-sm-block">
+                    <a class="header-logo text-center " href="Home.html">Brandon Cuthbertson</a>
+                </div>
+                <!--NAV BAR-->
+                <div class="col-4 d-none d-md-block">
 
-                <nav class="nav-scroller d-flex justify-content-end ">
-                    <a class="p-2 text-muted" href="Home.html">Home</a>
-                    <a class="p-2 text-muted" href="Portfolio.html">Portfolio</a>
-                    <a class="p-2 text-muted" href="Resume.html">Resume</a>
-                </nav>
+                    <nav class="nav-scroller d-flex justify-content-end ">
+                        <a class="p-2 text-muted" href="Home.html">Home</a>
+                        <a class="p-2 text-muted" href="Portfolio.html">Portfolio</a>
+                        <a class="p-2 text-muted" href="Resume.html">Resume</a>
+                    </nav>
 
-            </div>
+                </div>
 
-            <!--Vissable on xs-->
-            <div class="col-9 d-block d-sm-none ">
-                <a class="header-logo text-center " href="Home.html">BC</a>
-            </div>
-            <!--NAV BAR-->
-            <span style="font-size:2em;cursor:pointer" onclick="openNav()">&#9776;</span>
-            <div class="col-4 col-sm-2 d-md-none ">
-                <div id="myNav" class="overlay">
-                   
-                    <div class="overlay-content">
-                        <a href="#">About</a>
-                        <a href="#">Services</a>
-                        <a href="#">Clients</a>
-                        <a href="#">Contact</a>
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <!--Vissable on xs-->
+                <div class="col-9 d-block d-sm-none ">
+                    <a class="header-logo text-center " href="Home.html">BC</a>
+                </div>
+                <!--NAV BAR-->
+                <div class="col-4 col-sm-2 d-md-none ">
+                    <span class="spanNav" onclick="openNav()"><i class="far fa-caret-square-down icon-color"></i></span>
+                    <div class="col-4 col-sm-2 d-md-none ">
+                        <div id="overlayNav" class="overlay">
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-caret-square-up"></i></a>
+                            <div class="overlay-content">
+                                <a class="p-2 text-muted" href="Home.html"><i class="fas fa-home"></i> Home </a>
+                                <a class="p-2 text-muted" href="Portfolio.html"> <i class="fas fa-code"></i> Portfolio</a>
+                                <a class="p-2 text-muted" href="Resume.html"><i class="fas fa-file"></i> Resume</a>
+                                <div class="dropdown-divider"></div>
+                                <a href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </header>
+        <!---------------------------------------->
+        <!---------------------------------------->
+        <div class="row py-2">
 
-            <!--<div class="col-4 col-sm-2 d-md-none ">
-        <div class="btn-group justify-content-end">
-            <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="far fa-caret-square-down icon-color"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-                <a class="p-2 text-muted dropdown-item" href="Home.html"><i class="fas fa-home"></i> Home </a>
-                <a class="p-2 text-muted dropdown-item" href="Portfolio.html"> <i class="fas fa-code"></i> Portfolio</a>
-                <a class="p-2 text-muted dropdown-item" href="Resume.html"><i class="fas fa-file"></i> Resume</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
+            <div class="col-9 d-flex justify-content-start">
+                <a class="px-1" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw icon-color"></i></a>
+                <a class="px-1" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw icon-color"></i></a>
+                <a class="px-1" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram icon-color"></i></a>
+            </div>
+
+            <div class="col-3 d-flex justify-content-end ">
+                <a class="btn btn-primary d-none d-md-block" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
             </div>
         </div>
-    </div>-->
-        </div>
-</header>
-    <!---------------------------------------->
-    <!---------------------------------------->
-    <div class="row py-2">
-
-        <div class="col-9 d-flex justify-content-start">
-            <a href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw icon-color"></i></a>
-            <a href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw icon-color"></i></a>
-            <a href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram icon-color"></i></a>
-        </div>
-
-        <div class="col-3 d-flex justify-content-end ">
-            <a class="btn btn-primary d-none d-md-block" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
-        </div>
-    </div>
 
 
 
 
 
 
-    <div class="jumbotron text-white myNeon">
-        <div class="row">
-            <div class="p-4 p-md-5 col-md-6 px-0">
-                <h1 class="display-4 font-italic text-left">Hello!</h1>
-                <h2 class="font-italic text-left"> Welcome</h2>
-                <p class="lead my-3">I'm a junior full stack developer based in Calgary, AB Canada. Welcome to my website, I hope you like it.</p>
-            </div>
-            
+        <div class="jumbotron text-white myNeon">
+            <div class="row">
+                <div class="p-4 p-md-5 col-md-6 px-0">
+                    <h1 class="display-4 font-italic text-left">Hello!</h1>
+                    <h2 class="font-italic text-left"> Welcome</h2>
+                    <p class="lead my-3">I'm a junior full stack developer based in Calgary, AB Canada. Welcome to my website, I hope you like it.</p>
+                </div>
+
                 <img class="col-6 d-none d-md-block px-0 text-center welcome-image mx-auto my-3" alt="Me" src="../IMG/Brandon-Cuthbertson.jpg" />
 
-           
+
+            </div>
+        </div>
+        <div class="row">
+            <!--Bootstrap Card Row-->
+
+
+
+
         </div>
     </div>
-    <div class="row">
-        <!--Bootstrap Card Row-->
-
-
-
-
-    </div>
-
- <!--"HEADER CONTAINER END-->
+    <!--"HEADER CONTAINER END-->
     <main role="main" class="container">
         <div class="row">
             <div class="col-md-8">
@@ -193,7 +175,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Use this instead of slim or else some functions wont work-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
+    <!--my java-->
+    <script src="../JS/myScript.js"></script>
     <script type="text/javascript">
         //Calls the Nav.html Page as a header
         $(document).ready(function () {

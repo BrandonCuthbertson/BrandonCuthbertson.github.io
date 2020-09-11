@@ -1,7 +1,7 @@
 function openNav() {
-    document.getElementById("myNav").style.height = "100%";
+    document.getElementById("overlayNav").style.height = "100%";
 }
 
 function closeNav() {
-    document.getElementById("myNav").style.height = "0%";
+    document.getElementById("overlayNav").style.height = "0%";
 }

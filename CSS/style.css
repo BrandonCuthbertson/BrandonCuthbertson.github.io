@@ -68,6 +68,11 @@ footer {
         background-position: 300%;
     }
 }
+
+.spanNav {
+    font-size:2em;
+    cursor:pointer;
+}
 /*Overlay*/
 .overlay {
     height: 0%;
