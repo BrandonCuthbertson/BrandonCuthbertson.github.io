@@ -5,7 +5,8 @@ body {
     color: white;
 }
 header {
-    border-bottom: 1px solid currentColor;
+    border-bottom: 1px solid;
+    border-image-source: linear-gradient(to left, #6c71c4, #268bd2, #2aa198, #859900, #b58900, #cb4b16, #dc322f, #d33682, #dc322f, #cb4b16, #b58900, #2aa198,#268bd2,#6c71c4);
 }
 footer {
     text-align: center;
@@ -29,7 +30,9 @@ footer {
         color: #cb4b16;
         text-decoration: none;
     }
+.welcome-image{
 
+}
 .myNeon {
     position: relative;
     background: rgba(0, 45, 56, 1);
