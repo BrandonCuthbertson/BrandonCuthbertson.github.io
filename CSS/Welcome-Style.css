@@ -1,15 +1,20 @@
 /*Welcome Page Glow*/
-body.welcome {
+.welcome {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
-.welcome a {
-    color: white;
-    text-decoration:none;
+    .welcome a {
+        color: white;
+        text-decoration: none;
+        filter: grayscale(100%);
+    }
+.welcome a:hover {
+    filter: grayscale(0%);
+}
 
-}
 
 
 .welcome-tron {
@@ -47,13 +52,13 @@ body.welcome {
         background: linear-gradient(45deg, #6c71c4, #268bd2, #2aa198, #859900, #b58900, #cb4b16, #dc322f, #d33682, #dc322f, #cb4b16, #b58900, #2aa198,#268bd2,#6c71c4); /*Solarize Colors*/
         /*background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%,rgba(0,0,0,0) 0%);*/
         background-size: 300%;
-        animation: welcome-tron 3s linear infinite;
+        animation: welcome-tron 10s linear infinite;
     }
 
     .welcome-tron::after {
         filter: blur(30px);
     }
-
+    
 @keyframes welcome-tron {
     0% {
         background-position: 0 0;
