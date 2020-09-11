@@ -32,7 +32,8 @@ footer {
     }
 .welcome-image {
     /*clip-path: polygon(50% 100%, 100% 70%, 100% 0, 0 0, 0 70%);*/
-    border-radius: 1em;
+    border-radius: 5em;
+  
 }
 .myNeon {
     position: relative;

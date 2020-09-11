@@ -5,6 +5,12 @@ body.welcome {
     align-items: center;
     justify-content: center;
 }
+.welcome a {
+    color: white;
+    text-decoration:none;
+
+}
+
 
 .welcome-tron {
     position: relative;
