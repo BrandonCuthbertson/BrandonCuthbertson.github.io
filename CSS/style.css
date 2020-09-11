@@ -1,11 +1,11 @@
 /*Solarize Theme*/
 body {
-    background-color: #002B36;
-    background: rgba(0, 0, 0, 0.95);
+   /* background-color: #002B36;*/
+    background: rgba(0, 0, 0, 1);
     color: white;
 }
 header {
-    border-bottom: 1px solid currentColor;
+  /*  border-bottom: 1px solid currentColor;*/
 
 }
 footer {
@@ -44,19 +44,15 @@ footer {
         z-index: -1;
         content: '';
         position: absolute;
-        width: calc(100%);
-        height: calc(100% + 3px);
+        width: calc(100% - 0.1em);
+        height: calc(100% + 1px);
         top: 1px;
-        left: 0px;
+        left: 1px;
         border-radius: 0em;
-        background: linear-gradient(45deg, #6c71c4, #268bd2, #2aa198, #859900, #b58900, #cb4b16, #dc322f, #d33682, #dc322f, #cb4b16, #b58900, #2aa198,#268bd2,#6c71c4); /*Solarize Colors*/
-        /*background: linear-gradient(45deg, rgba(0,0,0,0) 0%, rgba(255,255,255,1) 100%,rgba(0,0,0,0) 0%);*/
+         background: linear-gradient(45deg, #6c71c4, #268bd2, #2aa198, #859900, #b58900, #cb4b16, #dc322f, #d33682, #dc322f, #cb4b16, #b58900, #2aa198,#268bd2,#6c71c4); /*Solarize Colors*/
+        /*background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 50%, rgba(255,255,255,1) 100%);*/
         background-size: 300%;
         animation: myNeon 20s linear infinite;
-    }
-
-    .myNeon::after {
-        filter: blur(30px);
     }
 
 @keyframes myNeon {
@@ -71,7 +67,7 @@ footer {
 
 .spanNav {
     font-size:2em;
-    cursor:pointer;
+    cursor:pointer
 }
 /*Overlay*/
 .overlay {
