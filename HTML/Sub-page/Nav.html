@@ -1,5 +1,5 @@
-<script>console.log("GitHub: Log Update 0.8");</script>
-<header class="py-3">
+<script>console.log("GitHub: Log Update 1.0");</script>
+<header class="py-3 myNeon" style="background:rgba(0, 0, 0, 0.95)">
     <div class="row flex-nowrap justify-content-between align-items-center">
         <!--Hides on Screens smaller than medium-->
         <div class="col-10 col-md-8 d-none d-sm-block">
@@ -9,46 +9,46 @@
         <div class="col-4 d-none d-md-block">
 
             <nav class="nav-scroller d-flex justify-content-end ">
-                <a class="p-2 text-muted" href="Home.html">Home</a>
-                <a class="p-2 text-muted" href="Portfolio.html">Portfolio</a>
-                <a class="p-2 text-muted" href="Resume.html">Resume</a>
+                <a class="p-2 text-light" href="Home.html">Home</a>
+                <a class="p-2 text-light" href="Portfolio.html">Portfolio</a>
+                <a class="p-2 text-light" href="Resume.html">Resume</a>
             </nav>
 
         </div>
-        
+
         <!--Vissable on xs-->
         <div class="col-9 d-block d-sm-none ">
             <a class="header-logo text-center " href="Home.html">BC</a>
         </div>
         <!--NAV BAR-->
         <div class="col-4 col-sm-2 d-md-none ">
-            <div class="btn-group justify-content-end">
-                <button type="button" class="btn btn-secondary" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i class="far fa-caret-square-down icon-color"></i>
-                </button>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="p-2 text-muted" href="Home.html"><i class="fas fa-home"></i> Home </a>
-                    <a class="p-2 text-muted" href="Portfolio.html"> <i class="fas fa-code"></i> Portfolio</a>
-                    <a class="p-2 text-muted" href="Resume.html"><i class="fas fa-file"></i> Resume</a>
-                    <div class="dropdown-divider"></div>
-                    <a href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
+            <span class="spanNav" onclick="openNav()"><i class="far fa-caret-square-down icon-color"></i></span>
+            <div class="col-4 col-sm-2 d-md-none ">
+                <div id="overlayNav" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-caret-square-up"></i></a>
+                    <div class="overlay-content">
+                        <a class="p-2 text-light" href="Home.html"><i class="fas fa-home"></i> Home </a>
+                        <a class="p-2 text-light" href="Portfolio.html"> <i class="fas fa-code"></i> Portfolio</a>
+                        <a class="p-2 text-light" href="Resume.html"><i class="fas fa-file"></i> Resume</a>
+                        <hr class="myNeon" style="width:50%;height:1px;background:rgba(0, 0, 0, 0.95);" />
+                        <a href="mailto:Brandon.Cuthbertson@outlook.com" class="text-grey" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</a>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </header>
-<!---->
-<!---->
 
 <div class="row py-2">
 
     <div class="col-9 d-flex justify-content-start">
-        <a href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw icon-color"></i></a>
-        <a href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw icon-color"></i></a>
-        <a href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram icon-color"></i></a>
+        <a class="px-1" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw icon-color"></i></a>
+        <a class="px-1" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw icon-color"></i></a>
+        <a class="px-1" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram icon-color"></i></a>
     </div>
 
     <div class="col-3 d-flex justify-content-end ">
-        <a class="btn btn-primary d-none d-md-block" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
+        <a class="btn btn-dark d-none d-md-block" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2"></i>Get in Touch</a>
     </div>
-</div>
+    </div>
