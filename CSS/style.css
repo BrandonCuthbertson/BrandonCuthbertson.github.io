@@ -10,7 +10,7 @@ header {
 }
 footer {
     text-align: center;
-    border: 1px solid #586e75;
+    
 }
 
 .icon-color {
@@ -20,13 +20,16 @@ footer {
     padding: 1px;
 }
 .icon-green :hover {
-    color: #2aa198;
+    color: #859900;
+    font-size: 2em;
 }
 .icon-blue :hover {
     color: #268bd2;
+    font-size: 2em;
 }
 .icon-red :hover {
     color: #dc322f;
+    font-size: 2em;
 }
 /*site header*/
 .header-logo {
