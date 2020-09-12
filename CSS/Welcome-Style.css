@@ -9,11 +9,7 @@
     .welcome a {
         color: white;
         text-decoration: none;
-        filter: grayscale(100%);
     }
-.welcome a:hover {
-    filter: grayscale(0%);
-}
 
 
 
