@@ -15,9 +15,9 @@ footer {
 
 .icon-color {
     color: white;
-    text-shadow: 1px 1px 1px #ccc;
-    font-size: 1em;
-    padding: 1px;
+    font-size: 1.5em;
+    padding-left: 2px;
+    padding-right: 2px;
 }
 .icon-green :hover {
     color: #859900;
@@ -79,8 +79,8 @@ footer {
 }
 
 .spanNav {
-    font-size:2em;
-    cursor:pointer
+    font-size: 60px;
+    cursor: pointer;
 }
 /*Overlay*/
 .overlay {
