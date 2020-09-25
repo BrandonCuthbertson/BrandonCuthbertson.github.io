@@ -5,8 +5,11 @@
     "\\HTML",
     "\\HTML\\Sub-page",
     "\\IMG",
-    "\\JS"
+    "\\JS",
+    "\\Local",
+    "\\Local\\Bootstrap\\css",
+    "\\Local\\Bootstrap\\js"
   ],
-  "SelectedNode": "\\HTML\\Home.html",
+  "SelectedNode": "\\JS\\database.js",
   "PreviewInSolutionExplorer": false
 }
