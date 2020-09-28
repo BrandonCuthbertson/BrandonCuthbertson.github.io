@@ -6,9 +6,7 @@
     "\\HTML\\Sub-page",
     "\\IMG",
     "\\JS",
-    "\\Local",
-    "\\Local\\Bootstrap\\css",
-    "\\Local\\Bootstrap\\js"
+    "\\Local"
   ],
   "SelectedNode": "\\JS\\database.js",
   "PreviewInSolutionExplorer": false
