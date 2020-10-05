@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-    <title>Brandon Cuthbertson | My Personal Website</title>
-    <meta name="description" content="Brandon Cuthbertsons Personal Website">
+    <title>Brandon Cuthbertson | Resume</title>
+    <meta name="description" content="Brandon Cuthbertsons Resume">
     <meta name="author" content="Brandon Cuthbertson">
+
     <!--SITE FAVICON-->
-    <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../Favicon/favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="Favicon/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png" />
@@ -21,31 +22,64 @@
     <!--Font Awesome -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
-    <!-- My styles sheet CSS-->
-    <link rel="stylesheet" href="CSS/Welcome-Style.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
-
-
+    
+    <!-- My styles sheet CSS/JS-->
+    <link rel="stylesheet" type="text/css" href="CSS/Theme.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/Layout.css" />
 
 </head>
+<body>
+    <div id="NavDiv" class="d-none d-md-block" > <!--Hides on Medium-->
+        <header class="header text-center d-flex align-items-center ">
+            <nav>
+                <div class="py-3">
+                    <img class="navPhoto img-fluid p-3" src="IMG/BWC1.jpg" />
 
-<body class="welcome">
+                    <div class="d-flex flex-row justify-content-center">
+                        <!--Links To Other-->
+                        <div class="icon"><a alt="GitHub" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw"></i></a></div>
+                        <div class="icon"><a alt="Instagram" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram"></i></a></div>
+                        <div class="icon"> <a alt="Linkedin" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw"></i></a></div>
+                    </div>
+                    <hr />
+                    <div class="d-flex flex-column align-items-center">
+                        <ul class="ulNav text-left">
+                            <li id="Home">&#9;Home </li>
+                            <li id="Portfolio">&#9;Portfolio</li>
+                            <li id="Resume">&#9;Resume</li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <button type="button" class="btn btn-outline-warning" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</button>
+                </div>
+            </nav>
 
-    <a href="HTML/Home.html" alt="Enter?">
-        <div class="welcome-tron" role="button">
-            <p>Welcome</p>
+        </header>
+    </div> <!--Medium Nav-->
 
-            <!--<a href="#" alt="Come Back another Time">Under Construction</a>-->
-            <!--Enter >>-->
+    <main class="main-body">
+        <h1>TEST</h1>
 
 
-        </div>
-    </a>
-    <!---->
-    <footer></footer>
+    </main>
+    
+
+
+
+
+    <div id="footer-placeholder" class="container"></div>
     <!-- JQuery, Poper and Bootstrap.js-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Use this instead of slim or else some functions wont work-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <!--my java-->
+
+    <script type="text/javascript">
+        //Calls the Other Html Pages
+        $(document).ready(function () {
+
+            $('#footer-placeholder').load('HTML/Footer.html');
+        });
+    </script>
 </body>
 </html>

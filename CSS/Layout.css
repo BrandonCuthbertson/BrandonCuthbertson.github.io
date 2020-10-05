@@ -1,0 +1,74 @@
+/*This style sheet is for Function*/
+
+/*Header and Nav*/
+.header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height:100%;
+
+    width: 180px;
+    overflow-y: auto;
+
+}
+#NavDiv {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    overflow-y: auto;
+    width: 183px;
+}
+    .navPhoto {
+    border-radius: 25%;
+}
+.icon {
+    font-weight: bold;
+    border-radius: 25%;
+    padding: 2px 15px 2px 15px; 
+    margin: 2px;
+    font-size: 18px; 
+}
+
+
+
+.ulNav {
+    list-style: none; /*removes ul dots*/
+    font-weight: bold;
+    font-size: 18px;
+  
+
+}
+
+    .ulNav li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+li#Home:before {
+    /*<i class="fas fa-home"></i>*/
+    content: "\f015"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+li#Portfolio:before {
+    /*<i class="fas fa-code"></i>*/
+    content: "\f121"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+li#Resume:before {
+    /*<i class="fas fa-file-alt"></i>*/
+    content: "\f15c"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em; /* same as padding-left set on li */
+    width: 1.3em; /* same as padding-left set on li */
+}
+
+/*MAIN PAGE*/

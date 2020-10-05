@@ -2,12 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\CSS",
-    "\\HTML",
-    "\\HTML\\Sub-page",
-    "\\IMG",
-    "\\JS",
-    "\\Local"
+    "\\HTML"
   ],
-  "SelectedNode": "\\JS\\database.js",
+  "SelectedNode": "\\CSS\\Layout.css",
   "PreviewInSolutionExplorer": false
 }

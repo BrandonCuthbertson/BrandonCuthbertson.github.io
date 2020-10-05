@@ -1,0 +1,30 @@
+/*This Is for Colors*/
+
+body{
+background-color: #272727;
+color: #747474;
+}
+
+/*Other Colors
+    #ff652f -Red
+    #ffe400 - yellow
+    #14a76c - green
+*/
+/*ICONS*/
+hr {
+    background-color: rgba(255,255,255, 0.1);
+}
+#NavDiv {
+    background-color: #272727;
+}
+.header {
+    background: rgba(0, 0, 0, 0.5);
+}
+.icon {
+    background-color: rgba(255,255,255, 0.3);
+    
+}
+    .icon a {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
