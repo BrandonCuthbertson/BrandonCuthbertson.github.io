@@ -1,3 +1,12 @@
+// On load hides all tabs and displays About me
+//Work around because default id is not working
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+}
+document.getElementById('About').style.display = "block";
+evt.currentTarget.className += " active";
+
 function openPage(evt, pageName) {
     // Declare all variables
     var i, tabcontent, tablinks;

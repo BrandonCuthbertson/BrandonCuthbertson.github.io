@@ -16,7 +16,7 @@ color: var(--Font-color);
 
 hr {
     background-color: var(--hr);
-    );
+   
 }
 /*sidebar Nav*/
 .sidebar {
@@ -55,15 +55,17 @@ hr {
     }
 
 /*topbar Nav*/
-.topnav{
+.topnav {
     width: 100%;
     overflow: auto;
+    border-bottom: solid 0.5em var(--nav-border);
 }
-.topnav a {
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-}
+    .topnav a {
+        text-decoration: none;
+        font-size: 18px;
+        text-decoration: none;       
+    }
+    
 
 /*Both Navbars*/
 /*Layout*/
@@ -77,8 +79,7 @@ hr {
 }
 
 #navPortfolio:before {
-    /*<i class="fas fa-code"></i>*/
-    content: "\f121"; /* FontAwesome Unicode */
+    content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
     font-family: "Font Awesome 5 Free";
     display: inline-block;
     margin-left: -1.3em;
@@ -113,6 +114,26 @@ hr {
     cursor: pointer;
     background-size: 100%;
 }
+
+#top-About {
+    color: var(--yellow);
+}
+
+#top-Portfolio {
+    color: var(--green);
+    
+}
+#top-Resume {
+    color: var(--red);
+   
+}
+#top-Contact{
+    color: var(--Dark-color);
+    background-color: var(--Font-color);
+    border-radius: 2px;
+    padding: 2px;
+}
+
 /*TABS*/
 
 /*Layout*/
@@ -131,13 +152,16 @@ hr {
     }
 } 
 /*Theme*/
-.tab li.active {
+.tab .active
+{
     color: white;
 }
 
 
+
 /*main*/
 .main-body {
+    border-bottom: solid 0.5em var(--nav-border);
     padding: 10px;
     margin-left: 180px;
 }

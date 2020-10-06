@@ -25,12 +25,10 @@
     
     <!-- My styles sheet CSS/JS-->
     <link rel="stylesheet" type="text/css" href="CSS/Theme.css" />
-    <link rel="stylesheet" type="text/css" href="CSS/Layout.css" />
-    
-
 </head>
 <body>
-    <div class="d-none d-md-block" > <!--Hides on Medium-->
+    <div class="d-none d-md-block">
+        <!--Hides on Medium-->
         <header class="sidebar text-center d-flex align-items-center">
             <nav>
                 <div class="py-3">
@@ -46,12 +44,12 @@
                     <hr />
                     <div class="d-flex flex-column align-items-center">
                         <ul class="ulNav text-left tab">
-                            <li id="navAbout" class="tablinks active" onclick="openPage(event, 'About')">&#9;About Me </li>
-                            <li id="navPortfolio" class="tablinks" onclick="openPage(event, 'Portfolio')">&#9;Portfolio</li>
-                            <li id="navResume" class="tablinks" onclick="openPage(event, 'Resume')">&#9;Resume</li>
+                            <li id="navAbout" class="tablinks active mx-2" onclick="openPage(event, 'About')">About Me </li>
+                            <li id="navPortfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')">Portfolio</li>
+                            <li id="navResume" class="tablinks mx-2" onclick="openPage(event, 'Resume')">Resume</li>
                         </ul>
                     </div>
-                    
+
                     <hr />
                     <button type="button" class="btn btn-outline-warning mb-5" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</button>
                     <hr class="mt-5" />
@@ -60,23 +58,27 @@
 
         </header>
     </div> <!--Medium Nav-->
-    <div>
-        <header>
-            <nav>
-                <div class="topnav d-flex flex-row justify-content-center">
-                    <a id="navAbout" class="tablinks px-3 active" onclick="openPage(event, 'About')">&#9;About Me </a>
-                    <a id="navPortfolio" class="tablinks px-3" onclick="openPage(event, 'Portfolio')">&#9;Portfolio</a>
-                    <a id="navResume" class="tablinks px-3" onclick="openPage(event, 'Resume')">&#9;Resume</a>
-                </div>
-            </nav>
-        </header>
-    </div>
+    <nav class="topnav p-3 d-block d-md-none">
+        <div class="row">
+            <div class="tab col-9 d-flex justify-items-left flex-row">
+                <!--h7 doesnt exist its just a blank tag for hiding text-->
+                <a id="top-About" class="tablinks mx-2" onclick="openPage(event, 'About')"><i class="fas fa-home mx-1"></i>About Me </a>
+                <a id="top-Portfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')"><i class="fas fa-code-branch mx-1"></i>Portfolio</a>
+                <a id="top-Resume" class="tablinks mx-2" onclick="openPage(event, 'Resume')"><i class="fas fa-file-alt mx-1"></i>Resume</a>
+            </div>
+            <div class="col-3 d-flex justify-items-right ">
+                <a id="top-Contact" class="tablinks px-2" onclick="openPage(event, 'Contact')"><i class="fas fa-address-card fa-fw mx-1 "></i>Contact</a>
+            </div>
+        </div>
+    </nav>
+    
 
     <main class="main-body">
         <div id="About" class="tabcontent">
             <h3>About</h3>
             <p>ABOUT</p>
         </div>
+
 
         <div id="Portfolio" class="tabcontent">
             <h3>Portfolio</h3>
@@ -88,9 +90,14 @@
             <p>Portfolio</p>
         </div>
 
+        <div id="Contact" class="tabcontent">
+            <h3>My Buisness Card</h3>
+            <p>Portfolio</p>
+        </div>
+
 
     </main>
-    
+
 
 
 
@@ -108,16 +115,6 @@
 
             $('#footer-placeholder').load('HTML/Footer.html');
         });
-    </script>
-    <script>
-        // On load hides all tabs and displays About me
-        //Work around because default id is not working
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-        document.getElementById('About').style.display = "block";
-        evt.currentTarget.className += " active";
     </script>
     <script src="JS/myScript.js"></script>
 </body>
