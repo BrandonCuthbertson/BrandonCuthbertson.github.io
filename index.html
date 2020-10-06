@@ -30,27 +30,29 @@
 </head>
 <body>
     <div id="NavDiv" class="d-none d-md-block" > <!--Hides on Medium-->
-        <header class="header text-center d-flex align-items-center ">
+        <header class="header text-center d-flex align-items-center right-strobe">
             <nav>
                 <div class="py-3">
                     <img class="navPhoto img-fluid p-3" src="IMG/BWC1.jpg" />
 
                     <div class="d-flex flex-row justify-content-center">
+
                         <!--Links To Other-->
-                        <div class="icon"><a alt="GitHub" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw"></i></a></div>
-                        <div class="icon"><a alt="Instagram" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram"></i></a></div>
-                        <div class="icon"> <a alt="Linkedin" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw"></i></a></div>
+                        <button type="button" class="btn btn-outline-warning  mx-1" alt="GitHub" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw"></i> </button>
+                        <button type="button" class="btn btn-outline-success  mx-1" alt="Instagram" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram"></i></button>
+                        <button type="button" class="btn btn-outline-danger  mx-1" alt="Linkedin" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw"></i></button>
                     </div>
                     <hr />
                     <div class="d-flex flex-column align-items-center">
                         <ul class="ulNav text-left">
-                            <li id="Home">&#9;Home </li>
-                            <li id="Portfolio">&#9;Portfolio</li>
-                            <li id="Resume">&#9;Resume</li>
+                            <li id="About" class="tabLink" onclick="openPage(event, 'About')">&#9;About Me </li>
+                            <li id="Portfolio"  class="tabLink" onclick="openPage(event, 'Portfolio')">&#9;Portfolio</li>
+                            <li id="Resume"  class="tabLink" onclick="openPage(event, 'Resume')">&#9;Resume</li>
                         </ul>
                     </div>
                     <hr />
-                    <button type="button" class="btn btn-outline-warning" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</button>
+                    <button type="button" class="btn btn-outline-warning mb-5" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</button>
+                    <hr class="mt-5"/>
                 </div>
             </nav>
 
@@ -58,7 +60,20 @@
     </div> <!--Medium Nav-->
 
     <main class="main-body">
-        <h1>TEST</h1>
+        <div id="About" class="tabcontent">
+            <h3>About</h3>
+            <p>ABOUT</p>
+        </div>
+
+        <div id="Portfolio" class="tabcontent">
+            <h3>Portfolio</h3>
+            <p>Portfolio</p>
+        </div>
+
+        <div id="Tokyo" class="tabcontent">
+            <h3>Tokyo</h3>
+            <p>Portfolio</p>
+        </div>
 
 
     </main>

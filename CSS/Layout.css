@@ -6,19 +6,11 @@
     left: 0;
     top: 0;
     height:100%;
-
     width: 180px;
-    overflow-y: auto;
+    overflow-y: hidden;
 
 }
-#NavDiv {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    overflow-y: auto;
-    width: 183px;
-}
+
     .navPhoto {
     border-radius: 25%;
 }
@@ -28,6 +20,8 @@
     padding: 2px 15px 2px 15px; 
     margin: 2px;
     font-size: 18px; 
+    z-index: 1;
+    cursor: pointer;
 }
 
 
@@ -44,9 +38,10 @@
         padding-top: 5px;
         padding-bottom: 5px;
     }
-li#Home:before {
+
+li#About:before {
     /*<i class="fas fa-home"></i>*/
-    content: "\f015"; /* FontAwesome Unicode */
+    content: "\f007"; /* FontAwesome Unicode */
     font-family: "Font Awesome 5 Free";
     display: inline-block;
     margin-left: -1.3em; /* same as padding-left set on li */
@@ -72,3 +67,13 @@ li#Resume:before {
 }
 
 /*MAIN PAGE*/
+.main-body {
+    margin-left: 180px;
+
+}
+@media (max-width: 767px){
+    .main-body {
+        margin-left: 0px;
+    }
+}
+

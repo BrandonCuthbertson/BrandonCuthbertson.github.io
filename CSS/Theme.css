@@ -1,30 +1,114 @@
 /*This Is for Colors*/
-
+:root {
+    --Dark-color: #272727; /* var(--Dark-color); */
+    --Font-color: #747474; /* var(--Theme-Font-color); */
+    /*Accents*/
+    --yellow: #ffe400; /*var(--yellow);*/
+    --green: #14a76c; /*var(--green);*/
+    --red: #ff652f; /*var(--red);*/
+}
 body{
-background-color: #272727;
-color: #747474;
+background-color: var(--Dark-color);
+color: var(--Font-color); 
+}
+header {
+    background-color: var(--Dark-color);
 }
 
 /*Other Colors
-    #ff652f -Red
+   
     #ffe400 - yellow
     #14a76c - green
+    #ff652f -Red
 */
-/*ICONS*/
+
 hr {
     background-color: rgba(255,255,255, 0.1);
 }
-#NavDiv {
-    background-color: #272727;
-}
 .header {
-    background: rgba(0, 0, 0, 0.5);
+   border-right: solid 0.5em rgba(255, 255, 255, 0.02);
 }
-.icon {
-    background-color: rgba(255,255,255, 0.3);
-    
+li#About:Hover {
+    color: var(--yellow);
+    cursor: pointer;
+    background-size: 100%;
 }
-    .icon a {
-        color: rgba(0, 0, 0, 0.5);
+
+li#Portfolio:Hover {
+    color: var(--green);
+    cursor: pointer;
+    background-size: 100%;
+}
+
+li#Resume:Hover {
+    color: var(--red);
+    cursor: pointer;
+    background-size: 100%;
+}
+
+
+.main-body {
+   padding: 10px;
+}
+
+/*Changing Bootstrap button to match color scheme*/
+/*yellow*/
+.btn-outline-warning { 
+    border-color: var(--yellow);
+    color: var(--yellow);
+    border-radius: 12px;
+    border-width: 2px;
+}
+.btn-outline-warning:hover {
+    color: #212529;
+    background-color: var(--yellow);
+    border-color: var(--yellow);
+}
+/*Green*/
+.btn-outline-success {
+    border-color: var(--green);
+    color: var(--green);
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+    .btn-outline-success:hover {
+        color: #212529;
+        background-color: var(--green);
+        border-color: var(--green);
     }
+/*Red*/
+.btn-outline-danger {
+    border-color: var(--red);
+    color: var(--red);
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+    .btn-outline-danger:hover {
+        color: #212529;
+        background-color: var(--red);
+        border-color: var(--red);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
