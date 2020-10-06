@@ -7,6 +7,7 @@ for (i = 0; i < tabcontent.length; i++) {
 document.getElementById('About').style.display = "block";
 evt.currentTarget.className += " active";
 
+
 function openPage(evt, pageName) {
     // Declare all variables
     var i, tabcontent, tablinks;
