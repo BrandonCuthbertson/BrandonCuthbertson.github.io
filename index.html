@@ -26,11 +26,12 @@
     <!-- My styles sheet CSS/JS-->
     <link rel="stylesheet" type="text/css" href="CSS/Theme.css" />
     <link rel="stylesheet" type="text/css" href="CSS/Layout.css" />
+    
 
 </head>
 <body>
-    <div id="NavDiv" class="d-none d-md-block" > <!--Hides on Medium-->
-        <header class="header text-center d-flex align-items-center right-strobe">
+    <div class="d-none d-md-block" > <!--Hides on Medium-->
+        <header class="sidebar text-center d-flex align-items-center">
             <nav>
                 <div class="py-3">
                     <img class="navPhoto img-fluid p-3" src="IMG/BWC1.jpg" />
@@ -44,20 +45,32 @@
                     </div>
                     <hr />
                     <div class="d-flex flex-column align-items-center">
-                        <ul class="ulNav text-left">
-                            <li id="About" class="tabLink" onclick="openPage(event, 'About')">&#9;About Me </li>
-                            <li id="Portfolio"  class="tabLink" onclick="openPage(event, 'Portfolio')">&#9;Portfolio</li>
-                            <li id="Resume"  class="tabLink" onclick="openPage(event, 'Resume')">&#9;Resume</li>
+                        <ul class="ulNav text-left tab">
+                            <li id="navAbout" class="tablinks active" onclick="openPage(event, 'About')">&#9;About Me </li>
+                            <li id="navPortfolio" class="tablinks" onclick="openPage(event, 'Portfolio')">&#9;Portfolio</li>
+                            <li id="navResume" class="tablinks" onclick="openPage(event, 'Resume')">&#9;Resume</li>
                         </ul>
                     </div>
+                    
                     <hr />
                     <button type="button" class="btn btn-outline-warning mb-5" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</button>
-                    <hr class="mt-5"/>
+                    <hr class="mt-5" />
                 </div>
             </nav>
 
         </header>
     </div> <!--Medium Nav-->
+    <div>
+        <header>
+            <nav>
+                <div class="topnav d-flex flex-row justify-content-center">
+                    <a id="navAbout" class="tablinks px-3 active" onclick="openPage(event, 'About')">&#9;About Me </a>
+                    <a id="navPortfolio" class="tablinks px-3" onclick="openPage(event, 'Portfolio')">&#9;Portfolio</a>
+                    <a id="navResume" class="tablinks px-3" onclick="openPage(event, 'Resume')">&#9;Resume</a>
+                </div>
+            </nav>
+        </header>
+    </div>
 
     <main class="main-body">
         <div id="About" class="tabcontent">
@@ -70,7 +83,7 @@
             <p>Portfolio</p>
         </div>
 
-        <div id="Tokyo" class="tabcontent">
+        <div id="Resume" class="tabcontent">
             <h3>Tokyo</h3>
             <p>Portfolio</p>
         </div>
@@ -96,5 +109,16 @@
             $('#footer-placeholder').load('HTML/Footer.html');
         });
     </script>
+    <script>
+        // On load hides all tabs and displays About me
+        //Work around because default id is not working
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        document.getElementById('About').style.display = "block";
+        evt.currentTarget.className += " active";
+    </script>
+    <script src="JS/myScript.js"></script>
 </body>
 </html>

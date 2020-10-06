@@ -6,51 +6,146 @@
     --yellow: #ffe400; /*var(--yellow);*/
     --green: #14a76c; /*var(--green);*/
     --red: #ff652f; /*var(--red);*/
+    --nav-border: rgba(255, 255, 255, 0.02); /*var(--nav-border);*/
+    --hr: rgba(255, 255, 255, 0.1); /*var(--hr);*/
 }
 body{
 background-color: var(--Dark-color);
 color: var(--Font-color); 
 }
-header {
-    background-color: var(--Dark-color);
-}
-
-/*Other Colors
-   
-    #ffe400 - yellow
-    #14a76c - green
-    #ff652f -Red
-*/
 
 hr {
-    background-color: rgba(255,255,255, 0.1);
+    background-color: var(--hr);
+    );
 }
-.header {
-   border-right: solid 0.5em rgba(255, 255, 255, 0.02);
+/*sidebar Nav*/
+.sidebar {
+    /*Layout*/
+    border-right: solid 0.5em var(--nav-border);
+    /*Theme*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 180px;
+    overflow-y: hidden;
 }
-li#About:Hover {
+.navPhoto {
+    border-radius: 25%;
+}
+.icon {
+    font-weight: bold;
+    border-radius: 25%;
+    padding: 2px 15px 2px 15px;
+    margin: 2px;
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.ulNav {
+    list-style: none; /*removes ul dots*/
+    font-weight: bold;
+    font-size: 18px;
+}
+
+    .ulNav li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+/*topbar Nav*/
+.topnav{
+    width: 100%;
+    overflow: auto;
+}
+.topnav a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/*Both Navbars*/
+/*Layout*/
+#navAbout:before {
+    /*<i class="fas fa-home"></i>*/
+    content: "\f007"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+
+#navPortfolio:before {
+    /*<i class="fas fa-code"></i>*/
+    content: "\f121"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+
+#navResume:before {
+    /*<i class="fas fa-file-alt"></i>*/
+    content: "\f15c"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+/*Theme*/
+#navAbout:Hover {
+
     color: var(--yellow);
     cursor: pointer;
     background-size: 100%;
 }
 
-li#Portfolio:Hover {
+
+#navPortfolio:Hover {
     color: var(--green);
     cursor: pointer;
     background-size: 100%;
 }
 
-li#Resume:Hover {
+#navResume:Hover {
     color: var(--red);
     cursor: pointer;
     background-size: 100%;
 }
+/*TABS*/
 
-
-.main-body {
-   padding: 10px;
+/*Layout*/
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
 }
 
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+} 
+/*Theme*/
+.tab li.active {
+    color: white;
+}
+
+
+/*main*/
+.main-body {
+    padding: 10px;
+    margin-left: 180px;
+}
+@media (max-width: 767px) {
+    .main-body {
+        margin-left: 0px;
+    }
+}
 /*Changing Bootstrap button to match color scheme*/
 /*yellow*/
 .btn-outline-warning { 
