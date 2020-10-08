@@ -9,290 +9,369 @@
     /*Other*/
     --nav-border: rgba(255, 255, 255, 0.02); /*var(--nav-border);*/
     --hr: rgba(255, 255, 255, 0.1); /*var(--hr);*/
+    --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: white; /*var(--Mono);*/
-
-   
 }
 
 @media (max-width: 767px) {
     .jumbotron {
         background-color: var(--Dark-color);
         position: absolute;
-        right:0;
-        left:0;
-        top:auto;
-       
+        right: 0;
+        left: 0;
+        top: auto;
     }
 }
 
 
-    body {
-        background-color: var(--Dark-color);
-        color: var(--Font-color);
-    }
+body {
+    background-color: var(--Dark-color);
+    color: var(--Font-color);
+}
 
-    hr {
-        background-color: var(--hr);
-    }
-    /*sidebar Nav*/
-    .sidebar {
-        /*Layout*/
-        border-right: solid 0.5em var(--nav-border);
-        /*Theme*/
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 180px;
-        overflow-y: hidden;
-        z-index:2;
-    }
-
-    .navPhoto {
-        border-radius: 25%;
-    }
-
-    .icon {
-        font-weight: bold;
-        border-radius: 25%;
-        padding: 2px 15px 2px 15px;
-        margin: 2px;
-        font-size: 18px;
-        z-index: 1;
-        cursor: pointer;
-    }
-
-    .ulNav {
-        list-style: none; /*removes ul dots*/
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-        .ulNav li {
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-    /*topbar Nav*/
-    .topnav {
-        width: 100%;
-        overflow: auto;
-        border-bottom: solid 0.5em var(--nav-border);
-    }
-
-        .topnav a {
-            text-decoration: none;
-            font-size: 2em;
-            text-decoration: none;
-        }
-
-
-    /*Both Navbars*/
-    /*TABS*/
-
+hr {
+    background-color: var(--hr);
+}
+/*sidebar Nav*/
+.sidebar {
     /*Layout*/
-    .tabcontent {
-        animation: fadeEffect 1s; /* Fading effect takes 1 second */
-    }
-
-    /* Go from zero to full opacity */
-    @keyframes fadeEffect {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    /*Layout*/
-    #navAbout:before {
-        /*<i class="fas fa-home"></i>*/
-        content: "\f007"; /* FontAwesome Unicode */
-        font-family: "Font Awesome 5 Free";
-        display: inline-block;
-        margin-left: -1.3em;
-        width: 1.3em;
-    }
-
-    #navPortfolio:before {
-        content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
-        font-family: "Font Awesome 5 Free";
-        display: inline-block;
-        margin-left: -1.3em;
-        width: 1.3em;
-    }
-
-    #navResume:before {
-        /*<i class="fas fa-file-alt"></i>*/
-        content: "\f15c"; /* FontAwesome Unicode */
-        font-family: "Font Awesome 5 Free";
-        display: inline-block;
-        margin-left: -1.3em;
-        width: 1.3em;
-    }
+    border-right: solid 0.5em var(--nav-border);
     /*Theme*/
-    #navAbout:Hover {
-        color: var(--yellow);
-        cursor: pointer;
-        background-size: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 180px;
+    overflow-y: hidden;
+    overflow-x:hidden;
+    z-index: 2;
+}
+
+.navPhoto {
+    border-radius: 25%;
+    height: auto;
+    width: inherit;
+    border: 2px solid var(--Font-color);
+}
+
+.sidebar .navPhoto {
+    max-height: 150px;
+}
+
+.main-body .navPhoto {
+    border-radius: 25%;
+    height: auto;
+    width: inherit;
+    margin-top: 10px;
+    max-height: 322px;
+    max-width: 322px;
+}
+
+
+
+.icon {
+    font-weight: bold;
+    border-radius: 25%;
+    padding: 2px 15px 2px 15px;
+    margin: 2px;
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.ulNav {
+    list-style: none; /*removes ul dots*/
+    font-weight: bold;
+    font-size: 18px;
+}
+
+    .ulNav li {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+/*topbar Nav*/
+.topnav {
+    width: 100%;
+    overflow: auto;
+    border-bottom: solid 0.5em var(--nav-border);
+}
+
+    .topnav a {
+        text-decoration: none;
+        font-size: 2em;
+        text-decoration: none;
     }
 
 
-    #navPortfolio:Hover {
-        color: var(--green);
-        cursor: pointer;
-        background-size: 100%;
+/*Both Navbars*/
+/*TABS*/
+
+/*Layout*/
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
     }
 
-    #navResume:Hover {
-        color: var(--red);
-        cursor: pointer;
-        background-size: 100%;
+    to {
+        opacity: 1;
     }
-    /*--*/
-    #top-About {
-        color: var(--yellow);
-        width: 1.5em;
-        text-align: center;
-    }
+}
 
-    #top-Portfolio {
-        color: var(--green);
-        width: 1.5em;
-        text-align: center;
-    }
+/*Layout*/
+#navAbout:before {
+    /*<i class="fas fa-home"></i>*/
+    content: "\f007"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
 
-    #top-Resume {
-        color: var(--red);
-        width: 1.5em;
-        text-align: center;
-    }
+#navPortfolio:before {
+    content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
 
-    #top-Contact {
-        position: absolute;
-        right: 4px;
-        color: var(--Font-color);
-        border: 2px solid var(--Font-color);
+#navResume:before {
+    /*<i class="fas fa-file-alt"></i>*/
+    content: "\f15c"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+/*Theme*/
+#navAbout:Hover {
+    color: var(--yellow);
+    cursor: pointer;
+    background-size: 100%;
+}
+
+
+#navPortfolio:Hover {
+    color: var(--green);
+    cursor: pointer;
+    background-size: 100%;
+}
+
+#navResume:Hover {
+    color: var(--red);
+    cursor: pointer;
+    background-size: 100%;
+}
+/*--*/
+#top-About {
+    color: var(--yellow);
+    width: 1.5em;
+    text-align: center;
+}
+
+#top-Portfolio {
+    color: var(--green);
+    width: 1.5em;
+    text-align: center;
+}
+
+#top-Resume {
+    color: var(--red);
+    width: 1.5em;
+    text-align: center;
+}
+
+#top-Contact {
+    position: absolute;
+    right: 4px;
+    color: var(--Font-color);
+    border: 2px solid var(--Font-color);
+    border-radius: 4px;
+    left: 0;
+    text-align: center;
+}
+
+/*Theme*/
+.active {
+    color: var(--Mono);
+}
+
+@media (max-width: 767px) {
+    #top-About.active {
+        background-color: var(--yellow);
+        color: var(--Dark-color);
         border-radius: 4px;
-        left: 0;
-        text-align: center;
     }
 
+    #top-Portfolio.active {
+        background-color: var(--green);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+
+    #top-Resume.active {
+        background-color: var(--red);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+
+    #top-Contact.active {
+        background-color: var(--Font-color);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+}
+
+.section-header {
+    background-color: var(--section);
+}
 
 
+/*main*/
+.main-body {
+    position: relative;
+    border-bottom: solid 0.5em var(--nav-border);
+    padding: 10px;
+    margin-left: 170px;
+    margin-right: 0;
+    top: 0;
+}
 
-    /*main*/
+@media (max-width: 767px) {
     .main-body {
-        position:absolute;
-        border-bottom: solid 0.5em var(--nav-border);
-        padding: 10px;
-        margin-left: 170px;
-        top:0;
+        margin-left: 0px;
+        position: relative;
+        width: 100%;
     }
-   
-    @media (max-width: 767px) {
-        .main-body {
-            margin-left: 0px;
-            position:relative;
-        }
-    }
-    /*Theme*/
-    .active {
-        color: var(--Mono);
-    }
+}
+/*ABOUT*/
+.main-body #About .section-header {
+    border: 2px solid var(--yellow);
+    border-radius: 25px;
+    right: 0;
+    overflow: visible;
+}
 
-    @media (max-width: 767px) {
-        #top-About.active {
-            background-color: var(--yellow);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-        #top-Portfolio.active {
-            background-color: var(--green);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-        #top-Resume.active {
-            background-color: var(--red);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-        #top-Contact.active {
-            background-color: var(--Font-color);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-    }
-    .section-header{
-        background-color: var(--hr);
-    }
+.main-body #About h4:before {
+    content: "\258e";
+    display: inline-block;
+    margin-left: -1.0em;
+    width: 1.3em;
+    color: var(--yellow);
+}
+.main-body #About hr{
+    background-color:var(--yellow);
+}
 
 
+.main-body #About .navPhoto {
+    border: 2px solid var(--yellow);
+}
 
-    /*Changing Bootstrap button to match color scheme*/
-    /*yellow*/
-    .btn-outline-warning {
+.main-body #About .font-weight-bold, .main-body #About .font-italic, .main-body #About p b, .main-body #About p i {
+    color: var(--yellow);
+}
+/*Portfolio*/
+.main-body #Portfolio .section-header {
+    border: 2px solid var(--green);
+    border-radius: 25px;
+    right: 0;
+    overflow: visible;
+}
+
+.main-body #Portfolio h4:before {
+    content: "\258e";
+    display: inline-block;
+    margin-left: -1.0em;
+    width: 1.3em;
+    color: var(--green);
+}
+
+.main-body #Portfolio hr {
+    background-color: var(--green);
+}
+
+
+.main-body #Portfolio .navPhoto {
+    border: 2px solid var(--green);
+}
+
+.main-body #Portfolio .font-weight-bold, .main-body #Portfolio .font-italic, .main-body #Portfolio p b, .main-body #Portfolio p i {
+    color: var(--green);
+}
+/*Resume*/
+.main-body #Resume .section-header {
+    border: 2px solid var(--red);
+    border-radius: 25px;
+    right: 0;
+    overflow: visible;
+}
+
+.main-body #Resume h4:before {
+    content: "\258e";
+    display: inline-block;
+    margin-left: -1.0em;
+    width: 1.3em;
+    color: var(--red);
+}
+
+.main-body #Resume hr {
+    background-color: var(--red);
+}
+
+
+.main-body #Resume .navPhoto {
+    border: 2px solid var(--red);
+}
+
+.main-body #Resume .font-weight-bold, .main-body #Resume .font-italic, .main-body #Resume p b, .main-body #Resume p i {
+    color: var(--red);
+}
+
+/*Changing Bootstrap button to match color scheme*/
+/*yellow*/
+.btn-outline-warning {
+    border-color: var(--yellow);
+    color: var(--yellow);
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+    .btn-outline-warning:hover{
+        color: #212529;
+        background-color: var(--yellow);
         border-color: var(--yellow);
-        color: var(--yellow);
-        border-radius: 12px;
-        border-width: 2px;
     }
 
-        .btn-outline-warning:hover {
-            color: #212529;
-            background-color: var(--yellow);
-            border-color: var(--yellow);
-        }
-    /*Green*/
-    .btn-outline-success {
+/*Green*/
+.btn-outline-success {
+    border-color: var(--green);
+    color: var(--green);
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+    .btn-outline-success:hover {
+        color: #212529;
+        background-color: var(--green);
         border-color: var(--green);
-        color: var(--green);
-        border-radius: 12px;
-        border-width: 2px;
     }
+/*Red*/
+.btn-outline-danger {
+    border-color: var(--red);
+    color: var(--red);
+    border-radius: 12px;
+    border-width: 2px;
+}
 
-        .btn-outline-success:hover {
-            color: #212529;
-            background-color: var(--green);
-            border-color: var(--green);
-        }
-    /*Red*/
-    .btn-outline-danger {
+    .btn-outline-danger:hover {
+        color: #212529;
+        background-color: var(--red);
         border-color: var(--red);
-        color: var(--red);
-        border-radius: 12px;
-        border-width: 2px;
     }
-
-        .btn-outline-danger:hover {
-            color: #212529;
-            background-color: var(--red);
-            border-color: var(--red);
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
