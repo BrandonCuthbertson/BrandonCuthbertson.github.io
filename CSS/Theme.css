@@ -6,6 +6,8 @@
     --yellow: #ffe400; /*var(--yellow);*/
     --green: #14a76c; /*var(--green);*/
     --red: #ff652f; /*var(--red);*/
+    /*MAYBE*/
+    --purple: #6311CE; /*var(--purple);*/
     /*Other*/
     --nav-border: rgba(255, 255, 255, 0.02); /*var(--nav-border);*/
     --hr: rgba(255, 255, 255, 0.1); /*var(--hr);*/
@@ -334,44 +336,200 @@ hr {
     color: var(--red);
 }
 
+
+/*Bootstrap Cards*/
+.card {
+    border-radius: 12px;
+    border: 2px solid;
+    overflow: hidden;
+    background-color: var(--Dark-color);
+}
+   
+
+
 /*Changing Bootstrap button to match color scheme*/
 /*yellow*/
-.btn-outline-warning {
+.btn-Yellow {
     border-color: var(--yellow);
     color: var(--yellow);
     border-radius: 12px;
     border-width: 2px;
-}
+}  
 
-    .btn-outline-warning:hover{
-        color: #212529;
+    .btn-Yellow:hover {
+        color: var(--Dark-color);
         background-color: var(--yellow);
         border-color: var(--yellow);
     }
 
+    .btn-Yellow:focus, .btn-Yellow.focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+    }
+
+    .btn-Yellow.disabled, .btn-Yellow:disabled {
+        color: var(--yellow);
+        background-color: transparent;
+    }
+
+    .btn-Yellow:not(:disabled):not(.disabled):active, .btn-Yellow:not(:disabled):not(.disabled).active,
+    .show > .btn-Yellow.dropdown-toggle {
+        /* color: var(--Dark-color);
+        background-color: var(--yellow);
+        border-color: var(--yellow);*/
+        border-color: var(--yellow);
+        color: var(--yellow);
+        border-radius: 12px;
+        border-width: 2px;
+    }
+        .btn-Yellow:not(:disabled):not(.disabled):active:hover, .btn-Yellow:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Yellow.dropdown-toggle:hover {
+            color: var(--Dark-color);
+            background-color: var(--yellow);
+            border-color: var(--yellow);
+        }
+
+        .btn-Yellow:not(:disabled):not(.disabled):active:focus, .btn-Yellow:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Yellow.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+
+        }
+
+
 /*Green*/
-.btn-outline-success {
-    border-color: var(--green);
+.btn-Green {
     color: var(--green);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--green);
     border-radius: 12px;
     border-width: 2px;
 }
 
-    .btn-outline-success:hover {
-        color: #212529;
+    .btn-Green:hover {
+        color: var(--Dark-color);
         background-color: var(--green);
         border-color: var(--green);
     }
+
+    .btn-Green:focus, .btn-Green.focus {
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    }
+
+    .btn-Green.disabled, .btn-Green:disabled {
+        color: var(--green);
+        background-color: transparent;
+    }
+
+    .btn-Green:not(:disabled):not(.disabled):active, .btn-Green:not(:disabled):not(.disabled).active,
+    .show > .btn-Green.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--green);
+            border-color: var(--green);*/
+        border-color: var(--green);
+        color: var(--green);
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+        .btn-Green:not(:disabled):not(.disabled):active:hover, .btn-Green:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Green.dropdown-toggle:hover {
+            color: var(--Dark-color);
+            background-color: var(--green);
+            border-color: var(--green);
+        }
+
+        .btn-Green:not(:disabled):not(.disabled):active:focus, .btn-Green:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Green.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        }
+
 /*Red*/
-.btn-outline-danger {
+.btn-Red {
     border-color: var(--red);
     color: var(--red);
     border-radius: 12px;
     border-width: 2px;
 }
 
-    .btn-outline-danger:hover {
-        color: #212529;
+    .btn-Red:hover {
+        color: var(--Dark-color);
         background-color: var(--red);
         border-color: var(--red);
     }
+    .btn-Red:focus, .btn-Red.focus {
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+    }
+
+    .btn-Red.disabled, .btn-Red:disabled {
+        color: var(--red);
+        background-color: transparent;
+    }
+
+    .btn-Red:not(:disabled):not(.disabled):active, .btn-Red:not(:disabled):not(.disabled).active,
+    .show > .btn-Red.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--red);
+            border-color: var(--red);*/
+        border-color: var(--red);
+        color: var(--red);
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+        .btn-Red:not(:disabled):not(.disabled):active:hover, .btn-Red:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Red.dropdown-toggle:hover {
+            color: var(--Dark-color);
+            background-color: var(--red);
+            border-color: var(--red);
+        }
+
+        .btn-Red:not(:disabled):not(.disabled):active:focus, .btn-Red:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Red.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+        }
+
+/*Purple*/
+.btn-Gray {
+    border-color: var(--Font-color);
+    color: var(--Font-color);
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+    .btn-Gray:hover {
+        color: var(--Dark-color);
+        background-color: var(--Font-color);
+        border-color: var(--Font-color);
+    }
+
+    .btn-Gray:focus, .btn-Gray.focus {
+        box-shadow: 0 0 0 0.2rem var(--purple);
+    }
+
+    .btn-Gray.disabled, .btn-Gray:disabled {
+        color: var(--Font-color);
+        background-color: transparent;
+    }
+
+    .btn-Gray:not(:disabled):not(.disabled):active, .btn-Gray:not(:disabled):not(.disabled).active,
+    .show > .btn-Gray.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--Font-color);
+            border-color: var(--Font-color);*/
+        border-color: var(--Font-color);
+        color: var(--Font-color);
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+        .btn-Gray:not(:disabled):not(.disabled):active:hover, .btn-Gray:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Gray.dropdown-toggle:hover {
+            color: var(--Dark-color);
+            background-color: var(--Font-color);
+            border-color: var(--Font-color);
+        }
+
+        .btn-Gray:not(:disabled):not(.disabled):active:focus, .btn-Gray:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Gray.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem var(--purple);
+        }

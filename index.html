@@ -28,7 +28,7 @@
 </head>
 <body>
     <div class="d-none d-md-block">
-        <!--Hides on Medium-->
+        <!--Large Nav - Hides on Medium-->
         <header class="sidebar text-center d-flex pt-5">
             <nav>
                 <div class="py-3">
@@ -37,27 +37,27 @@
                     <div class="d-flex flex-row justify-content-center">
 
                         <!--Links To Other-->
-                        <button type="button" class="btn btn-outline-warning  mx-1" alt="GitHub" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw"></i> </button>
-                        <button type="button" class="btn btn-outline-success  mx-1" alt="Instagram" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram"></i></button>
-                        <button type="button" class="btn btn-outline-danger  mx-1" alt="Linkedin" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw"></i></button>
+                        <a type="button" class="btn btn-Yellow mx-1" alt="GitHub" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw"></i> </a>
+                        <a type="button" class="btn btn-Green mx-1" alt="Instagram" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram"></i></a>
+                        <a type="button" class="btn btn-Red mx-1" alt="Linkedin" href="https://www.linkedin.com/in/brandonwcuthbertson/"><i class="fab fa-linkedin-in fa-fw"></i></a>
                     </div>
                     <hr />
                     <div class="d-flex flex-column align-items-center">
                         <ul class="ulNav text-left tab">
-                            <li id="navAbout" class="tablinks active mx-2" onclick="openPage(event, 'About')">About Me </li>
+                            <li id="navAbout" class="tablinks mx-2" onclick="openPage(event, 'About')">About Me </li>
                             <li id="navPortfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')">Portfolio</li>
                             <li id="navResume" class="tablinks mx-2" onclick="openPage(event, 'Resume')">Resume</li>
                         </ul>
                     </div>
 
                     <hr />
-                    <button type="button" class="btn btn-outline-warning mb-5" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</button>
+                    <a type="button" class="btn btn-Gray mb-5" href="mailto:Brandon.Cuthbertson@outlook.com" target="_blank"> <i class="fas fa-address-card fa-fw mr-2 "></i>Get in Touch</a>
                     <hr class="mt-5" />
                 </div>
             </nav>
 
         </header>
-    </div> <!--Medium Nav-->
+    </div> <!--Small Nav - shows on medium-->
     <nav class="topnav p-3 d-block d-md-none">
         <div class="row ">
             <div class="tab col-9 d-flex justify-items-left flex-row">
@@ -82,10 +82,11 @@
                         <div class="col-xs-12 col-sm-6">
                             <h3 class="font-weight-bold">Brandon Cuthbertson</h3>
                             <h5 class="font-weight-light">Junior Full Stack Developer</h5>
-                            <p>Hi, my name is Brandon Cuthbertson and I'm a <b>Junior Full Stack Developer</b>. Welcome to my website, <i>I hope you like it!</i></p>
+                            <p>Hi, my name is Brandon Cuthbertson and I'm a <b>Junior Full Stack Developer</b>. Welcome to my website, <i>check out my Porfolio and Resume while your here!</i></p>
                             <br />
-                            <button class="btn btn-outline-warning m-2"> Check out my <b>Portfolio </b><i class="fas fa-chevron-right"></i></button>
-                            <button class="btn btn-outline-warning m-2"> Check out my <b>Resume</b> <i class="fas fa-chevron-right"></i></button>
+                            
+                            <a class="btn btn-Yellow m-2" onclick="openPage(event, 'Portfolio')"><b>Portfolio </b><i class="fas fa-chevron-right"></i></a>
+                            <a class="btn btn-Yellow m-2" onclick="openPage(event, 'Resume')" ><b>Resume &thinsp;</b> <i class="fas fa-chevron-right"></i></a>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <img class="navPhoto" src="IMG/BWC1.jpg" alt="ME" />
@@ -99,10 +100,11 @@
             <section>
                 <div class="container p-3 p-lg-5 ">
                     <div class="row">
-                        <div class="col-2 d-none d-md-block"></div>
-                        <div class="col-12 col-md-8">
+                        <div class="col-1 d-none d-md-block"></div>
+                        <div class="col-12 col-md-10 m-3">
                             <div>
                                 <h4>Who Am I</h4>
+                                <p>blahhhh</p>
                             </div>
                             <hr /> <!--Who Am I-->
                             <div>
@@ -114,7 +116,7 @@
                             </div>
                             <hr /><!--What I can Do-->
                         </div>
-                        <div class="col-2 d-none d-md-block"></div>
+                        <div class="col-1 d-none d-md-block"></div>
                     </div><!--Row-->
                 </div><!--Container-->
 
@@ -126,8 +128,44 @@
 
 
         <div id="Portfolio" class="tabcontent">
-            <h3>Portfolio</h3>
-            <p>Portfolio</p>
+            <section class="section-header p-3 p-lg-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h3 class="font-weight-bold">Portfolio</h3>
+                            <p>Welcome to my online portfolio! Here you will be able to view projects I have <i>completed</i>,
+                            if you want to look at what I am currently working on please feel free to check my <b>Github</b> or <b>Instagram</b> page. </p>
+                            <a href="https://www.instagram.com/bwc.dev/" class="btn btn-Green m-2"> Instagram <i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/BrandonCuthbertson" class="btn btn-Green m-2">Github <i class="fab fa-github-alt fa-fw"></i></a>
+                          </div>  
+                    </div><!--row-->
+
+                </div><!--Container-->
+            </section>
+            <section><!--BootStrap Cards-->
+            <div class="container">
+                <div class="row">
+
+                    <p class="p-2">All</p> <p class="p-2">Utilities</p> <p class="p-2">Front end</p> <p class="p-2">Backend</p> <p class="p-2">Mobile App</p> <p class="p-2">Windows App</p>
+
+                </div>
+                <div class="row">
+                    <!--Cards-->
+                    <div class="card red" style="width: 18rem;">
+                        <img class="card-img-top" src="IMG/BWC.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!--Selector end-->
+            
+            
+
+
+            </section>
         </div>
 
         <div id="Resume" class="tabcontent">
