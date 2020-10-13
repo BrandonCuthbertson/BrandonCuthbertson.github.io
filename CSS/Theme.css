@@ -503,7 +503,7 @@ hr {
     }
 
     .btn-Gray:focus, .btn-Gray.focus {
-        box-shadow: 0 0 0 0.2rem var(--purple);
+        box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
     }
 
     .btn-Gray.disabled, .btn-Gray:disabled {
@@ -531,5 +531,5 @@ hr {
 
         .btn-Gray:not(:disabled):not(.disabled):active:focus, .btn-Gray:not(:disabled):not(.disabled).active:focus,
         .show > .btn-Gray.dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.2rem var(--purple);
+            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }

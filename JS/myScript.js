@@ -10,6 +10,7 @@ if (sessionStorage.current != null) {
 
 }
 else {
+    removeTabs();
     tabName = 'About';
 document.getElementById(tabName).style.display = "block";
 document.getElementById('nav' + tabName).className += " active";
