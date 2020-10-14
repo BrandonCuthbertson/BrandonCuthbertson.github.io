@@ -1,23 +1,28 @@
+
+
+// Global Variables
 var tabName;
-// On load hides all tabs and displays About me
+
+
+// On page load will either load previous tab or default to About
 if (sessionStorage.current != null) {
    
     removeTabs();
     tabName = sessionStorage.getItem("current");
     document.getElementById(tabName).style.display = "block";
     document.getElementById('nav' + tabName).className += " active";
-    document.getElementById('Top-' + tabName).className += " active";
+    document.getElementById('top-' + tabName).className += " active";
 
 }
 else {
     removeTabs();
     tabName = "About";
     document.getElementById(tabName).style.display = "block";
-    document.getElementById('nav' + tabName).className += " active";
-    document.getElementById('Top-' + tabName).className += " active";
+    document.getElementById("nav" + tabName).className += " active";
+    document.getElementById("top-" + tabName).className += " active";
 }
 
-
+// Clears all Tabs on Main Page 
 function removeTabs(){
     // Declare all variables
     var i, tabcontent, tablinks;
@@ -36,6 +41,7 @@ function removeTabs(){
     }
 }
 
+//Laods Tabs
 function openPage(evt, pageName) {
     removeTabs();
 
@@ -43,4 +49,5 @@ function openPage(evt, pageName) {
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
     sessionStorage.setItem("current", pageName);
+    console.log("Logging Tab Name" + pageName);
 }
