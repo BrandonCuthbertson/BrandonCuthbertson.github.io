@@ -22,7 +22,8 @@
     <!--Font Awesome -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
-    
+
+
     <!-- My styles sheet CSS/JS-->
     <link rel="stylesheet" type="text/css" href="CSS/Theme.css" />
 </head>
@@ -61,11 +62,11 @@
     <nav class="topnav p-3 d-block d-md-none">
         <div class="row ">
             <div class="tab col-9 d-flex justify-items-left flex-row">
-               
-                <a id="top-About" class="tablinks mx-2" onclick="openPage(event, 'About')"><i class="fas fa-home mx-1" ></i></a>
+
+                <a id="top-About" class="tablinks mx-2" onclick="openPage(event, 'About')"><i class="fas fa-home mx-1"></i></a>
                 <a id="top-Portfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')"><i class="fas fa-code-branch mx-1"></i></a>
                 <a id="top-Resume" class="tablinks mx-2" onclick="openPage(event, 'Resume')"><i class="fas fa-file-alt mx-1"></i></a>
-                
+
             </div>
             <div class="col-3 d-flex justify-text-right ">
                 <a id="top-Contact" class="tablinks px-2 " onclick="openPage(event, 'Contact')"><i class="fas fa-address-card fa-fw "></i></a>
@@ -84,17 +85,17 @@
                             <h5 class="font-weight-light">Junior Full Stack Developer</h5>
                             <p>Hi, my name is Brandon Cuthbertson and I'm a <b>Junior Full Stack Developer</b>. Welcome to my website, <i>check out my Porfolio and Resume while your here!</i></p>
                             <br />
-                            
-                            <a class="btn btn-One m-2" onclick="openPage(event, 'Portfolio')"><b>Portfolio </b><i class="fas fa-chevron-right"></i></a>
-                            <a class="btn btn-One m-2" onclick="openPage(event, 'Resume')" ><b>Resume &thinsp;</b> <i class="fas fa-chevron-right"></i></a>
+
+                            <a class="btn btn-One my-2" onclick="openPage(event, 'Portfolio')"><b>Portfolio </b><i class="fas fa-chevron-right"></i></a>
+                            <a class="btn btn-One my-2" onclick="openPage(event, 'Resume')"><b>Resume &thinsp;</b> <i class="fas fa-chevron-right"></i></a>
                         </div>
                         <div class="col-xs-12 col-sm-6">
                             <img class="navPhoto" src="IMG/BWC1.jpg" alt="ME" />
                         </div>
                     </div><!--row-->
-                    
+
                 </div><!--Container-->
-                
+
 
             </section>
             <section>
@@ -104,26 +105,95 @@
                         <div class="col-10 col-md-12 m-2">
                             <div>
                                 <h4>Who Am I</h4>
-                                <p>blahhhh</p>
+                                <p>
+                                    Hi, I am Brandon Cuthbertson, a Junior Full-Stack Developer and videogame enthusiast who recently completed SAIT Polytechnic’s
+                                    Object-Oriented Software Development course and although my journey into coding has just begun I am excited to peek behind the curtain of the
+                                    many technologies that have provided me with wonder and delight. I am also a huge nerd and lover of fantasy and sci-fi and hope to use
+                                    my developing skills to create projects to further my passions.
+                                </p>
+
                             </div>
-                            <hr /> <!--Who Am I-->
+                            <hr />
+
                             <div>
                                 <h4>Education</h4>
+                                <b>Southern Alberta Institute of Technology</b>
+                                <p>
+                                    At SAIT I completed the Fast-Tracked Object-Oriented Software Development course, a 32-week certificate program where I learned a variety of programming languages,
+                                    web-based languages, and databases. As a fast-track course, it was condensed so I was very focused on gathering the information with the passion to create projects as I go forward.
+                                </p>
+                                <b>Additional Learning</b>
+                                <p>
+                                    I have also done Online learning that you can check out here:
+                                </p>
+                                <p class="justify-text-right">
+                                    <a class="btn btn-One my-2 text-left" target="_blank" title="Free Code Camp " href="https://www.freecodecamp.org/brandoncuthbertson"><i class="fab fa-free-code-camp"></i></a>
+                                </p>
+
                             </div>
                             <hr /> <!--Education-->
                             <div>
                                 <h4>What I can Do</h4>
+                                <!--Classes Are:  learning/basic/intermediate/advanced/expert-->
+                                <div class="col-12 offset-md-1">
+                                    <h5>Front-End</h5>
+                                    <div class="px-2 px-md-4">
+                                        <div class="col-12 col-md-8 ">
+                                            <div class="skillBar intermediate " id="HTML5" data-skill="HTML5"><i class="fab fa-html5 skillIcon" style="color: #E44D26;"></i></div>
+                                            <div class="skillBar intermediate" data-skill="CSS3"><i class="fab fa-css3-alt skillIcon" style="color: #264de4;"></i></div>
+                                            <div class="skillBar intermediate" data-skill="Bootstrap"><i class="fab fa-bootstrap skillIcon" style="color: #602C50;"></i></div>
+                                        </div>
+                                    </div>
+                                    <h5>Back-End</h5>
+                                    <div class="px-2 px-md-4">
+                                        <div class="col-12 col-md-8">
+                                            <div class="skillBar intermediate" data-skill="JavaScript"><i class="fab fa-js-square skillIcon" style="color: #f7e018"></i></div>
+
+                                            <div class="skillBar learning" data-skill="Node.js"><i class="fab fa-node-js skillIcon" style="color: #8bc500"></i></div>
+                                        </div>
+                                    </div>
+                                    <h5>Databases</h5>
+                                    <div class="px-2 px-md-4">
+                                        <div class="col-12 col-md-8">
+                                            <!--https://icons8.com/icon/39855/mysql-logo MySQL Logo icon by Ico-->
+                                            <div class="skillBar basic" data-skill="mySQL">
+                                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 226 226" style=" fill:#000000;left:-1em;top:inherit;" class="skillIcon">
+                                                    <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none">
+                                                        <path d="M0,226v-226h226v226z" fill="none"></path>
+                                                        <g fill="#f29111">
+                                                            <path d="M140.87922,36.16c-2.11875,-0.05297 -3.97266,0.75922 -4.92609,3.1075c-1.62438,3.93734 2.41891,7.78641 3.86672,9.79922c1.00641,1.39484 2.31297,2.96625 3.03688,4.53766c0.47672,1.04172 0.54734,2.08344 0.95344,3.17812c1.00641,2.70141 2.61312,5.77359 3.90203,8.28078c0.65328,1.27125 1.37719,2.59547 2.20703,3.72547c0.51203,0.68859 1.37719,1.00641 1.51844,2.06578c-0.8475,1.20063 -0.90047,3.05453 -1.37719,4.57297c-2.15406,6.79766 -1.34187,15.255 1.78328,20.26937c0.97109,1.55375 3.24875,4.85547 6.35625,3.60187c2.71906,-1.11234 2.11875,-4.55531 2.89562,-7.60984c0.17656,-0.67094 0.07063,-1.18297 0.42375,-1.64203v0.14125c0.81219,1.65969 1.64203,3.31938 2.47187,4.96141c1.85391,2.96625 5.12031,6.05609 7.87469,8.15719c1.43016,1.07703 2.56016,2.94859 4.41406,3.58422v-0.14125h-0.14125c-0.35313,-0.565 -0.91813,-0.79453 -1.37719,-1.23594c-1.07703,-1.05938 -2.27766,-2.38359 -3.16047,-3.60187c-2.52484,-3.40766 -4.74953,-7.15078 -6.76234,-11.03516c-0.97109,-1.85391 -1.81859,-3.90203 -2.63078,-5.79125c-0.31781,-0.74156 -0.31781,-1.83625 -0.97109,-2.22469c-0.90047,1.39484 -2.20703,2.50719 -2.89563,4.14922c-1.09469,2.61312 -1.25359,5.80891 -1.65969,9.11062c-0.24719,0.08828 -0.14125,0.01766 -0.26484,0.14125c-1.92453,-0.47672 -2.61312,-2.45422 -3.31938,-4.14922c-1.80094,-4.29047 -2.15406,-11.21172 -0.54734,-16.13781c0.40609,-1.28891 2.26,-5.31453 1.51844,-6.4975c-0.35313,-1.18297 -1.55375,-1.85391 -2.20703,-2.75437c-0.82984,-1.11234 -1.64203,-2.57781 -2.20703,-3.86672c-1.48313,-3.35469 -2.87797,-7.23906 -4.44938,-10.62906c-0.74156,-1.62438 -1.99516,-3.24875 -3.03688,-4.69656c-1.14766,-1.58906 -2.41891,-2.75437 -3.31937,-4.69656c-0.30016,-0.67094 -0.74156,-1.76562 -0.26484,-2.47187c0.14125,-0.47672 0.35313,-0.67094 0.82984,-0.82984c0.79453,-0.61797 3.01922,0.19422 3.86672,0.54734c2.20703,0.91812 4.06094,1.80094 5.9325,3.03687c0.90047,0.60031 1.80094,1.74797 2.89562,2.08344h1.23594c1.95984,0.44141 4.13156,0.12359 5.9325,0.68859c3.21344,0.97109 6.09141,2.48953 8.68688,4.13156c7.96297,5.01438 14.47813,12.16516 18.90984,20.69312c0.72391,1.37719 1.04172,2.70141 1.67734,4.14922c1.25359,2.93094 2.86031,5.96781 4.13156,8.82813c1.25359,2.87797 2.48953,5.75594 4.27281,8.13953c0.93578,1.25359 4.57297,1.94219 6.215,2.63078c1.14766,0.49437 3.05453,1.00641 4.13156,1.65969c2.10109,1.25359 4.11391,2.75437 6.07375,4.14922c0.98875,0.68859 3.99031,2.18937 4.14922,3.44297c-4.85547,-0.12359 -8.56328,0.31781 -11.72375,1.65969c-0.90047,0.38844 -2.34828,0.38844 -2.48953,1.51844c0.47672,0.51203 0.565,1.28891 0.95344,1.92453c0.75922,1.21828 2.03047,2.86031 3.17813,3.72547c1.25359,0.93578 2.52484,1.94219 3.86672,2.77203c2.36594,1.43016 5.01438,2.26 7.30969,3.70781c1.34188,0.86516 2.70141,1.94219 4.00797,2.89562c0.65328,0.49438 1.07703,1.23594 1.92453,1.53609v-0.14125c-0.44141,-0.565 -0.54734,-1.34188 -0.95344,-1.92453l-1.81859,-1.81859c-1.74797,-2.31297 -3.97266,-4.36109 -6.33859,-6.05609c-1.88922,-1.35953 -6.10906,-3.19578 -6.88594,-5.38516l-0.14125,-0.14125c1.32422,-0.14125 2.89562,-0.63562 4.13156,-0.97109c2.08344,-0.54734 3.91969,-0.40609 6.05609,-0.95344c0.97109,-0.2825 1.94219,-0.565 2.91328,-0.82984v-0.565c-1.07703,-1.09469 -1.85391,-2.57781 -3.03687,-3.58422c-3.08984,-2.63078 -6.46219,-5.26156 -9.94047,-7.45094c-1.92453,-1.21828 -4.30813,-2.01281 -6.33859,-3.03688c-0.68859,-0.35312 -1.88922,-0.52969 -2.34828,-1.11234c-1.07703,-1.35953 -1.65969,-3.08984 -2.48953,-4.67891c-1.73031,-3.33703 -3.42531,-6.97422 -4.96141,-10.48781c-1.04172,-2.38359 -1.73031,-4.74953 -3.03688,-6.90359c-6.26797,-10.29359 -13.01266,-16.52625 -23.46516,-22.63531c-2.22469,-1.30656 -4.89078,-1.80094 -7.71578,-2.47188c-1.53609,-0.10594 -3.03688,-0.19422 -4.57297,-0.2825c-0.91812,-0.38844 -1.88922,-1.51844 -2.75437,-2.08344c-2.17172,-1.35953 -6.44453,-3.72547 -9.97578,-3.77844zM155.83406,51.1325c-1.00641,-0.01766 -1.73031,0.12359 -2.48953,0.2825v0.14125h0.14125c0.47672,0.98875 1.34187,1.62437 1.94219,2.47187c0.45906,0.97109 0.90047,1.94219 1.35953,2.91328l0.14125,-0.14125c0.8475,-0.60031 1.25359,-1.57141 1.25359,-3.03688c-0.35313,-0.35312 -0.40609,-0.81219 -0.68859,-1.23594c-0.40609,-0.58266 -1.16531,-0.90047 -1.65969,-1.39484zM8.43969,108.46234c-1.35953,0.05297 -2.84266,0.31781 -4.44938,0.82984c-2.68375,0.81219 -4.00797,2.41891 -4.00797,5.68531v34.1825h9.05766v-33.35266l12.55359,28.51484c1.55375,3.54891 3.6725,4.82016 7.82172,4.82016c4.16688,0 6.19734,-1.27125 7.75109,-4.82016l12.55359,-27.79094v32.62875h9.04v-34.1825c0,-3.26641 -1.30656,-4.87313 -4.00797,-5.68531c-6.42688,-2.03047 -10.75266,-0.2825 -12.69484,4.11391l-12.88906,28.99156l-12.46531,-28.99156c-1.4125,-3.30172 -4.2375,-5.10266 -8.26312,-4.94375zM118.63234,108.48c-3.56656,0 -14.67234,0.42375 -14.67234,9.04v5.57938c0,3.955 3.47828,7.18609 11.0175,7.98062c0.8475,0.05297 1.695,0.12359 2.5425,0.12359c0,0 8.79281,-0.17656 9.04,-0.12359c5.085,0 4.52,3.955 4.52,4.52v4.52c0,0.61797 -0.14125,4.52 -4.57297,4.52h-22.54703v4.52h22.63531c2.96625,0 5.84422,-0.61797 8.13953,-1.695c3.81375,-1.74797 5.38516,-4.11391 5.38516,-7.22141v-6.46219c0,-6.93891 -8.61625,-7.22141 -13.56,-7.22141h-9.04c-3.54891,0 -4.09625,-2.15406 -4.52,-4.52v-4.52c0.42375,-1.80094 1.21828,-4.2375 4.36109,-4.52h22.75891v-4.52zM153.59172,108.48c-6.67406,0.91813 -9.02234,4.2375 -9.02234,9.04v22.6c0,4.39641 2.45422,7.04484 7.50391,8.42203c1.695,0.47672 3.23109,0.67094 4.67891,0.67094l10.06406,-0.05297h5.91484l5.03203,4.52h10.17l-6.99187,-6.30328c3.28406,-1.35953 4.30812,-3.44297 4.30812,-7.345v-22.51172c0,-4.8025 -3.12516,-8.12187 -9.79922,-9.04zM189.84,108.48v31.44578c0,5.45578 3.08984,8.52797 11.26469,9.14594c0.75922,0.03531 1.53609,0.08828 2.29531,0.08828h22.6v-4.52h-20.88734c-4.66125,0 -6.23266,-1.95984 -6.23266,-4.74953v-31.41047zM158.97687,113h11.63547c3.07219,0 5.13797,2.47187 5.59703,4.52c0,0 0.07062,21.04625 0.07062,22.6c0,1.55375 -0.86516,2.26 -0.86516,2.26l-2.45422,-2.26h-10.24063l5.03203,4.52h-8.77516c-3.14281,0 -4.90844,-2.33062 -5.3675,-4.52v-22.14094c0,-2.40125 1.83625,-4.97906 5.3675,-4.97906zM63.28,122.04c0.17656,0.17656 0,19.26297 0,19.63375c0.07062,3.955 5.085,7.41563 12.94203,7.48625h14.17797v0.30016c0,0.8475 0.61797,3.6725 -4.52,4.21984c-0.05297,0 -22.54703,0 -22.6,0v4.52h23.57109c3.99031,-0.12359 12.64188,-1.02406 12.58891,-7.94531c0,-0.12359 0.03531,-28.21469 0,-28.21469h-9.04v22.6c-0.14125,0 -11.19406,0.03531 -13.41875,0c-4.36109,-0.07063 -4.73188,-2.56016 -4.66125,-3.51359v-19.08641z"></path>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                            </div>
+                                            <!---->
+                                            <div class="skillBar basic" data-skill="MS&nbsp;SQL"><i class="fas fa-database skillIcon" style="color: #2687cf"></i></div> <!--&nbsp; has to be in it or else it will seperate the words on load-->
+                                            <div class="skillBar basic" data-skill="Oracle"><img class="skillIcon"style="left: -1em; top: inherit;" src="https://img.icons8.com/color/48/000000/oracle-logo.png" /></div>
+                                        </div>
+                                    </div>
+                                    <h5>Object-Orieneted Languages</h5>
+                                    <div class="px-2 px-md-4">
+                                        <div class="col-12 col-md-8">
+                                            <div class="skillBar intermediate" data-skill="C#"><!--C Sharp Lovo by Icons8 https://icons8.com/icon/55204/c-sharp-logo-->
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="skillIcon" x="0px" y="0px" width="50" height="50" viewBox="0 0 226 226" style=" fill:#000000;left:-1em;top:inherit;">
+                                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-size="none"  ><path d="M0,226v-226h226v226z" fill="none"></path><g fill="#813787"><path d="M113,9.04c-3.23109,0 -6.44453,0.81219 -9.34016,2.43656l-76.13375,42.78109c-5.79125,3.26641 -9.44609,9.35781 -9.44609,15.96125v85.56219c0,6.62109 3.65484,12.7125 9.44609,15.97891l76.13375,42.76344c5.79125,3.26641 12.88906,3.26641 18.68031,0l76.13375,-42.76344c5.80891,-3.26641 9.44609,-9.37547 9.44609,-15.97891v-85.56219c0,-6.60344 -3.65484,-12.69484 -9.44609,-15.96125l-76.13375,-42.78109c-2.89562,-1.62437 -6.10906,-2.43656 -9.34016,-2.43656zM113,18.08c1.695,0 3.40766,0.42375 4.92609,1.27125l76.13375,42.78109c3.01922,1.71266 4.82016,4.78484 4.82016,8.08656v85.56219c0,3.30172 -1.80094,6.37391 -4.83781,8.08656l-76.11609,42.78109c-3.03687,1.695 -6.81531,1.695 -9.85219,0l-76.11609,-42.78109c-3.03687,-1.71266 -4.83781,-4.76719 -4.83781,-8.08656v-85.56219c0,-3.30172 1.80094,-6.37391 4.83781,-8.08656l76.11609,-42.78109c1.51844,-0.8475 3.23109,-1.27125 4.92609,-1.27125zM113,54.24c-32.36391,0 -58.76,26.39609 -58.76,58.76c0,32.36391 26.39609,58.76 58.76,58.76c18.48609,0 35.64797,-8.61625 46.73609,-23.21797l3.08984,-4.07859l-27.36719,-15.85531l-2.47187,2.68375c-5.10266,5.57937 -12.34172,8.82813 -19.98688,8.82813c-14.99016,0 -27.12,-12.12984 -27.12,-27.12c0,-14.99016 12.12984,-27.12 27.12,-27.12c7.64516,0 14.88422,3.24875 19.98688,8.82813l2.47187,2.68375l27.36719,-15.85531l-3.08984,-4.07859c-11.08813,-14.60172 -28.25,-23.21797 -46.73609,-23.21797zM113,63.28c13.89547,0 26.60797,5.95016 35.91281,15.87297l-12.39469,7.16844c-6.53281,-5.72062 -14.65469,-9.48141 -23.51813,-9.48141c-19.89859,0 -36.16,16.26141 -36.16,36.16c0,19.89859 16.26141,36.16 36.16,36.16c8.86344,0 16.98531,-3.76078 23.51813,-9.48141l12.39469,7.16844c-9.30484,9.92281 -22.01734,15.87297 -35.91281,15.87297c-27.45547,0 -49.72,-22.26453 -49.72,-49.72c0,-27.45547 22.26453,-49.72 49.72,-49.72zM158.2,90.4v9.04h-9.04v9.04h9.04v9.04h-9.04v9.04h9.04v9.04h9.04v-9.04h9.04v9.04h9.04v-9.04h9.04v-9.04h-9.04v-9.04h9.04v-9.04h-9.04v-9.04h-9.04v9.04h-9.04v-9.04zM167.24,108.48h9.04v9.04h-9.04z"></path>
+                                                                                     </g></g></svg></div>
+                                            <div class="skillBar learning" data-skill="Python"><i class="fab fa-python skillIcon" style="color: #ffe973"></i></div>
+                                            <div class="skillBar learning" data-skill="Java"><i class="fab fa-java skillIcon" style="color: #36586c;"></i></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <hr /><!--What I can Do-->
-                        </div>
-                        <div class="col-1 d-none d-md-block"></div>
-                    </div><!--Row-->
-                </div><!--Container-->
+                                    <hr /><!--What I can Do-->
+                                </div>
+                                <div class="col-1 d-none d-md-block"></div>
+                            </div><!--Row-->
+                                </div><!--Container-->
 
-            </section>
+</section>
 
-           
-           
+
+
         </div><!--ABout-->
 
 
@@ -133,37 +203,40 @@
                     <div class="row">
                         <div class="col-12 text-center">
                             <h3 class="font-weight-bold">Portfolio</h3>
-                            <p>Welcome to my online portfolio! Here you will be able to view projects I have <i>completed</i>,
-                            if you want to look at what I am currently working on please feel free to check my <b>Github</b> or <b>Instagram</b> page. </p>
-                            <a href="https://www.instagram.com/bwc.dev/" class="btn btn-Two m-2"> Instagram <i class="fab fa-instagram"></i></a>
-                            <a href="https://github.com/BrandonCuthbertson" class="btn btn-Two m-2">Github <i class="fab fa-github-alt fa-fw"></i></a>
-                          </div>  
+                            <p>
+                                Welcome to my online portfolio! Here you will be able to view projects I have <i>completed</i>,
+                                if you want to look at what I am currently working on please feel free to check my <b>Github</b> or <b>Instagram</b> page.
+                            </p>
+                            <a href="https://www.instagram.com/bwc.dev/" class="btn btn-Two my-2"> Instagram <i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/BrandonCuthbertson" class="btn btn-Two my-2">Github <i class="fab fa-github-alt fa-fw"></i></a>
+                        </div>
                     </div><!--row-->
 
                 </div><!--Container-->
             </section>
-            <section><!--BootStrap Cards-->
-            <div class="container">
-                <div class="row">
+            <section>
+                <!--BootStrap Cards-->
+                <div class="container">
+                    <div class="row">
 
-                    <p class="p-2">All</p> <p class="p-2">Utilities</p> <p class="p-2">Front end</p> <p class="p-2">Backend</p> <p class="p-2">Mobile App</p> <p class="p-2">Windows App</p>
+                        <p class="p-2">All</p> <p class="p-2">Utilities</p> <p class="p-2">Front end</p> <p class="p-2">Backend</p> <p class="p-2">Mobile App</p> <p class="p-2">Windows App</p>
 
-                </div>
-                <div class="row">
-                    <!--Cards-->
-                    <div class="card" style="width: 12rem;">
-                        <h6 class="text-center"><i class="fab fa-bootstrap m-1"></i><i class="fab fa-bootstrap m-1"></i><i class="fab fa-bootstrap"></i><i class="fab fa-bootstrap"></i><i class="fab fa-bootstrap"></i></h6>
-                        <img class="card-img-top" src="IMG/BWC.jpg" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="row">
+                        <!--Cards-->
+                        <div class="card" style="width: 12rem;">
+                            <h6 class="text-center"><i class="fab fa-bootstrap m-1"></i><i class="fab fa-bootstrap m-1"></i><i class="fab fa-bootstrap"></i><i class="fab fa-bootstrap"></i><i class="fab fa-bootstrap"></i></h6>
+                            <img class="card-img-top" src="IMG/BWC.jpg" alt="Card image cap">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div><!--Selector end-->
-            
-            
+                </div><!--Selector end-->
+
+
 
 
             </section>
@@ -178,12 +251,13 @@
                             <p>
                                 Welcome to my resume page, here you will find a download link for <i>two resumes</i>.
                                 The first is a <b>condensed resume</b> that just covers the basics.
-                                The other being a<b> cover letter and resume hybrid</b> using the wonderful devCard template by 
-                     <a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/">Xiao Riley.</a>
+                                The other being a<b> cover letter and resume hybrid</b> using the wonderful devCard template by
+                                <a href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/devcard-bootstrap-4-vcard-portfolio-template-for-software-developers/">Xiao Riley.</a>
                             </p>
-                            <a href="https://www.linkedin.com/in/brandoncuthbertson/" class="btn btn-Three m-2"> Feel Free To Check out my <b>LinkedIn</b> <i class="fab fa-linkedin"></i></a>                        </div>
+                            <a href="https://www.linkedin.com/in/brandoncuthbertson/" class="btn btn-Three m-2"> Check out my <b>LinkedIn</b> <i class="fab fa-linkedin"></i></a>
+                        </div>
                     </div><!--row-->
-                    </div><!--Container-->
+                </div><!--Container-->
             </section>
             <section>
                 <div class="container">

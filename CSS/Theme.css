@@ -15,6 +15,7 @@
     --Mono: white; /*var(--Mono);*/
 }
 
+
 @media (max-width: 767px) {
     .jumbotron {
         background-color: var(--Dark-color);
@@ -279,6 +280,76 @@ hr {
 .main-body #About .font-weight-bold, .main-body #About .font-italic, .main-body #About p b, .main-body #About p i {
     color: var(--yellow);
 }
+/*ABOUT SKILLBAR*/
+
+@keyframes load {
+    from {
+        width: 0%
+    }
+}
+@-webkit-keyframes load {
+    from {
+        width: 0%
+    }
+}
+@-moz-keyframes load {
+    from {
+        width: 0%
+    }
+}
+@-o-keyframes load {
+    from {
+        width: 0%
+    }
+}
+.skillBar {
+    background-color: var(--Dark-color);
+    padding: 2px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid var(--yellow);
+    
+}
+    .skillBar::before {
+        content: attr(data-skill);
+        background: repeating-linear-gradient( -55deg, var(--Dark-color), var(--Dark-color) 20px, var(--Font-color) 20px, var(--Font-color) 25px);
+        border: 2px solid var(--Font-color);
+        color: var(--yellow);
+        display: inline-block;
+        padding: 5px 0 5px 10px;
+        border-radius: inherit;
+        animation: load 2s 0s;
+        -webkit-animation: load 2s 0s;
+        -moz-animation: load 2s 0s;
+        -o-animation: load 2s 0s;
+    }
+    .skillBar.learning::before {
+        width: calc(20% - 10px);
+    }
+
+    .skillBar.basic::before {
+        width: calc(40% - 10px);
+    }
+
+    .skillBar.intermediate::before {
+        width: calc(60% - 10px);
+    }
+
+    .skillBar.advanced::before {
+        width: calc(80% - 10px);
+    }
+
+    .skillBar.expert::before {
+        width: calc(100% - 10px);
+    }
+
+.skillIcon {
+    position:absolute;
+    top:inherit;
+    left: -0.5em;
+    font-size: 2em;
+}
+
 /*Portfolio*/
 .main-body #Portfolio .section-header {
     border: 2px solid var(--green);
@@ -349,6 +420,9 @@ hr {
 
 /*Changing Bootstrap button to match color scheme*/
 /*yellow*/
+.border-One {
+    border-color: var(--yellow) !important;
+}
 .btn-One {
     border-color: var(--yellow);
     color: var(--yellow);
@@ -396,6 +470,9 @@ hr {
 
 
 /*Green*/
+.border-Two {
+    border-color: var(--green) !important;
+}
 .btn-Two {
     color: var(--green);
     background-color: transparent;
@@ -444,6 +521,9 @@ hr {
         }
 
 /*Red*/
+.border-Three {
+    border-color: var(--red) !important;
+}
 .btn-Three {
     border-color: var(--red);
     color: var(--red);
@@ -488,7 +568,10 @@ hr {
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
         }
 
-/*Purple*/
+/*Grey*/
+.border-Four {
+    border-color: var(--Font-color) !important;
+}
 .btn-Four {
     border-color: var(--Font-color);
     color: var(--Font-color);
