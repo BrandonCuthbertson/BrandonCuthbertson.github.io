@@ -41,13 +41,15 @@ function removeTabs(){
     }
 }
 
-//Laods Tabs
+//Loads Tabs
 function openPage(evt, pageName) {
     removeTabs();
 
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
-    sessionStorage.setItem("current", pageName);
-    console.log("Logging Tab Name" + pageName);
+    sessionStorage.setItem("current", pageName); //adds it to session
+    console.log("Logging Tab Name " + pageName);
 }
+
+//Sets all to hidden then shows selected

@@ -27,6 +27,8 @@
 }
 
 
+
+
 body {
     background-color: var(--Dark-color);
     color: var(--Font-color);
@@ -112,11 +114,11 @@ hr {
 
 /*Layout*/
 .tabcontent {
-    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    animation: fade 1s; 
 }
 
 /* Go from zero to full opacity */
-@keyframes fadeEffect {
+@keyframes fade {
     from {
         opacity: 0;
     }
@@ -312,7 +314,7 @@ hr {
 }
     .skillBar::before {
         content: attr(data-skill);
-        background: repeating-linear-gradient( -55deg, var(--Dark-color), var(--Dark-color) 20px, var(--Font-color) 20px, var(--Font-color) 25px);
+        background: repeating-linear-gradient( -45deg, var(--Dark-color), var(--Dark-color) 20px, var(--Font-color) 20px, var(--Font-color) 25px);
         border: 2px solid var(--Font-color);
         color: var(--yellow);
         display: inline-block;
@@ -358,16 +360,24 @@ hr {
     overflow: visible;
 }
 
-.main-body #Portfolio h4:before {
-    content: "\258e";
-    display: inline-block;
-    margin-left: -1.0em;
-    width: 1.3em;
-    color: var(--green);
+.main-body #Portfolio #Portfolio-Nav a{
+    color:var(--green);
 }
+    .main-body #Portfolio #Portfolio-Nav a:hover {
+        color: var(--Mono);
+        text-decoration: none;
+    }
+    .main-body #Portfolio #Portfolio-Nav .active {
+        color: var(--Mono);
+        text-decoration: none;
+        font-weight: bold;
+    }
 
 .main-body #Portfolio hr {
     background-color: var(--green);
+}
+#Portfolio h5 {
+    color: var(--green);
 }
 
 
@@ -414,13 +424,42 @@ hr {
     border: 2px solid;
     overflow: hidden;
     background-color: var(--Dark-color);
+    width: 15em;
+    height: 20em;
+    /*Remember the border-# for border colors*/
 }
+    .card .btn {
+        bottom: -0.5em;
+        position: absolute;
+        right:2em;
+        left:2em;
+    }
+.card img{
+    width:15em;
+    height:5em;
+}
+/*Card Image Id's*/
+    .card #template {
+        background: url('../IMG/BWC1.jpg') 0px -35px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .card #website {
+        background: url('../IMG/Website-code.png') 0px 0px;
+        filter: contrast(100%);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
+    }
+
+
+
    
 
 
 /*Changing Bootstrap button to match color scheme*/
 /*yellow*/
-.border-One {
+.border-One { /*For Bootstrap Cards*/
     border-color: var(--yellow) !important;
 }
 .btn-One {
@@ -470,7 +509,7 @@ hr {
 
 
 /*Green*/
-.border-Two {
+.border-Two { /*For Bootstrap Cards*/
     border-color: var(--green) !important;
 }
 .btn-Two {
@@ -521,7 +560,7 @@ hr {
         }
 
 /*Red*/
-.border-Three {
+.border-Three { /*For Bootstrap Cards*/
     border-color: var(--red) !important;
 }
 .btn-Three {
@@ -569,7 +608,7 @@ hr {
         }
 
 /*Grey*/
-.border-Four {
+.border-Four { /*For Bootstrap Cards*/
     border-color: var(--Font-color) !important;
 }
 .btn-Four {
@@ -614,5 +653,54 @@ hr {
 
         .btn-Four:not(:disabled):not(.disabled):active:focus, .btn-Four:not(:disabled):not(.disabled).active:focus,
         .show > .btn-Four.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
+        }
+/*Purple*/
+.border-Special { /*For Bootstrap Cards*/
+    border-color: var(--purple) !important;
+}
+
+.btn-Special {
+    border-color: var(--purple);
+    color: var(--purple);
+    border-radius: 12px;
+    border-width: 2px;
+}
+
+    .btn-Special:hover {
+        color: var(--Dark-color);
+        background-color: var(--purple);
+        border-color: var(--purple);
+    }
+
+    .btn-Special:focus, .btn-Special.focus {
+        box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+    }
+
+    .btn-Special.disabled, .btn-Special:disabled {
+        color: var(--purple);
+        background-color: transparent;
+    }
+
+    .btn-Special:not(:disabled):not(.disabled):active, .btn-Special:not(:disabled):not(.disabled).active,
+    .show > .btn-Special.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--Font-color);
+            border-color: var(--Font-color);*/
+        border-color: var(--purple);
+        color: var(--Font-color);
+        border-radius: 12px;
+        border-width: 2px;
+    }
+
+        .btn-Special:not(:disabled):not(.disabled):active:hover, .btn-Special:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Special.dropdown-toggle:hover {
+            color: var(--Dark-color);
+            background-color: var(--purple);
+            border-color: var(--purple);
+        }
+
+        .btn-Special:not(:disabled):not(.disabled):active:focus, .btn-Special:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Special.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }

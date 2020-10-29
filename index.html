@@ -25,21 +25,23 @@
 
     <!-- My styles sheet CSS/JS-->
     <link rel="stylesheet" type="text/css" href="CSS/Theme.css" />
+    <!--Javascript the NEEDS to Load before page-->
+    <script src="JS/database.js"></script>
 </head>
 <body>
     <div class="d-none d-md-block">
         <!--Large Nav - Hides on Medium-->
         <header class="sidebar text-center d-flex pt-5">
             <nav>
-                <div class="py-3">
-                    <img class="navPhoto m-3" src="IMG/BWC1.jpg" />
+                <div class="py-3 ">
+                    <img class="navPhoto m-3 " src="IMG/BWC1.jpg" />
 
                     <div class="d-flex flex-row justify-content-center">
 
                         <!--Links To Other-->
-                        <a type="button" class="btn btn-One mx-1" alt="GitHub" href="https://github.com/BrandonCuthbertson"><i class="fab fa-github-alt fa-fw"></i> </a>
-                        <a type="button" class="btn btn-Two mx-1" alt="Instagram" href="https://www.instagram.com/bwc.dev/"><i class="fab fa-instagram"></i></a>
-                        <a type="button" class="btn btn-Three mx-1" alt="Linkedin" href="https://www.linkedin.com/in/brandoncuthbertson/"><i class="fab fa-linkedin-in fa-fw"></i></a>
+                        <a type="button" class="btn btn-One mx-1" alt="GitHub" href="https://github.com/BrandonCuthbertson" target="_blank"><i class="fab fa-github-alt fa-fw"></i> </a>
+                        <a type="button" class="btn btn-Two mx-1" alt="Instagram" href="https://www.instagram.com/bwc.dev/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a type="button" class="btn btn-Three mx-1" alt="Linkedin" href="https://www.linkedin.com/in/brandoncuthbertson/" target="_blank"><i class="fab fa-linkedin-in fa-fw"></i></a>
                     </div>
                     <hr />
                     <div class="d-flex flex-column align-items-center">
@@ -100,39 +102,46 @@
             <section>
                 <div class="container p-3 p-lg-5 ">
                     <div class="row">
-                        <div class="col-1 d-none d-md-block"></div>
+
                         <div class="col-10 col-md-12 m-2">
                             <div>
-                                <h4>Who Am I</h4>
-                                <p>
-                                    Hi, I am Brandon Cuthbertson, a Junior Full-Stack Developer and videogame enthusiast who recently completed SAIT Polytechnic’s
-                                    Object-Oriented Software Development course and although my journey into coding has just begun I am excited to peek behind the curtain of the
-                                    many technologies that have provided me with wonder and delight. I am also a huge nerd and lover of fantasy and sci-fi and hope to use
-                                    my developing skills to create projects to further my passions.
-                                </p>
 
-                            </div>
+                                <h4>Who Am I</h4>
+
+
+                                <div id="About-Me">
+                                    <!--WHO AM I BODY-->
+                                    <p>
+                                        Hi, I am Brandon Cuthbertson, a Junior Full-Stack Developer and videogame enthusiast who recently completed SAIT Polytechnic’s
+                                        Object-Oriented Software Development course and although my journey into coding has just begun I am excited to peek behind the curtain of the
+                                        many technologies that have provided me with wonder and delight. I am also a huge nerd and lover of fantasy and sci-fi and hope to use
+                                        my developing skills to create projects to further my passions.
+                                    </p>
+
+                                </div>
+                            </div><!--Who Am I div-->
                             <hr />
 
                             <div>
                                 <h4>Education</h4>
-                                <b>Southern Alberta Institute of Technology</b>
-                                <p>
-                                    At SAIT I completed the Fast-Tracked Object-Oriented Software Development course, a 32-week certificate program where I learned a variety of programming languages,
-                                    web-based languages, and databases. As a fast-track course, it was condensed so I was very focused on gathering the information with the passion to create projects as I go forward.
-                                </p>
-                                <b>Additional Learning</b>
-                                <p>
-                                    I have also done Online learning that you can check out here:
-                                </p>
-                                <p class="justify-text-right">
-                                    <a class="btn btn-One my-2 text-left" target="_blank" title="Free Code Camp " href="https://www.freecodecamp.org/brandoncuthbertson"><i class="fab fa-free-code-camp"></i></a>
-                                </p>
-
+                                <div>
+                                    <b>Southern Alberta Institute of Technology</b>
+                                    <p>
+                                        At SAIT I completed the Fast-Tracked Object-Oriented Software Development course, a 32-week certificate program where I learned a variety of programming languages,
+                                        web-based languages, and databases. As a fast-track course, it was condensed so I was very focused on gathering the information with the passion to create projects as I go forward.
+                                    </p>
+                                    <b>Additional Learning</b>
+                                    <p>
+                                        I have also done Online learning that you can check out here:
+                                    </p>
+                                    <p class="justify-text-right">
+                                        <a class="btn btn-One my-2 text-left" target="_blank" title="Free Code Camp " href="https://www.freecodecamp.org/brandoncuthbertson"><i class="fab fa-free-code-camp"></i></a>
+                                    </p>
+                                </div>
                             </div>
                             <hr /> <!--Education-->
                             <div>
-                                <h4>What I can Do</h4>
+                                <h4>What Can I Do?</h4>
                                 <!--Classes Are:  learning/basic/intermediate/advanced/expert-->
                                 <div class="col-12 offset-md-1">
                                     <h5>Front-End</h5>
@@ -147,7 +156,7 @@
                                     <div class="px-2 px-md-4">
                                         <div class="col-12 col-md-8">
                                             <div class="skillBar intermediate" data-skill="JavaScript"><i class="fab fa-js-square skillIcon" style="color: #f7e018"></i></div>
-
+                                            <div class="skillBar learning" data-skill="ASP.net"><i class="fab fa-microsoft skillIcon" style="color: #5027D5"></i></div>
                                             <div class="skillBar learning" data-skill="Node.js"><i class="fab fa-node-js skillIcon" style="color: #8bc500"></i></div>
                                         </div>
                                     </div>
@@ -155,27 +164,27 @@
                                     <div class="px-2 px-md-4">
                                         <div class="col-12 col-md-8">
                                             <div class="skillBar basic" data-skill="mySQL"><i class="fas fa-database skillIcon" style="color: #f29111"></i></div>
-                                            <div class="skillBar basic" data-skill="MS&nbsp;SQL"><i class="fas fa-database skillIcon" style="color: #2687cf"></i></div> <!--&nbsp; has to be in it or else it will seperate the words on load-->
+                                            <div class="skillBar learning" data-skill="MS&nbsp;SQL"><i class="fas fa-database skillIcon" style="color: #2687cf"></i></div> <!--&nbsp; has to be in it or else it will seperate the words on load-->
                                             <div class="skillBar basic" data-skill="Oracle"><i class="fas fa-database skillIcon" style="color: #FF0000"></i></div>
                                         </div>
                                     </div>
                                     <h5>Object-Orieneted Languages</h5>
                                     <div class="px-2 px-md-4">
                                         <div class="col-12 col-md-8">
-                                            <div class="skillBar intermediate" data-skill="C#"><i class="fas fa-laptop-code skillIcon" style="color: #9969d5;left: -0.7em;"></i></div>
+                                            <div class="skillBar intermediate" data-skill="C#"><i class="skillIcon" style="color: #9969d5;left: -0.7em;top:-0.1em;">C#</i></div>
                                             <div class="skillBar learning" data-skill="Python"><i class="fab fa-python skillIcon" style="color: #ffe973"></i></div>
                                             <div class="skillBar learning" data-skill="Java"><i class="fab fa-java skillIcon" style="color: #36586c;"></i></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                    <hr /><!--What I can Do-->
-                                </div>
-                                <div class="col-1 d-none d-md-block"></div>
-                            </div><!--Row-->
-                                </div><!--Container-->
+                            <hr /><!--What I can Do-->
+                        </div>
+                        <div class="col-1 d-none d-md-block"></div>
+                    </div><!--Row-->
+                </div><!--Container-->
 
-</section>
+            </section>
 
 
 
@@ -202,23 +211,58 @@
             <section>
                 <!--BootStrap Cards-->
                 <div class="container">
-                    <div class="row">
+                    <span id="Portfolio-Nav" class="nav d-flex justify-content-center mx-3">
+                        <a href="#" class="p-3 active">All</a>
+                        <a href="#" class="p-3">Front-End</a>
+                        <a href="#" class="p-3">Back-End</a>
+                        <a href="#" class="p-3">Mobile-App</a>
+                        <a href="#" class="p-3">Windows-App</a>
+                        <a href="#" class="p-3">Games</a>
+                    </span>
+                    <br />
+                    <div class="container p-2">
+                        <div id="myCard" class="row">
 
-                        <p class="p-2">All</p> <p class="p-2">Utilities</p> <p class="p-2">Front end</p> <p class="p-2">Backend</p> <p class="p-2">Mobile App</p> <p class="p-2">Windows App</p>
+                            <!--Cards-->
 
-                    </div>
-                    <div class="row">
-                        <!--Cards-->
-                        <div class="card" style="width: 12rem;">
-                            <h6 class="text-center"><i class="fab fa-bootstrap m-1"></i><i class="fab fa-bootstrap m-1"></i><i class="fab fa-bootstrap"></i><i class="fab fa-bootstrap"></i><i class="fab fa-bootstrap"></i></h6>
-                            <img class="card-img-top" src="IMG/BWC.jpg" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
+                            <script>
+                                text = "";
+                                /*cardDb[0] is template]*/
+                                for (i = 1; i < cardDBLength; i++) { 
+                                    text += "<div class='card border-Two my-4 mx-auto text-center'" + cardDB[i].Tag + ">" +
+                                        " <img class='card-img-top' id=" + cardDB[i].Picture+">" +
+                                        "<div class='card-body '>" +
+                                        " <h5 class='card-title'>" + cardDB[i].Title +"</h5>" +
+                                        "<p class='card-text'>" + cardDB[i].Desc +"</p>" +
+                                        
+                                        "   </div>" +
+                                        
+                                        "<a href='" + cardDB[i].Link + "' class='btn btn-Two mx-auto' target='_blank'>Learn More</a>" +
+                                        
+                                        "   </div>";
+
+                                    document.getElementById("myCard").innerHTML = text;
+                                    console.log("Counting: " + [i]);
+                                }
+
+                            </script>
+                            <!--Card End-->
+                            <!--Cards-->
+                            <!--<div class="card border-Two my-4 mx-auto">
+                                <img class="card-img-top " src="IMG/BWC.jpg" alt="Card image cap">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title ">Template</h5>
+                                    <p class="card-text">A Quick Summary of the Project and what im working on</p>
+                                    <a href="#" class="btn btn-Two" target="_blank">Learn More</a>
+                                </div>
+                            </div>-->
+                            <!--Card End-->
+
                         </div>
+
+
                     </div>
+
                 </div><!--Selector end-->
 
 
@@ -274,14 +318,15 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!--my java-->
-
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         //Calls the Other Html Pages
         $(document).ready(function () {
 
             $('#footer-placeholder').load('HTML/Footer.html');
         });
-    </script>
+    </script>-->
     <script src="JS/myScript.js"></script>
+    
+
 </body>
 </html>
