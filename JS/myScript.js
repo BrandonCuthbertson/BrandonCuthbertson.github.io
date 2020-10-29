@@ -22,6 +22,9 @@ else {
     document.getElementById("top-" + tabName).className += " active";
 }
 
+/*
+ * Different Tabs
+ */
 // Clears all Tabs on Main Page 
 function removeTabs(){
     // Declare all variables
@@ -52,4 +55,41 @@ function openPage(evt, pageName) {
     console.log("Logging Tab Name " + pageName);
 }
 
+
+/*
+ * PORTFOLIO CARDS
+ */
 //Sets all to hidden then shows selected
+function togglePortfolio(evt, portfolioItem) {
+    // Declare all variables
+    var i, porfolioCard, portfolioLink;
+
+
+    // Get all elements with class="porfolioCard" and hide them
+    porfolioCard = document.getElementsByClassName("porfolioCard");
+    for (i = 0; i < porfolioCard.length; i++) {
+        porfolioCard[i].style.display = "none";
+    }
+
+    // Get all elements with class="portfolioLink" and remove the class "active"
+    portfolioLink = document.getElementsByClassName("portfolioLink");
+    for (i = 0; i < portfolioLink.length; i++) {
+        portfolioLink[i].className = portfolioLink[i].className.replace(" active", "");
+    }
+
+    // Get all elements with class="portfolioItem" and show them
+    porfolioCard = document.getElementsByClassName(portfolioItem);
+    for (i = 0; i < porfolioCard.length; i++) {
+        porfolioCard[i].style.display = "block";
+    }
+
+    // Set portfolioLink to active
+    portfolioLink = document.getElementsByClassName(portfolioItem);
+    for (i = 0; i < portfolioLink.length; i++) {
+        portfolioLink[i].className = portfolioLink[i].className.replace(" active", "");
+    }
+    evt.currentTarget.className += " active";
+    
+    console.log(portfolioLink + " Activated");
+
+}

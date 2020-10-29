@@ -212,12 +212,12 @@
                 <!--BootStrap Cards-->
                 <div class="container">
                     <span id="Portfolio-Nav" class="nav d-flex justify-content-center mx-3">
-                        <a href="#" class="p-3 active">All</a>
-                        <a href="#" class="p-3">Front-End</a>
-                        <a href="#" class="p-3">Back-End</a>
-                        <a href="#" class="p-3">Mobile-App</a>
-                        <a href="#" class="p-3">Windows-App</a>
-                        <a href="#" class="p-3">Games</a>
+                        <a class="p-3 portfolioLink active"  onclick="togglePortfolio(event, 'All')">All</a>
+                        <a class="p-3 portfolioLink" onclick="togglePortfolio(event, 'Front-End')">Front-End</a>
+                        <a class="p-3 portfolioLink" onclick="togglePortfolio(event, 'Back-End')">Back-End</a>
+                        <a class="p-3 portfolioLink" onclick="togglePortfolio(event, 'Mobile-App')">Mobile-App</a>
+                        <a class="p-3 portfolioLink" onclick="togglePortfolio(event, 'Windows-App')">Windows-App</a>
+                        <a class="p-3 portfolioLink" onclick="togglePortfolio(event, 'Games')">Games</a>
                     </span>
                     <br />
                     <div class="container p-2">
@@ -229,7 +229,7 @@
                                 text = "";
                                 /*cardDb[0] is template]*/
                                 for (i = 1; i < cardDBLength; i++) { 
-                                    text += "<div class='card border-Two my-4 mx-auto text-center'" + cardDB[i].Tag + ">" +
+                                    text += "<div class='card border-Two my-4 mx-auto text-center porfolioCard All " + cardDB[i].Tag + "'>" +
                                         " <img class='card-img-top' id=" + cardDB[i].Picture+">" +
                                         "<div class='card-body '>" +
                                         " <h5 class='card-title'>" + cardDB[i].Title +"</h5>" +
