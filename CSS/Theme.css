@@ -27,10 +27,7 @@
 }
 
 
-html {
-    
-    filter: invert(90%);
-}
+
 
 body {
     background-color: var(--Dark-color);
