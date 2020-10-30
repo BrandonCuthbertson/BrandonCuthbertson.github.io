@@ -52,7 +52,7 @@ function openPage(evt, pageName) {
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
     sessionStorage.setItem("current", pageName); //adds it to session
-    console.log("Logging Tab Name " + pageName);
+    //console.log("Logging Tab Name " + pageName);
 }
 
 
@@ -90,6 +90,6 @@ function togglePortfolio(evt, portfolioItem) {
     }
     evt.currentTarget.className += " active";
     
-    console.log(portfolioLink + " Activated");
+    //console.log(portfolioLink + " Activated");
 
 }
