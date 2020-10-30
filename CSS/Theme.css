@@ -14,6 +14,10 @@
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: white; /*var(--Mono);*/
 }
+html {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
 
 
 @media (max-width: 767px) {
@@ -256,6 +260,7 @@ hr {
         margin-left: 0px;
         position: relative;
         width: 100%;
+        z-index:0;
     }
 }
 /*ABOUT*/
