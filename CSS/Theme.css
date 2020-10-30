@@ -27,11 +27,15 @@
 }
 
 
-
+html {
+    
+    filter: invert(90%);
+}
 
 body {
     background-color: var(--Dark-color);
     color: var(--Font-color);
+   
 }
 
 hr {
