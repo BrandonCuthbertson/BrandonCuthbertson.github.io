@@ -52,18 +52,18 @@ hr {
     z-index: 2;
 }
 
-.navPhoto {
+.profile-picture {
     border-radius: 25%;
     height: auto;
     width: inherit;
     border: 2px solid var(--Font-color);
 }
 
-.sidebar .navPhoto {
+.sidebar .profile-picture {
     max-height: 150px;
 }
 
-.main-body .navPhoto {
+.main-body .profile-picture {
     border-radius: 25%;
     height: auto;
     width: inherit;
@@ -277,7 +277,7 @@ hr {
 }
 
 
-.main-body #About .navPhoto {
+.main-body #About .profile-picture {
     border: 2px solid var(--yellow);
 }
 
@@ -383,7 +383,7 @@ hr {
 }
 
 
-.main-body #Portfolio .navPhoto {
+.main-body #Portfolio .profile-picture {
     border: 2px solid var(--green);
 }
 
@@ -411,7 +411,7 @@ hr {
 }
 
 
-.main-body #Resume .navPhoto {
+.main-body #Resume .profile-picture {
     border: 2px solid var(--red);
 }
 
@@ -706,3 +706,41 @@ hr {
         .show > .btn-Special.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }
+/*! 
+ * Template Name: Dev - Bootstrap 4 Resume/CV Template for Software Developers
+ * Template Name: Dev - Bootstrap 4 Resume/CV Template for Software Developers
+ * Version: 1.2
+ * Author: Xiaoying Riley
+ * Copyright: 3rd Wave Media Ltd.
+ * Twitter: @3rdwave_themes
+ * Website: http://themes.3rdwavemedia.com/
+*/
+/*!
+    Modified for Websites
+*/
+.resume-wrapper{border:1px solid rgba(0,0,0,0.025)}
+    .resume-wrapper h4:before {content: "" !important;}/*Added*/
+.resume-section-heading{position:relative;padding-left:1rem;font-size:1.125rem;letter-spacing:0.15rem;color:var(--red);}
+.resume-section-heading:before{content:"";display:inline-block;width:5px;height:100%;background:var(--red);position:absolute;left:0;top:0}
+
+.resume-name{font-size:2.75vw;font-weight:900;letter-spacing:0.4rem;color:var(--red)}
+@media(max-width:720px){.resume-name{font-size:1.75em;}}
+.resume-tagline{font-size:1.25rem;font-weight:300}
+.resume-contact{border-left:1px solid rgba(0,0,0,0.08);font-size:0.75rem}
+a.resume-link{color:var(--Font-color)}
+a.resume-link:hover{color:var(--red);text-decoration:none;}
+.resume-profile-image { max-width: 140px;border-radius: 25%;border: 2px solid var(--red);}/*edited*/
+.resume-intro{font-size:0.875rem}
+.resume-main 
+.item-title{font-size:1rem}
+.resume-main .item-meta{font-size:0.75rem}
+.resume-main .item-content{font-size:0.875rem}
+.resume-aside{border-left:1px solid rgba(0,0,0,0.08)}
+.resume-aside .item{font-size:0.875rem}.resume-aside
+ .item-title{font-size:1rem}
+ .resume-education-list,.resume-awards-list{font-size:0.875rem}
+ .resume-degree-time-org,.resume-degree-time{font-size:0.75rem}
+ .resume-lang-list,.resume-interests-list{font-size:0.875rem}
+ .resume-social-list{font-size:0.75rem}.fa-heart{color:#fb866a}
+ @media (max-width: 991.98px){.resume-aside{border-left:0}}
+ @media (max-width: 767.98px){.resume-contact{border-left:0}}
