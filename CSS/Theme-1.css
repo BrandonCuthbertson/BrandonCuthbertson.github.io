@@ -1,3 +1,6 @@
+/****************************
+    THEME COLORS
+****************************/
 :root {
     --Dark-color: #272727; /* var(--Dark-color); */
     --Font-color: #747474; /* var(--Theme-Font-color); */
@@ -13,11 +16,9 @@
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: white; /*var(--Mono);*/
 }
-html {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-}
-
+/****************************
+    Generic Attributes
+****************************/
 
 @media (max-width: 767px) {
     .jumbotron {
@@ -28,34 +29,18 @@ html {
         top: auto;
     }
 }
-
-
-
-
 body {
     background-color: var(--Dark-color);
     color: var(--Font-color);
-   
 }
 
 hr {
     background-color: var(--hr);
 }
-/*sidebar Nav*/
-.sidebar {
-    /*Layout*/
-    border-right: solid 0.5em var(--nav-border);
-    /*Theme*/
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 180px;
-    overflow-y: hidden;
-    overflow-x:hidden;
-    z-index: 2;
-}
 
+/****************************
+    Profile Pictures
+****************************/
 .profile-picture {
     border-radius: 25%;
     height: auto;
@@ -63,7 +48,7 @@ hr {
     border: 2px solid var(--Font-color);
 }
 
-.sidebar .profile-picture {
+.sideBar .profile-picture {
     max-height: 150px;
 }
 
@@ -75,31 +60,87 @@ hr {
     max-height: 322px;
     max-width: 322px;
 }
-
-
-
-.icon {
-    font-weight: bold;
-    border-radius: 25%;
-    padding: 2px 15px 2px 15px;
-    margin: 2px;
-    font-size: 18px;
-    z-index: 1;
-    cursor: pointer;
+.main-body #About .profile-picture {
+    border: 2px solid var(--yellow);
+}
+.main-body #Portfolio .profile-picture {
+    border: 2px solid var(--green);
+}
+.main-body #Resume .profile-picture {
+    border: 2px solid var(--red);
 }
 
-.ulNav {
-    list-style: none; /*removes ul dots*/
-    font-weight: bold;
-    font-size: 18px;
+/****************************
+    Desktop Navigational Bar
+****************************/
+.sideBar {
+    /*Layout*/
+    border-right: solid 0.5em var(--nav-border);
+    /*Theme*/
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 180px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    z-index: 2;
 }
-
-    .ulNav li {
+    .sideBar ul {
+        list-style: none; /*removes ul dots*/
+        font-weight: bold;
+        font-size: 18px;
+    }
+    .sideBar li {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+.active {
+    color: var(--Mono);
+}
+#navAbout:before {
+    /*<i class="fas fa-home"></i>*/
+    content: "\f007"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+#navAbout:Hover {
+    color: var(--yellow);
+    cursor: pointer;
+    background-size: 100%;
+}
 
-/*topbar Nav*/
+#navPortfolio:before {
+    content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+#navPortfolio:Hover {
+    color: var(--green);
+    cursor: pointer;
+    background-size: 100%;
+}
+
+#navResume:before {
+    /*<i class="fas fa-file-alt"></i>*/
+    content: "\f15c"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+#navResume:Hover {
+    color: var(--red);
+    cursor: pointer;
+    background-size: 100%;
+}
+/****************************
+    Mobile Navigational Bar
+****************************/
 .topnav {
     width: 100%;
     overflow: auto;
@@ -111,93 +152,36 @@ hr {
         font-size: 2em;
         text-decoration: none;
     }
-
-
-/*Both Navbars*/
-/*TABS*/
-
-/*Layout*/
-.tabcontent {
-    animation: fade 1s; 
-}
-.porfolioCard {
-    animation: fade 2s;
-}
-/* Go from zero to full opacity */
-@keyframes fade {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-/*Layout*/
-#navAbout:before {
-    /*<i class="fas fa-home"></i>*/
-    content: "\f007"; /* FontAwesome Unicode */
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-}
-
-#navPortfolio:before {
-    content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-}
-
-#navResume:before {
-    /*<i class="fas fa-file-alt"></i>*/
-    content: "\f15c"; /* FontAwesome Unicode */
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-}
-/*Theme*/
-#navAbout:Hover {
-    color: var(--yellow);
-    cursor: pointer;
-    background-size: 100%;
-}
-
-
-#navPortfolio:Hover {
-    color: var(--green);
-    cursor: pointer;
-    background-size: 100%;
-}
-
-#navResume:Hover {
-    color: var(--red);
-    cursor: pointer;
-    background-size: 100%;
-}
-/*--*/
 #top-About {
     color: var(--yellow);
     width: 1.5em;
     text-align: center;
 }
-
+    #top-About.active {
+        background-color: var(--yellow);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
 #top-Portfolio {
     color: var(--green);
     width: 1.5em;
     text-align: center;
 }
-
+    #top-Portfolio.active {
+        background-color: var(--green);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
 #top-Resume {
     color: var(--red);
     width: 1.5em;
     text-align: center;
 }
-
+    #top-Resume.active {
+        background-color: var(--red);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
 #top-Contact {
     position: absolute;
     right: 4px;
@@ -207,44 +191,30 @@ hr {
     left: 0;
     text-align: center;
 }
-
-/*Theme*/
-.active {
-    color: var(--Mono);
-}
-
-@media (max-width: 767px) {
-    #top-About.active {
-        background-color: var(--yellow);
-        color: var(--Dark-color);
-        border-radius: 4px;
-    }
-
-    #top-Portfolio.active {
-        background-color: var(--green);
-        color: var(--Dark-color);
-        border-radius: 4px;
-    }
-
-    #top-Resume.active {
-        background-color: var(--red);
-        color: var(--Dark-color);
-        border-radius: 4px;
-    }
-
     #top-Contact.active {
         background-color: var(--Font-color);
         color: var(--Dark-color);
         border-radius: 4px;
     }
-}
 
+/****************************
+    Tab Content
+****************************/
+
+.tabcontent { animation: fade 1s;}
+
+@keyframes fade {from {opacity: 0;}to {opacity: 1;}}
+@-webkit-keyframes fade {from {opacity: 0;}to {opacity: 1;}}
+@-moz-keyframes fade {from {opacity: 0;}to {opacity: 1;}}
+@-o-keyframes fade {from {opacity: 0;}to {opacity: 1;}}
+
+/****************************
+    Main Body 
+****************************/
 .section-header {
     background-color: var(--section);
 }
 
-
-/*main*/
 .main-body {
     position: relative;
     border-bottom: solid 0.5em var(--nav-border);
@@ -262,55 +232,42 @@ hr {
         z-index:0;
     }
 }
-/*ABOUT*/
-.main-body #About .section-header {
+/****************************
+    About Page
+****************************/
+#About .section-header {
     border: 2px solid var(--yellow);
     border-radius: 25px;
     right: 0;
     overflow: visible;
 }
 
-.main-body #About h4:before {
+#About h4:before {
     content: "\258e";
     display: inline-block;
     margin-left: -1.0em;
     width: 1.3em;
     color: var(--yellow);
 }
-.main-body #About hr{
+ #About hr{
     background-color:var(--yellow);
 }
 
-
-.main-body #About .profile-picture {
-    border: 2px solid var(--yellow);
-}
-
-.main-body #About .font-weight-bold, .main-body #About .font-italic, .main-body #About p b, .main-body #About p i {
+#About .font-weight-bold, #About .font-italic, #About p b, #About p i {
     color: var(--yellow);
 }
-/*ABOUT SKILLBAR*/
+/*
+    ABOUT SKILLBAR
+*/
 
 @keyframes load {
     from {
         width: 0%
     }
 }
-@-webkit-keyframes load {
-    from {
-        width: 0%
-    }
-}
-@-moz-keyframes load {
-    from {
-        width: 0%
-    }
-}
-@-o-keyframes load {
-    from {
-        width: 0%
-    }
-}
+@-webkit-keyframes load {from { width: 0% }}
+@-moz-keyframes load {from {width: 0%}}
+@-o-keyframes load {from {width: 0%}}
 .skillBar {
     background-color: var(--Dark-color);
     padding: 2px;
@@ -332,25 +289,15 @@ hr {
         -moz-animation: load 2s 0s;
         -o-animation: load 2s 0s;
     }
-    .skillBar.learning::before {
-        width: calc(20% - 10px);
-    }
+    .skillBar.learning::before { width: calc(20% - 10px);}
 
-    .skillBar.basic::before {
-        width: calc(40% - 10px);
-    }
+    .skillBar.basic::before {width: calc(40% - 10px);}
 
-    .skillBar.intermediate::before {
-        width: calc(60% - 10px);
-    }
+    .skillBar.intermediate::before {width: calc(60% - 10px);}
 
-    .skillBar.advanced::before {
-        width: calc(80% - 10px);
-    }
+    .skillBar.advanced::before {width: calc(80% - 10px);}
 
-    .skillBar.expert::before {
-        width: calc(100% - 10px);
-    }
+    .skillBar.expert::before {width: calc(100% - 10px);}
 
 .skillIcon {
     position:absolute;
@@ -359,51 +306,55 @@ hr {
     font-size: 2em;
 }
 
-/*Portfolio*/
-.main-body #Portfolio .section-header {
+/****************************
+    Portfolio Page
+****************************/
+#Portfolio .section-header {
     border: 2px solid var(--green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
 }
 
-.main-body #Portfolio #Portfolio-Nav a{
+#Portfolio #Portfolio-Nav a{
     color:var(--green);
 }
-    .main-body #Portfolio #Portfolio-Nav a:hover {
+    #Portfolio #Portfolio-Nav a:hover {
         color: var(--Mono);
         text-decoration: none;
     }
-    .main-body #Portfolio #Portfolio-Nav .active {
+    #Portfolio #Portfolio-Nav .active {
         color: var(--Mono);
         text-decoration: none;
         font-weight: bold;
     }
 
-.main-body #Portfolio hr {
+#Portfolio hr {
     background-color: var(--green);
+}
+#Portfolio .font-weight-bold, #Portfolio .font-italic, #Portfolio p b, #Portfolio p i {
+    color: var(--green);
 }
 #Portfolio h5 {
     color: var(--green);
 }
-
-
-.main-body #Portfolio .profile-picture {
-    border: 2px solid var(--green);
+/*Portfolio Card*/
+.porfolioCard {
+    animation: fade 2s;
 }
 
-.main-body #Portfolio .font-weight-bold, .main-body #Portfolio .font-italic, .main-body #Portfolio p b, .main-body #Portfolio p i {
-    color: var(--green);
-}
-/*Resume*/
-.main-body #Resume .section-header {
+
+/****************************
+    Resume Page
+****************************/
+#Resume .section-header {
     border: 2px solid var(--red);
     border-radius: 25px;
     right: 0;
     overflow: visible;
 }
 
-.main-body #Resume h4:before {
+#Resume h4:before {
     content: "\258e";
     display: inline-block;
     margin-left: -1.0em;
@@ -411,21 +362,17 @@ hr {
     color: var(--red);
 }
 
-.main-body #Resume hr {
+#Resume hr {
     background-color: var(--red);
 }
-
-
-.main-body #Resume .profile-picture {
-    border: 2px solid var(--red);
-}
-
-.main-body #Resume .font-weight-bold, .main-body #Resume .font-italic, .main-body #Resume p b, .main-body #Resume p i {
+ #Resume .font-weight-bold, #Resume .font-italic, #Resume p b, #Resume p i {
     color: var(--red);
 }
+ /*For all css related to the resume sheet go to the bottom*/
 
-
-/*Bootstrap Cards*/
+/****************************
+    BOOTSTRAP OVERRIDE CARD
+****************************/
 .card {
     border-radius: 12px;
     border: 2px solid;
@@ -458,14 +405,16 @@ hr {
         background-size: 150%;
         
     }
-
-
-
-   
-
-
-/*Changing Bootstrap button to match color scheme*/
-/*yellow*/
+/****************************
+    BOOTSTRAP OVERRIDE - btn
+****************************/
+.btn {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+/*************
+   --yellow
+*************/
 .border-One { /*For Bootstrap Cards*/
     border-color: var(--yellow) !important;
 }
@@ -514,8 +463,9 @@ hr {
 
         }
 
-
-/*Green*/
+/*************
+   --green
+*************/
 .border-Two { /*For Bootstrap Cards*/
     border-color: var(--green) !important;
 }
@@ -566,7 +516,9 @@ hr {
             box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
         }
 
-/*Red*/
+/*************
+   --red
+*************/
 .border-Three { /*For Bootstrap Cards*/
     border-color: var(--red) !important;
 }
@@ -614,7 +566,9 @@ hr {
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
         }
 
-/*Grey*/
+/*************
+   --Font-color
+*************/
 .border-Four { /*For Bootstrap Cards*/
     border-color: var(--Font-color) !important;
 }
@@ -662,7 +616,9 @@ hr {
         .show > .btn-Four.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }
-/*Purple*/
+/*************
+   --purple
+*************/
 .border-Special { /*For Bootstrap Cards*/
     border-color: var(--purple) !important;
 }
@@ -711,6 +667,8 @@ hr {
         .show > .btn-Special.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }
+
+
 /*! 
  * Template Name: Dev - Bootstrap 4 Resume/CV Template for Software Developers
  * Template Name: Dev - Bootstrap 4 Resume/CV Template for Software Developers
