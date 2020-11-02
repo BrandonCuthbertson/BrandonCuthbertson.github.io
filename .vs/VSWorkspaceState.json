@@ -1,15 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\CSS",
-    "\\HTML",
-    "\\IMG",
     "\\JS"
   ],
-<<<<<<< HEAD
-  "SelectedNode": "\\JS\\myScript.js",
-=======
-  "SelectedNode": "\\HTML\\About.html",
->>>>>>> parent of ed5c2e2... Maybe fixed ios button change
+  "SelectedNode": "\\Index.html",
   "PreviewInSolutionExplorer": false
 }

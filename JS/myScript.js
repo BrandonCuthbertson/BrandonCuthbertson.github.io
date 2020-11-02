@@ -1,32 +1,30 @@
-
-
 // Global Variables
 var tabName;
 
 
 // On page load will either load previous tab or default to About
 if (sessionStorage.current != null) {
-   
+
     removeTabs();
     tabName = sessionStorage.getItem("current");
     document.getElementById(tabName).style.display = "block";
-    document.getElementsByClassName('nav' + tabName).className += " active";
-    
+    document.getElementById('nav' + tabName).className += " active";
+    document.getElementById('top-' + tabName).className += " active";
 
 }
 else {
     removeTabs();
     tabName = "About";
     document.getElementById(tabName).style.display = "block";
-    document.getElementsByClassName("nav" + tabName).className += " active";
-    
+    document.getElementById("nav" + tabName).className += " active";
+    document.getElementById("top-" + tabName).className += " active";
 }
 
 /*
  * Different Tabs
  */
 // Clears all Tabs on Main Page 
-function removeTabs(){
+function removeTabs() {
     // Declare all variables
     var i, tabcontent, tablinks;
 
@@ -51,7 +49,6 @@ function openPage(evt, pageName) {
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(pageName).style.display = "block";
     evt.currentTarget.className += " active";
-
     sessionStorage.setItem("current", pageName); //adds it to session
     //console.log("Logging Tab Name " + pageName);
 }
@@ -90,7 +87,7 @@ function togglePortfolio(evt, portfolioItem) {
         portfolioLink[i].className = portfolioLink[i].className.replace(" active", "");
     }
     evt.currentTarget.className += " active";
-    
+
     //console.log(portfolioLink + " Activated");
 
 }

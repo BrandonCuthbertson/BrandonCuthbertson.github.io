@@ -1,6 +1,3 @@
-/****************************
-    THEME COLOR SCHEME
-****************************/
 :root {
     --Dark-color: #272727; /* var(--Dark-color); */
     --Font-color: #747474; /* var(--Theme-Font-color); */
@@ -16,9 +13,11 @@
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: white; /*var(--Mono);*/
 }
-/****************************
-Generic HTML Attributes
-****************************/
+html {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
 
 @media (max-width: 767px) {
     .jumbotron {
@@ -30,41 +29,20 @@ Generic HTML Attributes
     }
 }
 
+
+
+
 body {
     background-color: var(--Dark-color);
     color: var(--Font-color);
+   
 }
 
 hr {
     background-color: var(--hr);
 }
-/****************************
-    PROFILE PICTURE CSS
-****************************/
-.profile-picture {
-    border-radius: 25%;
-    height: auto;
-    width: inherit;
-    border: 2px solid var(--Font-color);
-}
-
-.sideBar .profile-picture {
-    max-height: 150px;
-}
-
-.main-body .profile-picture {
-    height: auto;
-    width: inherit;
-    margin-top: 10px;
-    max-height: 322px;
-    max-width: 322px;
-}
-
-/****************************
-    Desktop Navigation Bar
-
-****************************/
-.sideBar {
+/*sidebar Nav*/
+.sidebar {
     /*Layout*/
     border-right: solid 0.5em var(--nav-border);
     /*Theme*/
@@ -77,16 +55,87 @@ hr {
     overflow-x:hidden;
     z-index: 2;
 }
-    .sideBar ul {
-        list-style: none; /*removes ul dots*/
-        font-weight: bold;
-        font-size: 18px;
-    }
-    .sideBar li {
+
+.profile-picture {
+    border-radius: 25%;
+    height: auto;
+    width: inherit;
+    border: 2px solid var(--Font-color);
+}
+
+.sidebar .profile-picture {
+    max-height: 150px;
+}
+
+.main-body .profile-picture {
+    border-radius: 25%;
+    height: auto;
+    width: inherit;
+    margin-top: 10px;
+    max-height: 322px;
+    max-width: 322px;
+}
+
+
+
+.icon {
+    font-weight: bold;
+    border-radius: 25%;
+    padding: 2px 15px 2px 15px;
+    margin: 2px;
+    font-size: 18px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.ulNav {
+    list-style: none; /*removes ul dots*/
+    font-weight: bold;
+    font-size: 18px;
+}
+
+    .ulNav li {
         padding-top: 5px;
         padding-bottom: 5px;
     }
-.navAbout:before {
+
+/*topbar Nav*/
+.topnav {
+    width: 100%;
+    overflow: auto;
+    border-bottom: solid 0.5em var(--nav-border);
+}
+
+    .topnav a {
+        text-decoration: none;
+        font-size: 2em;
+        text-decoration: none;
+    }
+
+
+/*Both Navbars*/
+/*TABS*/
+
+/*Layout*/
+.tabcontent {
+    animation: fade 1s; 
+}
+.porfolioCard {
+    animation: fade 2s;
+}
+/* Go from zero to full opacity */
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*Layout*/
+#navAbout:before {
     /*<i class="fas fa-home"></i>*/
     content: "\f007"; /* FontAwesome Unicode */
     font-family: "Font Awesome 5 Free";
@@ -95,13 +144,7 @@ hr {
     width: 1.3em;
 }
 
-.navAbout:Hover {
-    color: var(--yellow);
-    cursor: pointer;
-    background-size: 100%;
-}
-
-.navPortfolio:before {
+#navPortfolio:before {
     content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
     font-family: "Font Awesome 5 Free";
     display: inline-block;
@@ -109,13 +152,7 @@ hr {
     width: 1.3em;
 }
 
-.navPortfolio:Hover {
-    color: var(--green);
-    cursor: pointer;
-    background-size: 100%;
-}
-
-.navResume:before {
+#navResume:before {
     /*<i class="fas fa-file-alt"></i>*/
     content: "\f15c"; /* FontAwesome Unicode */
     font-family: "Font Awesome 5 Free";
@@ -123,26 +160,44 @@ hr {
     margin-left: -1.3em;
     width: 1.3em;
 }
+/*Theme*/
+#navAbout:Hover {
+    color: var(--yellow);
+    cursor: pointer;
+    background-size: 100%;
+}
 
-.navResume:Hover {
+
+#navPortfolio:Hover {
+    color: var(--green);
+    cursor: pointer;
+    background-size: 100%;
+}
+
+#navResume:Hover {
     color: var(--red);
     cursor: pointer;
     background-size: 100%;
 }
-/****************************
-    Mobile Navigation Bar
-****************************/
-.mobileNav {
-    width: 100%;
-    overflow: auto;
-    border-bottom: solid 0.5em var(--nav-border);
+/*--*/
+#top-About {
+    color: var(--yellow);
+    width: 1.5em;
+    text-align: center;
 }
 
-    .mobileNav a {
-        text-decoration: none;
-        font-size: 2em;
-        text-decoration: none;
-    }
+#top-Portfolio {
+    color: var(--green);
+    width: 1.5em;
+    text-align: center;
+}
+
+#top-Resume {
+    color: var(--red);
+    width: 1.5em;
+    text-align: center;
+}
+
 #top-Contact {
     position: absolute;
     right: 4px;
@@ -153,592 +208,510 @@ hr {
     text-align: center;
 }
 
+/*Theme*/
+.active {
+    color: var(--Mono);
+}
+
+@media (max-width: 767px) {
+    #top-About.active {
+        background-color: var(--yellow);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+
+    #top-Portfolio.active {
+        background-color: var(--green);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+
+    #top-Resume.active {
+        background-color: var(--red);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+
     #top-Contact.active {
         background-color: var(--Font-color);
         color: var(--Dark-color);
         border-radius: 4px;
     }
+}
+
+.section-header {
+    background-color: var(--section);
+}
+
+
+/*main*/
+.main-body {
+    position: relative;
+    border-bottom: solid 0.5em var(--nav-border);
+    padding: 10px;
+    margin-left: 170px;
+    margin-right: 0;
+    top: 0;
+}
 
 @media (max-width: 767px) {
-    .navAbout {
-        color: var(--yellow);
-        width: 1.5em;
-        text-align: center;
-    }
-
-        .navAbout:before {
-            content: " ";
-            display: inline-block;
-            margin-left: 0em;
-            width: 0em;
-        }
-
-        .navAbout.active {
-            background-color: var(--yellow);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-    .navPortfolio {
-        color: var(--green);
-        width: 1.5em;
-        text-align: center;
-    }
-
-        .navPortfolio:before {
-            content: " ";
-            display: inline-block;
-            margin-left: 0em;
-            width: 0em;
-        }
-
-        .navPortfolio.active {
-            background-color: var(--green);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-    .navResume {
-        color: var(--red);
-        width: 1.5em;
-        text-align: center;
-    }
-
-        .navResume:before {
-            content: " ";
-            display: inline-block;
-            margin-left: 0em;
-            width: 0em;
-        }
-
-        .navResume.active {
-            background-color: var(--red);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-}
-/****************************
-    Both Navigational Bars
-****************************/
-
-
-
-
-/****************************
-    TABS
-****************************/
-    .tabcontent {
-        animation: fade 1s;
-    }
-
-    /* Go from zero to full opacity */
-    @keyframes fade {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-    .active {
-        color: var(--Mono);
-    }
-    .section-header {
-        background-color: var(--section);
-    }
-
-
-    /*main*/
     .main-body {
+        margin-left: 0px;
         position: relative;
-        border-bottom: solid 0.5em var(--nav-border);
-        padding: 10px;
-        margin-left: 170px;
-        margin-right: 0;
-        top: 0;
+        width: 100%;
+        z-index:0;
     }
+}
+/*ABOUT*/
+.main-body #About .section-header {
+    border: 2px solid var(--yellow);
+    border-radius: 25px;
+    right: 0;
+    overflow: visible;
+}
 
-    @media (max-width: 767px) {
-        .main-body {
-            margin-left: 0px;
-            position: relative;
-            width: 100%;
-            z-index: 0;
-        }
-    }
-    /*ABOUT*/
-    .main-body #About .section-header {
-        border: 2px solid var(--yellow);
-        border-radius: 25px;
-        right: 0;
-        overflow: visible;
-    }
+.main-body #About h4:before {
+    content: "\258e";
+    display: inline-block;
+    margin-left: -1.0em;
+    width: 1.3em;
+    color: var(--yellow);
+}
+.main-body #About hr{
+    background-color:var(--yellow);
+}
 
-    .main-body #About h4:before {
-        content: "\258e";
+
+.main-body #About .profile-picture {
+    border: 2px solid var(--yellow);
+}
+
+.main-body #About .font-weight-bold, .main-body #About .font-italic, .main-body #About p b, .main-body #About p i {
+    color: var(--yellow);
+}
+/*ABOUT SKILLBAR*/
+
+@keyframes load {
+    from {
+        width: 0%
+    }
+}
+@-webkit-keyframes load {
+    from {
+        width: 0%
+    }
+}
+@-moz-keyframes load {
+    from {
+        width: 0%
+    }
+}
+@-o-keyframes load {
+    from {
+        width: 0%
+    }
+}
+.skillBar {
+    background-color: var(--Dark-color);
+    padding: 2px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid var(--yellow);
+    
+}
+    .skillBar::before {
+        content: attr(data-skill);
+        background: repeating-linear-gradient( -45deg, var(--Dark-color), var(--Dark-color) 20px, var(--Font-color) 20px, var(--Font-color) 25px);
+        border: 2px solid var(--Font-color);
+        color: var(--yellow);
         display: inline-block;
-        margin-left: -1.0em;
-        width: 1.3em;
-        color: var(--yellow);
+        padding: 5px 0 5px 10px;
+        border-radius: inherit;
+        animation: load 2s 0s;
+        -webkit-animation: load 2s 0s;
+        -moz-animation: load 2s 0s;
+        -o-animation: load 2s 0s;
+    }
+    .skillBar.learning::before {
+        width: calc(20% - 10px);
     }
 
-    .main-body #About hr {
-        background-color: var(--yellow);
+    .skillBar.basic::before {
+        width: calc(40% - 10px);
     }
 
-
-    .main-body #About .profile-picture {
-        border: 2px solid var(--yellow);
+    .skillBar.intermediate::before {
+        width: calc(60% - 10px);
     }
 
-    .main-body #About .font-weight-bold, .main-body #About .font-italic, .main-body #About p b, .main-body #About p i {
-        color: var(--yellow);
-    }
-    /*ABOUT SKILLBAR*/
-
-    @keyframes load {
-        from {
-            width: 0%
-        }
+    .skillBar.advanced::before {
+        width: calc(80% - 10px);
     }
 
-    @-webkit-keyframes load {
-        from {
-            width: 0%
-        }
+    .skillBar.expert::before {
+        width: calc(100% - 10px);
     }
 
-    @-moz-keyframes load {
-        from {
-            width: 0%
-        }
+.skillIcon {
+    position:absolute;
+    top:inherit;
+    left: -0.5em;
+    font-size: 2em;
+}
+
+/*Portfolio*/
+.main-body #Portfolio .section-header {
+    border: 2px solid var(--green);
+    border-radius: 25px;
+    right: 0;
+    overflow: visible;
+}
+
+.main-body #Portfolio #Portfolio-Nav a{
+    color:var(--green);
+}
+    .main-body #Portfolio #Portfolio-Nav a:hover {
+        color: var(--Mono);
+        text-decoration: none;
     }
-
-    @-o-keyframes load {
-        from {
-            width: 0%
-        }
-    }
-
-    .skillBar {
-        background-color: var(--Dark-color);
-        padding: 2px;
-        border-radius: 25px;
-        font-weight: bold;
-        border: 2px solid var(--yellow);
-    }
-
-        .skillBar::before {
-            content: attr(data-skill);
-            background: repeating-linear-gradient( -45deg, var(--Dark-color), var(--Dark-color) 20px, var(--Font-color) 20px, var(--Font-color) 25px);
-            border: 2px solid var(--Font-color);
-            color: var(--yellow);
-            display: inline-block;
-            padding: 5px 0 5px 10px;
-            border-radius: inherit;
-            animation: load 2s 0s;
-            -webkit-animation: load 2s 0s;
-            -moz-animation: load 2s 0s;
-            -o-animation: load 2s 0s;
-        }
-
-        .skillBar.learning::before {
-            width: calc(20% - 10px);
-        }
-
-        .skillBar.basic::before {
-            width: calc(40% - 10px);
-        }
-
-        .skillBar.intermediate::before {
-            width: calc(60% - 10px);
-        }
-
-        .skillBar.advanced::before {
-            width: calc(80% - 10px);
-        }
-
-        .skillBar.expert::before {
-            width: calc(100% - 10px);
-        }
-
-    .skillIcon {
-        position: absolute;
-        top: inherit;
-        left: -0.5em;
-        font-size: 2em;
-    }
-
-    /*Portfolio*/
-    .main-body #Portfolio .section-header {
-        border: 2px solid var(--green);
-        border-radius: 25px;
-        right: 0;
-        overflow: visible;
-    }
-
-    .porfolioCard {
-        animation: fade 2s;
-    }
-
-    .main-body #Portfolio #Portfolio-Nav a {
-        color: var(--green);
-    }
-
-        .main-body #Portfolio #Portfolio-Nav a:hover {
-            color: var(--Mono);
-            text-decoration: none;
-        }
-
     .main-body #Portfolio #Portfolio-Nav .active {
         color: var(--Mono);
         text-decoration: none;
         font-weight: bold;
     }
 
-    .main-body #Portfolio hr {
-        background-color: var(--green);
+.main-body #Portfolio hr {
+    background-color: var(--green);
+}
+#Portfolio h5 {
+    color: var(--green);
+}
+
+
+.main-body #Portfolio .profile-picture {
+    border: 2px solid var(--green);
+}
+
+.main-body #Portfolio .font-weight-bold, .main-body #Portfolio .font-italic, .main-body #Portfolio p b, .main-body #Portfolio p i {
+    color: var(--green);
+}
+/*Resume*/
+.main-body #Resume .section-header {
+    border: 2px solid var(--red);
+    border-radius: 25px;
+    right: 0;
+    overflow: visible;
+}
+
+.main-body #Resume h4:before {
+    content: "\258e";
+    display: inline-block;
+    margin-left: -1.0em;
+    width: 1.3em;
+    color: var(--red);
+}
+
+.main-body #Resume hr {
+    background-color: var(--red);
+}
+
+
+.main-body #Resume .profile-picture {
+    border: 2px solid var(--red);
+}
+
+.main-body #Resume .font-weight-bold, .main-body #Resume .font-italic, .main-body #Resume p b, .main-body #Resume p i {
+    color: var(--red);
+}
+
+
+/*Bootstrap Cards*/
+.card {
+    border-radius: 12px;
+    border: 2px solid;
+    overflow: hidden;
+    background-color: var(--Dark-color);
+    width: 15em;
+    height: 20em;
+    /*Remember the border-# for border colors*/
+}
+    .card .btn {
+        bottom: -0.5em;
+        position: absolute;
+        right:2em;
+        left:2em;
+    }
+.card img{
+    width:15em;
+    height:5em;
+}
+/*Card Image Id's*/
+    .card #template {
+        background: url('../IMG/BWC1.jpg') 0px -35px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .card #website {
+        background: url('../IMG/Website-code.png') 0px 0px;
+        filter: contrast(100%);
+        background-repeat: no-repeat;
+        background-size: 150%;
+        
     }
 
-    #Portfolio h5 {
-        color: var(--green);
+
+
+   
+
+
+/*Changing Bootstrap button to match color scheme*/
+/*yellow*/
+.border-One { /*For Bootstrap Cards*/
+    border-color: var(--yellow) !important;
+}
+.btn-One {
+    border-color: var(--yellow);
+    color: var(--yellow);
+    border-radius: 12px;
+    border-width: 2px;
+}  
+
+    .btn-One:hover {
+        color: var(--Dark-color);
+        background-color: var(--yellow);
+        border-color: var(--yellow);
     }
 
-
-    .main-body #Portfolio .profile-picture {
-        border: 2px solid var(--green);
+    .btn-One:focus, .btn-One.focus {
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
     }
 
-    .main-body #Portfolio .font-weight-bold, .main-body #Portfolio .font-italic, .main-body #Portfolio p b, .main-body #Portfolio p i {
-        color: var(--green);
-    }
-    /*Resume*/
-    .main-body #Resume .section-header {
-        border: 2px solid var(--red);
-        border-radius: 25px;
-        right: 0;
-        overflow: visible;
+    .btn-One.disabled, .btn-One:disabled {
+        color: var(--yellow);
+        background-color: transparent;
     }
 
-    .main-body #Resume h4:before {
-        content: "\258e";
-        display: inline-block;
-        margin-left: -1.0em;
-        width: 1.3em;
-        color: var(--red);
-    }
-
-    .main-body #Resume hr {
-        background-color: var(--red);
-    }
-
-
-    .main-body #Resume .profile-picture {
-        border: 2px solid var(--red);
-    }
-
-    .main-body #Resume .font-weight-bold, .main-body #Resume .font-italic, .main-body #Resume p b, .main-body #Resume p i {
-        color: var(--red);
-    }
-
-
-    /*Bootstrap Cards*/
-    .card {
-        border-radius: 12px;
-        border: 2px solid;
-        overflow: hidden;
-        background-color: var(--Dark-color);
-        width: 15em;
-        height: 20em;
-        /*Remember the border-# for border colors*/
-    }
-
-        .card .btn {
-            bottom: -0.5em;
-            position: absolute;
-            right: 2em;
-            left: 2em;
-        }
-
-        .card img {
-            width: 15em;
-            height: 5em;
-        }
-        /*Card Image Id's*/
-        .card #template {
-            background: url('../IMG/BWC1.jpg') 0px -35px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-        }
-
-        .card #website {
-            background: url('../IMG/Website-code.png') 0px 0px;
-            filter: contrast(100%);
-            background-repeat: no-repeat;
-            background-size: 150%;
-        }
-
-
-
-
-
-
-    /*Changing Bootstrap button to match color scheme*/
-    /*yellow*/
-    .border-One { /*For Bootstrap Cards*/
-        border-color: var(--yellow) !important;
-    }
-
-    .btn-One {
+    .btn-One:not(:disabled):not(.disabled):active, .btn-One:not(:disabled):not(.disabled).active,
+    .show > .btn-One.dropdown-toggle {
+        /* color: var(--Dark-color);
+        background-color: var(--yellow);
+        border-color: var(--yellow);*/
         border-color: var(--yellow);
         color: var(--yellow);
         border-radius: 12px;
         border-width: 2px;
-        -webkit-appearance: none;
-        -moz-appearance: none;
     }
-
-        .btn-One:hover {
+        .btn-One:not(:disabled):not(.disabled):active:hover, .btn-One:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-One.dropdown-toggle:hover {
             color: var(--Dark-color);
             background-color: var(--yellow);
             border-color: var(--yellow);
         }
 
-        .btn-One:focus, .btn-One.focus {
+        .btn-One:not(:disabled):not(.disabled):active:focus, .btn-One:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-One.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+
         }
 
-        .btn-One.disabled, .btn-One:disabled {
-            color: var(--yellow);
-            background-color: transparent;
-        }
 
-        .btn-One:not(:disabled):not(.disabled):active, .btn-One:not(:disabled):not(.disabled).active,
-        .show > .btn-One.dropdown-toggle {
-            /* color: var(--Dark-color);
-        background-color: var(--yellow);
-        border-color: var(--yellow);*/
-            border-color: var(--yellow);
-            color: var(--yellow);
-            border-radius: 12px;
-            border-width: 2px;
-        }
+/*Green*/
+.border-Two { /*For Bootstrap Cards*/
+    border-color: var(--green) !important;
+}
+.btn-Two {
+    color: var(--green);
+    background-color: transparent;
+    background-image: none;
+    border-color: var(--green);
+    border-radius: 12px;
+    border-width: 2px;
+}
 
-            .btn-One:not(:disabled):not(.disabled):active:hover, .btn-One:not(:disabled):not(.disabled).active:hover,
-            .show > .btn-One.dropdown-toggle:hover {
-                color: var(--Dark-color);
-                background-color: var(--yellow);
-                border-color: var(--yellow);
-            }
-
-            .btn-One:not(:disabled):not(.disabled):active:focus, .btn-One:not(:disabled):not(.disabled).active:focus,
-            .show > .btn-One.dropdown-toggle:focus {
-                box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
-            }
-
-
-    /*Green*/
-    .border-Two { /*For Bootstrap Cards*/
-        border-color: var(--green) !important;
+    .btn-Two:hover {
+        color: var(--Dark-color);
+        background-color: var(--green);
+        border-color: var(--green);
     }
 
-    .btn-Two {
+    .btn-Two:focus, .btn-Two.focus {
+        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    }
+
+    .btn-Two.disabled, .btn-Two:disabled {
         color: var(--green);
         background-color: transparent;
-        background-image: none;
+    }
+
+    .btn-Two:not(:disabled):not(.disabled):active, .btn-Two:not(:disabled):not(.disabled).active,
+    .show > .btn-Two.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--green);
+            border-color: var(--green);*/
         border-color: var(--green);
+        color: var(--green);
         border-radius: 12px;
         border-width: 2px;
     }
 
-        .btn-Two:hover {
+        .btn-Two:not(:disabled):not(.disabled):active:hover, .btn-Two:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Two.dropdown-toggle:hover {
             color: var(--Dark-color);
             background-color: var(--green);
             border-color: var(--green);
         }
 
-        .btn-Two:focus, .btn-Two.focus {
+        .btn-Two:not(:disabled):not(.disabled):active:focus, .btn-Two:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Two.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
         }
 
-        .btn-Two.disabled, .btn-Two:disabled {
-            color: var(--green);
-            background-color: transparent;
-        }
+/*Red*/
+.border-Three { /*For Bootstrap Cards*/
+    border-color: var(--red) !important;
+}
+.btn-Three {
+    border-color: var(--red);
+    color: var(--red);
+    border-radius: 12px;
+    border-width: 2px;
+}
 
-        .btn-Two:not(:disabled):not(.disabled):active, .btn-Two:not(:disabled):not(.disabled).active,
-        .show > .btn-Two.dropdown-toggle {
-            /* color: var(--Dark-color);
-            background-color: var(--green);
-            border-color: var(--green);*/
-            border-color: var(--green);
-            color: var(--green);
-            border-radius: 12px;
-            border-width: 2px;
-        }
-
-            .btn-Two:not(:disabled):not(.disabled):active:hover, .btn-Two:not(:disabled):not(.disabled).active:hover,
-            .show > .btn-Two.dropdown-toggle:hover {
-                color: var(--Dark-color);
-                background-color: var(--green);
-                border-color: var(--green);
-            }
-
-            .btn-Two:not(:disabled):not(.disabled):active:focus, .btn-Two:not(:disabled):not(.disabled).active:focus,
-            .show > .btn-Two.dropdown-toggle:focus {
-                box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
-            }
-
-    /*Red*/
-    .border-Three { /*For Bootstrap Cards*/
-        border-color: var(--red) !important;
+    .btn-Three:hover {
+        color: var(--Dark-color);
+        background-color: var(--red);
+        border-color: var(--red);
+    }
+    .btn-Three:focus, .btn-Three.focus {
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
     }
 
-    .btn-Three {
+    .btn-Three.disabled, .btn-Three:disabled {
+        color: var(--red);
+        background-color: transparent;
+    }
+
+    .btn-Three:not(:disabled):not(.disabled):active, .btn-Three:not(:disabled):not(.disabled).active,
+    .show > .btn-Three.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--red);
+            border-color: var(--red);*/
         border-color: var(--red);
         color: var(--red);
         border-radius: 12px;
         border-width: 2px;
     }
 
-        .btn-Three:hover {
+        .btn-Three:not(:disabled):not(.disabled):active:hover, .btn-Three:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Three.dropdown-toggle:hover {
             color: var(--Dark-color);
             background-color: var(--red);
             border-color: var(--red);
         }
 
-        .btn-Three:focus, .btn-Three.focus {
+        .btn-Three:not(:disabled):not(.disabled):active:focus, .btn-Three:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Three.dropdown-toggle:focus {
             box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
         }
 
-        .btn-Three.disabled, .btn-Three:disabled {
-            color: var(--red);
-            background-color: transparent;
-        }
+/*Grey*/
+.border-Four { /*For Bootstrap Cards*/
+    border-color: var(--Font-color) !important;
+}
+.btn-Four {
+    border-color: var(--Font-color);
+    color: var(--Font-color);
+    border-radius: 12px;
+    border-width: 2px;
+}
 
-        .btn-Three:not(:disabled):not(.disabled):active, .btn-Three:not(:disabled):not(.disabled).active,
-        .show > .btn-Three.dropdown-toggle {
-            /* color: var(--Dark-color);
-            background-color: var(--red);
-            border-color: var(--red);*/
-            border-color: var(--red);
-            color: var(--red);
-            border-radius: 12px;
-            border-width: 2px;
-        }
-
-            .btn-Three:not(:disabled):not(.disabled):active:hover, .btn-Three:not(:disabled):not(.disabled).active:hover,
-            .show > .btn-Three.dropdown-toggle:hover {
-                color: var(--Dark-color);
-                background-color: var(--red);
-                border-color: var(--red);
-            }
-
-            .btn-Three:not(:disabled):not(.disabled):active:focus, .btn-Three:not(:disabled):not(.disabled).active:focus,
-            .show > .btn-Three.dropdown-toggle:focus {
-                box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
-            }
-
-    /*Grey*/
-    .border-Four { /*For Bootstrap Cards*/
-        border-color: var(--Font-color) !important;
+    .btn-Four:hover {
+        color: var(--Dark-color);
+        background-color: var(--Font-color);
+        border-color: var(--Font-color);
     }
 
-    .btn-Four {
+    .btn-Four:focus, .btn-Four.focus {
+        box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+    }
+
+    .btn-Four.disabled, .btn-Four:disabled {
+        color: var(--Font-color);
+        background-color: transparent;
+    }
+
+    .btn-Four:not(:disabled):not(.disabled):active, .btn-Four:not(:disabled):not(.disabled).active,
+    .show > .btn-Four.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--Font-color);
+            border-color: var(--Font-color);*/
         border-color: var(--Font-color);
         color: var(--Font-color);
         border-radius: 12px;
         border-width: 2px;
     }
 
-        .btn-Four:hover {
+        .btn-Four:not(:disabled):not(.disabled):active:hover, .btn-Four:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Four.dropdown-toggle:hover {
             color: var(--Dark-color);
             background-color: var(--Font-color);
             border-color: var(--Font-color);
         }
 
-        .btn-Four:focus, .btn-Four.focus {
-            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+        .btn-Four:not(:disabled):not(.disabled):active:focus, .btn-Four:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Four.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }
+/*Purple*/
+.border-Special { /*For Bootstrap Cards*/
+    border-color: var(--purple) !important;
+}
 
-        .btn-Four.disabled, .btn-Four:disabled {
-            color: var(--Font-color);
-            background-color: transparent;
-        }
+.btn-Special {
+    border-color: var(--purple);
+    color: var(--purple);
+    border-radius: 12px;
+    border-width: 2px;
+}
 
-        .btn-Four:not(:disabled):not(.disabled):active, .btn-Four:not(:disabled):not(.disabled).active,
-        .show > .btn-Four.dropdown-toggle {
-            /* color: var(--Dark-color);
-            background-color: var(--Font-color);
-            border-color: var(--Font-color);*/
-            border-color: var(--Font-color);
-            color: var(--Font-color);
-            border-radius: 12px;
-            border-width: 2px;
-        }
-
-            .btn-Four:not(:disabled):not(.disabled):active:hover, .btn-Four:not(:disabled):not(.disabled).active:hover,
-            .show > .btn-Four.dropdown-toggle:hover {
-                color: var(--Dark-color);
-                background-color: var(--Font-color);
-                border-color: var(--Font-color);
-            }
-
-            .btn-Four:not(:disabled):not(.disabled):active:focus, .btn-Four:not(:disabled):not(.disabled).active:focus,
-            .show > .btn-Four.dropdown-toggle:focus {
-                box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
-            }
-    /*Purple*/
-    .border-Special { /*For Bootstrap Cards*/
-        border-color: var(--purple) !important;
+    .btn-Special:hover {
+        color: var(--Dark-color);
+        background-color: var(--purple);
+        border-color: var(--purple);
     }
 
-    .btn-Special {
-        border-color: var(--purple);
+    .btn-Special:focus, .btn-Special.focus {
+        box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+    }
+
+    .btn-Special.disabled, .btn-Special:disabled {
         color: var(--purple);
+        background-color: transparent;
+    }
+
+    .btn-Special:not(:disabled):not(.disabled):active, .btn-Special:not(:disabled):not(.disabled).active,
+    .show > .btn-Special.dropdown-toggle {
+        /* color: var(--Dark-color);
+            background-color: var(--Font-color);
+            border-color: var(--Font-color);*/
+        border-color: var(--purple);
+        color: var(--Font-color);
         border-radius: 12px;
         border-width: 2px;
     }
 
-        .btn-Special:hover {
+        .btn-Special:not(:disabled):not(.disabled):active:hover, .btn-Special:not(:disabled):not(.disabled).active:hover,
+        .show > .btn-Special.dropdown-toggle:hover {
             color: var(--Dark-color);
             background-color: var(--purple);
             border-color: var(--purple);
         }
 
-        .btn-Special:focus, .btn-Special.focus {
-            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5);
+        .btn-Special:not(:disabled):not(.disabled):active:focus, .btn-Special:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-Special.dropdown-toggle:focus {
+            box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }
-
-        .btn-Special.disabled, .btn-Special:disabled {
-            color: var(--purple);
-            background-color: transparent;
-        }
-
-        .btn-Special:not(:disabled):not(.disabled):active, .btn-Special:not(:disabled):not(.disabled).active,
-        .show > .btn-Special.dropdown-toggle {
-            /* color: var(--Dark-color);
-            background-color: var(--Font-color);
-            border-color: var(--Font-color);*/
-            border-color: var(--purple);
-            color: var(--Font-color);
-            border-radius: 12px;
-            border-width: 2px;
-        }
-
-            .btn-Special:not(:disabled):not(.disabled):active:hover, .btn-Special:not(:disabled):not(.disabled).active:hover,
-            .show > .btn-Special.dropdown-toggle:hover {
-                color: var(--Dark-color);
-                background-color: var(--purple);
-                border-color: var(--purple);
-            }
-
-            .btn-Special:not(:disabled):not(.disabled):active:focus, .btn-Special:not(:disabled):not(.disabled).active:focus,
-            .show > .btn-Special.dropdown-toggle:focus {
-                box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
-            }
-    /*! 
+/*! 
  * Template Name: Dev - Bootstrap 4 Resume/CV Template for Software Developers
  * Template Name: Dev - Bootstrap 4 Resume/CV Template for Software Developers
  * Version: 1.2
@@ -747,132 +720,32 @@ hr {
  * Twitter: @3rdwave_themes
  * Website: http://themes.3rdwavemedia.com/
 */
-    /*!
+/*!
     Modified for Websites
 */
-    .resume-wrapper {
-        border: 1px solid rgba(0,0,0,0.025)
-    }
+.resume-wrapper{border:1px solid rgba(0,0,0,0.025)}
+    .resume-wrapper h4:before {content: "" !important;}/*Added*/
+.resume-section-heading{position:relative;padding-left:1rem;font-size:1.125rem;letter-spacing:0.15rem;color:var(--red);}
+.resume-section-heading:before{content:"";display:inline-block;width:5px;height:100%;background:var(--red);position:absolute;left:0;top:0}
 
-        .resume-wrapper h4:before {
-            content: "" !important;
-        }
-    /*Added*/
-    .resume-section-heading {
-        position: relative;
-        padding-left: 1rem;
-        font-size: 1.125rem;
-        letter-spacing: 0.15rem;
-        color: var(--red);
-    }
-
-        .resume-section-heading:before {
-            content: "";
-            display: inline-block;
-            width: 5px;
-            height: 100%;
-            background: var(--red);
-            position: absolute;
-            left: 0;
-            top: 0
-        }
-
-    .resume-name {
-        font-size: 2.75em;
-        font-weight: 900;
-        letter-spacing: 0.4rem;
-        color: var(--red);
-    }
-
-    @media(max-width:768px) {
-        .resume-name {
-            font-size: 1em;
-        }
-    }
-
-    .resume-tagline {
-        font-size: 1.25rem;
-        font-weight: 300
-    }
-
-    .resume-contact {
-        border-left: 1px solid rgba(0,0,0,0.08);
-        font-size: 0.75rem
-    }
-
-    a.resume-link {
-        color: var(--Font-color)
-    }
-
-        a.resume-link:hover {
-            color: var(--red);
-            text-decoration: none;
-        }
-
-    .resume-profile-image {
-        max-width: 140px;
-        border-radius: 25%;
-        border: 2px solid var(--red);
-    }
-    /*edited*/
-    .resume-intro {
-        font-size: 0.875rem
-    }
-
-    .resume-main
-    .item-title {
-        font-size: 1rem
-    }
-
-    .resume-main .item-meta {
-        font-size: 0.75rem
-    }
-
-    .resume-main .item-content {
-        font-size: 0.875rem
-    }
-
-    .resume-aside {
-        border-left: 1px solid rgba(0,0,0,0.08)
-    }
-
-        .resume-aside .item {
-            font-size: 0.875rem
-        }
-
-        .resume-aside
-        .item-title {
-            font-size: 1rem
-        }
-
-    .resume-education-list, .resume-awards-list {
-        font-size: 0.875rem
-    }
-
-    .resume-degree-time-org, .resume-degree-time {
-        font-size: 0.75rem
-    }
-
-    .resume-lang-list, .resume-interests-list {
-        font-size: 0.875rem
-    }
-
-    .resume-social-list {
-        font-size: 0.75rem
-    }
-
-    .fa-heart {
-        color: #fb866a
-    }
-
-    @media (max-width: 991.98px) {
-        .resume-aside {
-            border-left: 0
-        }
-    }
-
-    @media (max-width: 767.98px) {
-        .resume-contact {
-            border-left: 0
-        }
-    }
+.resume-name{font-size:2.75em;font-weight:900;letter-spacing:0.4rem;color:var(--red);}
+@media(max-width:768px){.resume-name{font-size:1em;}}
+.resume-tagline{font-size:1.25rem;font-weight:300}
+.resume-contact{border-left:1px solid rgba(0,0,0,0.08);font-size:0.75rem}
+a.resume-link{color:var(--Font-color)}
+a.resume-link:hover{color:var(--red);text-decoration:none;}
+.resume-profile-image { max-width: 140px;border-radius: 25%;border: 2px solid var(--red);}/*edited*/
+.resume-intro{font-size:0.875rem}
+.resume-main 
+.item-title{font-size:1rem}
+.resume-main .item-meta{font-size:0.75rem}
+.resume-main .item-content{font-size:0.875rem}
+.resume-aside{border-left:1px solid rgba(0,0,0,0.08)}
+.resume-aside .item{font-size:0.875rem}.resume-aside
+ .item-title{font-size:1rem}
+ .resume-education-list,.resume-awards-list{font-size:0.875rem}
+ .resume-degree-time-org,.resume-degree-time{font-size:0.75rem}
+ .resume-lang-list,.resume-interests-list{font-size:0.875rem}
+ .resume-social-list{font-size:0.75rem}.fa-heart{color:#fb866a}
+ @media (max-width: 991.98px){.resume-aside{border-left:0}}
+ @media (max-width: 767.98px){.resume-contact{border-left:0}}
