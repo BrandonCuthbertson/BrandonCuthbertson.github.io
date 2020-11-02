@@ -7,7 +7,7 @@
 
     /*Other*/
     --nav-border: rgba(255, 255, 255, 0.02); /*var(--nav-border);*/
-    --hr: rgba(255, 255, 255, 0.1); /*var(--hr);*/
+    --hr: rgba(255, 255, 255, 0.2); /*var(--hr);*/
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: White; /*var(--Mono);*/
 }
@@ -39,6 +39,19 @@ hr {
 @-webkit-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-moz-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-o-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
+/*Card Image Id's*/
+.card #template {
+    background: url('../IMG/BWC1.jpg') 0px -35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card #website {
+    background: url('../IMG/Website-code.png') 0px 0px;
+    filter: grayscale(100%);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
 /****************************
     Profile Pictures
 ****************************/
@@ -221,7 +234,7 @@ hr {
     position: relative;
     border-bottom: solid 0.5em var(--nav-border);
     padding: 10px;
-    margin-left: 170px;
+    margin-left: 185px;
     margin-right: 0;
     top: 0;
 }
@@ -280,7 +293,7 @@ hr {
 }
     .skillBar::before {
         content: attr(data-skill);
-        background: repeating-linear-gradient( -45deg, var(--Black), var(--Black) 20px, var(--White) 20px, var(--White) 25px);
+        background: var(--Black);
         border: 2px solid var(--White);
         color: var(--White);
         display: inline-block;
@@ -426,19 +439,7 @@ hr {
     width:15em;
     height:5em;
 }
-/*Card Image Id's*/
-    .card #template {
-        background: url('../IMG/BWC1.jpg') 0px -35px;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-    .card #website {
-        background: url('../IMG/Website-code.png') 0px 0px;
-        filter: contrast(100%);
-        background-repeat: no-repeat;
-        background-size: 150%;
-        
-    }
+
 /****************************
     BOOTSTRAP OVERRIDE - btn
 ****************************/

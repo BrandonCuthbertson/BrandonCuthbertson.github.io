@@ -3,8 +3,9 @@
 ****************************/
 :root {
     --Black: Black; /* var(--Black); */
-    --White: #00FF41; /* var(--Theme-Font-color); */
+    --Green: #00FF41; /* var(--Theme-Font-color); */
     /*Other*/
+    --Dark-Green: #003B00;
     --nav-border: rgba(255, 255, 255, 0.02); /*var(--nav-border);*/
     --hr: rgba(255, 255, 255, 0.1); /*var(--hr);*/
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
@@ -25,11 +26,11 @@
 }
 body {
     background-color: var(--Black);
-    color: var(--White);
+    color: var(--Green);
 }
 
 hr {
-    background-color: var(--hr);
+    background-color: var(--Dark-Green);
 }
 .rotate-effect {
     animation: rotate 5s infinite linear;
@@ -38,6 +39,19 @@ hr {
 @-webkit-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-moz-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-o-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
+/*Card Image Id's*/
+.card #template {
+    background: url('../IMG/BWC1.jpg') 0px -35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card #website {
+    background: url('../IMG/Website-code.png') 0px 0px;
+    filter: hue-rotate(240deg);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
 /****************************
     Profile Pictures
 ****************************/
@@ -45,7 +59,7 @@ hr {
     border-radius: 25%;
     height: auto;
     width: inherit;
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
 }
 
 .sideBar .profile-picture {
@@ -61,13 +75,13 @@ hr {
     max-width: 322px;
 }
 .main-body #About .profile-picture {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
 }
 .main-body #Portfolio .profile-picture {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
 }
 .main-body #Resume .profile-picture {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
 }
 
 /****************************
@@ -107,7 +121,7 @@ hr {
     width: 1.3em;
 }
 #navAbout:Hover {
-    color: var(--White);
+    color: var(--Green);
     cursor: pointer;
     background-size: 100%;
 }
@@ -120,7 +134,7 @@ hr {
     width: 1.3em;
 }
 #navPortfolio:Hover {
-    color: var(--White);
+    color: var(--Green);
     cursor: pointer;
     background-size: 100%;
 }
@@ -134,7 +148,7 @@ hr {
     width: 1.3em;
 }
 #navResume:Hover {
-    color: var(--White);
+    color: var(--Green);
     cursor: pointer;
     background-size: 100%;
 }
@@ -155,46 +169,46 @@ hr {
         text-decoration: none;
     }
 #top-About {
-    color: var(--White);
+    color: var(--Green);
     width: 1.5em;
     text-align: center;
 }
     #top-About.active {
-        background-color: var(--White);
+        background-color: var(--Green);
         color: var(--Black);
         border-radius: 4px;
     }
 #top-Portfolio {
-    color: var(--White);
+    color: var(--Green);
     width: 1.5em;
     text-align: center;
 }
     #top-Portfolio.active {
-        background-color: var(--White);
+        background-color: var(--Green);
         color: var(--Black);
         border-radius: 4px;
     }
 #top-Resume {
-    color: var(--White);
+    color: var(--Green);
     width: 1.5em;
     text-align: center;
 }
     #top-Resume.active {
-        background-color: var(--White);
+        background-color: var(--Green);
         color: var(--Black);
         border-radius: 4px;
     }
 #top-Settings {
     position: absolute;
     right: 1em;
-    color: var(--White);
-    border: 2px solid var(--White);
+    color: var(--Green);
+    border: 2px solid var(--Green);
     border-radius: 4px;
    
     text-align: center;
 }
     #top-Settings.active {
-        background-color: var(--White);
+        background-color: var(--Green);
         color: var(--Black);
     }
 
@@ -220,7 +234,7 @@ hr {
     position: relative;
     border-bottom: solid 0.5em var(--nav-border);
     padding: 10px;
-    margin-left: 170px;
+    margin-left: 185px;
     margin-right: 0;
     top: 0;
 }
@@ -237,7 +251,7 @@ hr {
     About Page
 ****************************/
 #About .section-header {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
@@ -248,14 +262,14 @@ hr {
     display: inline-block;
     margin-left: -1.0em;
     width: 1.3em;
-    color: var(--White);
+    color: var(--Green);
 }
  #About hr{
-    background-color:var(--White);
+    background-color:var(--Green);
 }
 
 #About .font-weight-bold, #About .font-italic, #About p b, #About p i {
-    color: var(--White);
+    color: var(--Green);
 }
 /*
     ABOUT SKILLBAR
@@ -274,14 +288,14 @@ hr {
     padding: 2px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
     
 }
     .skillBar::before {
         content: attr(data-skill);
-        background: repeating-linear-gradient( -45deg, var(--Black), var(--Black) 20px, var(--White) 20px, var(--White) 25px);
-        border: 2px solid var(--White);
-        color: var(--White);
+        background: repeating-linear-gradient( -45deg, var(--Black), var(--Black) 20px, var(--Dark-Green) 20px, var(--Dark-Green) 25px);
+        border: 2px solid var(--Green);
+        color: var(--Green);
         display: inline-block;
         padding: 5px 0 5px 10px;
         border-radius: inherit;
@@ -311,14 +325,14 @@ hr {
     Portfolio Page
 ****************************/
 #Portfolio .section-header {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
 }
 
 #Portfolio #Portfolio-Nav a{
-    color:var(--White);
+    color:var(--Green);
 }
     #Portfolio #Portfolio-Nav a:hover {
         color: var(--Mono);
@@ -331,13 +345,13 @@ hr {
     }
 
 #Portfolio hr {
-    background-color: var(--White);
+    background-color: var(--Green);
 }
 #Portfolio .font-weight-bold, #Portfolio .font-italic, #Portfolio p b, #Portfolio p i {
-    color: var(--White);
+    color: var(--Green);
 }
 #Portfolio h5 {
-    color: var(--White);
+    color: var(--Green);
 }
 /*Portfolio Card*/
 .porfolioCard {
@@ -349,7 +363,7 @@ hr {
     Resume Page
 ****************************/
 #Resume .section-header {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
@@ -360,14 +374,14 @@ hr {
     display: inline-block;
     margin-left: -1.0em;
     width: 1.3em;
-    color: var(--White);
+    color: var(--Green);
 }
 
 #Resume hr {
-    background-color: var(--White);
+    background-color: var(--Green);
 }
  #Resume .font-weight-bold, #Resume .font-italic, #Resume p b, #Resume p i {
-    color: var(--White);
+    color: var(--Green);
 }
  /*For all css related to the resume sheet go to the bottom*/
 
@@ -375,14 +389,14 @@ hr {
     Settings Page
 ****************************/
 #Settings .section-header {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
     text-align:center;
 }
 #Settings .Error-header {
-    border: 2px solid var(--White);
+    border: 2px solid var(--Green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
@@ -392,11 +406,11 @@ hr {
 }
 
 /*#Settings hr {
-    background-color: var(--White);
+    background-color: var(--Green);
 }*/
 
 #Settings .font-weight-bold, #Settings .font-italic, #Settings p b, #Settings p i {
-    color: var(--White);
+    color: var(--Green);
 }
 #Settings .btn-Four{
     text-align: center;
@@ -425,19 +439,7 @@ hr {
     width:15em;
     height:5em;
 }
-/*Card Image Id's*/
-    .card #template {
-        background: url('../IMG/BWC1.jpg') 0px -35px;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-    .card #website {
-        background: url('../IMG/Website-code.png') 0px 0px;
-        filter: contrast(100%);
-        background-repeat: no-repeat;
-        background-size: 150%;
-        
-    }
+
 /****************************
     BOOTSTRAP OVERRIDE - btn
 ****************************/
@@ -446,23 +448,23 @@ hr {
     -moz-appearance: none;
 }
 /*************
-   --White
+   --Green
 *************/
 .border-One { /*For Bootstrap Cards*/
-    border-color: var(--White) !important;
+    border-color: var(--Green) !important;
 }
 .btn-One {
     color: var(--Black);
-    background-color: var(--White);
-    border-color: var(--White);
+    background-color: var(--Green);
+    border-color: var(--Green);
     border-radius: 12px;
     border-width: 2px;
 }
 
     .btn-One:hover {
-        border-color: var(--White);
+        border-color: var(--Green);
         background-color: var(--Black);
-        color: var(--White);
+        color: var(--Green);
     }
 
     .btn-One:focus, .btn-One.focus {
@@ -470,25 +472,25 @@ hr {
     }
 
     .btn-One.disabled, .btn-One:disabled {
-        color: var(--White);
+        color: var(--Green);
         background-color: transparent;
     }
 
     .btn-One:not(:disabled):not(.disabled):active, .btn-One:not(:disabled):not(.disabled).active,
     .show > .btn-One.dropdown-toggle {
         /* color: var(--Black);
-        background-color: var(--White);
-        border-color: var(--White);*/
-        border-color: var(--White);
-        color: var(--White);
+        background-color: var(--Green);
+        border-color: var(--Green);*/
+        border-color: var(--Green);
+        color: var(--Green);
         border-radius: 12px;
         border-width: 2px;
     }
         .btn-One:not(:disabled):not(.disabled):active:hover, .btn-One:not(:disabled):not(.disabled).active:hover,
         .show > .btn-One.dropdown-toggle:hover {
             color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);
         }
 
         .btn-One:not(:disabled):not(.disabled):active:focus, .btn-One:not(:disabled):not(.disabled).active:focus,
@@ -498,23 +500,23 @@ hr {
         }
 
 /*************
-   --White
+   --Green
 *************/
 .border-Two { /*For Bootstrap Cards*/
-    border-color: var(--White) !important;
+    border-color: var(--Green) !important;
 }
 .btn-Two {
     color: var(--Black);
-    background-color: var(--White);
-    border-color: var(--White);
+    background-color: var(--Green);
+    border-color: var(--Green);
     border-radius: 12px;
     border-width: 2px;
 }
 
     .btn-Two:hover {
-        border-color: var(--White);
+        border-color: var(--Green);
         background-color: var(--Black);
-        color: var(--White);
+        color: var(--Green);
     }
 
 
@@ -523,17 +525,17 @@ hr {
     }
 
     .btn-Two.disabled, .btn-Two:disabled {
-        color: var(--White);
+        color: var(--Green);
         background-color: transparent;
     }
 
     .btn-Two:not(:disabled):not(.disabled):active, .btn-Two:not(:disabled):not(.disabled).active,
     .show > .btn-Two.dropdown-toggle {
         /* color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);*/
-        border-color: var(--White);
-        color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);*/
+        border-color: var(--Green);
+        color: var(--Green);
         border-radius: 12px;
         border-width: 2px;
     }
@@ -541,8 +543,8 @@ hr {
         .btn-Two:not(:disabled):not(.disabled):active:hover, .btn-Two:not(:disabled):not(.disabled).active:hover,
         .show > .btn-Two.dropdown-toggle:hover {
             color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);
         }
 
         .btn-Two:not(:disabled):not(.disabled):active:focus, .btn-Two:not(:disabled):not(.disabled).active:focus,
@@ -551,40 +553,40 @@ hr {
         }
 
 /*************
-   --White
+   --Green
 *************/
 .border-Three { /*For Bootstrap Cards*/
-    border-color: var(--White) !important;
+    border-color: var(--Green) !important;
 }
 .btn-Three {
     color: var(--Black);
-    background-color: var(--White);
-    border-color: var(--White);
+    background-color: var(--Green);
+    border-color: var(--Green);
     border-radius: 12px;
     border-width: 2px;
 }
 
     .btn-Three:hover {
-        border-color: var(--White);
+        border-color: var(--Green);
         background-color: var(--Black);
-        color: var(--White);
+        color: var(--Green);
     }
     .btn-Three:focus, .btn-Three.focus {
         box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
     }
 
     .btn-Three.disabled, .btn-Three:disabled {
-        color: var(--White);
+        color: var(--Green);
         background-color: transparent;
     }
 
     .btn-Three:not(:disabled):not(.disabled):active, .btn-Three:not(:disabled):not(.disabled).active,
     .show > .btn-Three.dropdown-toggle {
         /* color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);*/
-        border-color: var(--White);
-        color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);*/
+        border-color: var(--Green);
+        color: var(--Green);
         border-radius: 12px;
         border-width: 2px;
     }
@@ -592,8 +594,8 @@ hr {
         .btn-Three:not(:disabled):not(.disabled):active:hover, .btn-Three:not(:disabled):not(.disabled).active:hover,
         .show > .btn-Three.dropdown-toggle:hover {
             color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);
         }
 
         .btn-Three:not(:disabled):not(.disabled):active:focus, .btn-Three:not(:disabled):not(.disabled).active:focus,
@@ -602,23 +604,23 @@ hr {
         }
 
 /*************
-   --White
+   --Green
 *************/
 .border-Four { /*For Bootstrap Cards*/
-    border-color: var(--White) !important;
+    border-color: var(--Green) !important;
 }
 .btn-Four {
     color: var(--Black);
-    background-color: var(--White);
-    border-color: var(--White);
+    background-color: var(--Green);
+    border-color: var(--Green);
     border-radius: 12px;
     border-width: 2px;
 }
 
     .btn-Four:hover {
-        border-color: var(--White);
+        border-color: var(--Green);
         background-color: var(--Black);
-        color: var(--White);
+        color: var(--Green);
     }
 
     .btn-Four:focus, .btn-Four.focus {
@@ -626,17 +628,17 @@ hr {
     }
 
     .btn-Four.disabled, .btn-Four:disabled {
-        color: var(--White);
+        color: var(--Green);
         background-color: transparent;
     }
 
     .btn-Four:not(:disabled):not(.disabled):active, .btn-Four:not(:disabled):not(.disabled).active,
     .show > .btn-Four.dropdown-toggle {
         /* color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);*/
-        border-color: var(--White);
-        color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);*/
+        border-color: var(--Green);
+        color: var(--Green);
         border-radius: 12px;
         border-width: 2px;
     }
@@ -644,8 +646,8 @@ hr {
         .btn-Four:not(:disabled):not(.disabled):active:hover, .btn-Four:not(:disabled):not(.disabled).active:hover,
         .show > .btn-Four.dropdown-toggle:hover {
             color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);
         }
 
         .btn-Four:not(:disabled):not(.disabled):active:focus, .btn-Four:not(:disabled):not(.disabled).active:focus,
@@ -653,23 +655,23 @@ hr {
             box-shadow: 0 0 0 0.2rem rgba(116, 116, 116, 0.5)
         }
 /*************
-   --White
+   --Green
 *************/
 .border-Special { /*For Bootstrap Cards*/
-    border-color: var(--White) !important;
+    border-color: var(--Green) !important;
 }
 
 .btn-Special {
-    border-color: var(--White);
-    color: var(--White);
+    border-color: var(--Green);
+    color: var(--Green);
     border-radius: 12px;
     border-width: 2px;
 }
 
     .btn-Special:hover {
         color: var(--Black);
-        background-color: var(--White);
-        border-color: var(--White);
+        background-color: var(--Green);
+        border-color: var(--Green);
     }
 
     .btn-Special:focus, .btn-Special.focus {
@@ -677,17 +679,17 @@ hr {
     }
 
     .btn-Special.disabled, .btn-Special:disabled {
-        color: var(--White);
+        color: var(--Green);
         background-color: transparent;
     }
 
     .btn-Special:not(:disabled):not(.disabled):active, .btn-Special:not(:disabled):not(.disabled).active,
     .show > .btn-Special.dropdown-toggle {
         /* color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);*/
-        border-color: var(--White);
-        color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);*/
+        border-color: var(--Green);
+        color: var(--Green);
         border-radius: 12px;
         border-width: 2px;
     }
@@ -695,8 +697,8 @@ hr {
         .btn-Special:not(:disabled):not(.disabled):active:hover, .btn-Special:not(:disabled):not(.disabled).active:hover,
         .show > .btn-Special.dropdown-toggle:hover {
             color: var(--Black);
-            background-color: var(--White);
-            border-color: var(--White);
+            background-color: var(--Green);
+            border-color: var(--Green);
         }
 
         .btn-Special:not(:disabled):not(.disabled):active:focus, .btn-Special:not(:disabled):not(.disabled).active:focus,
@@ -719,16 +721,16 @@ hr {
 */
 .resume-wrapper{border:1px solid rgba(0,0,0,0.025)}
     .resume-wrapper h4:before {content: "" !important;}/*Added*/
-.resume-section-heading{position:relative;padding-left:1rem;font-size:1.125rem;letter-spacing:0.15rem;color:var(--White);}
-.resume-section-heading:before{content:"";display:inline-block;width:5px;height:100%;background:var(--White);position:absolute;left:0;top:0}
+.resume-section-heading{position:relative;padding-left:1rem;font-size:1.125rem;letter-spacing:0.15rem;color:var(--Green);}
+.resume-section-heading:before{content:"";display:inline-block;width:5px;height:100%;background:var(--Green);position:absolute;left:0;top:0}
 
-.resume-name{font-size:2.75em;font-weight:900;letter-spacing:0.4rem;color:var(--White);}
+.resume-name{font-size:2.75em;font-weight:900;letter-spacing:0.4rem;color:var(--Green);}
 @media(max-width:768px){.resume-name{font-size:1em;}}
 .resume-tagline{font-size:1.25rem;font-weight:300}
 .resume-contact{border-left:1px solid rgba(0,0,0,0.08);font-size:0.75rem}
-a.resume-link{color:var(--White)}
-a.resume-link:hover{color:var(--White);text-decoration:none;}
-.resume-profile-image { max-width: 140px;border-radius: 25%;border: 2px solid var(--White);}/*edited*/
+a.resume-link{color:var(--Green)}
+a.resume-link:hover{color:var(--Green);text-decoration:none;}
+.resume-profile-image { max-width: 140px;border-radius: 25%;border: 2px solid var(--Green);}/*edited*/
 .resume-intro{font-size:0.875rem}
 .resume-main 
 .item-title{font-size:1rem}

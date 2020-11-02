@@ -16,6 +16,19 @@
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: white; /*var(--Mono);*/
 }
+/*Card Image Id's*/
+.card #template {
+    background: url('../IMG/BWC1.jpg') 0px -35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card #website {
+    background: url('../IMG/Website-code.png') 0px 0px;
+    filter: contrast(100%);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
 /****************************
     Generic Attributes
 ****************************/
@@ -37,6 +50,7 @@ body {
 hr {
     background-color: var(--hr);
 }
+
 .rotate-effect {
     animation: rotate 5s infinite linear;
 }
@@ -226,7 +240,7 @@ hr {
     position: relative;
     border-bottom: solid 0.5em var(--nav-border);
     padding: 10px;
-    margin-left: 170px;
+    margin-left: 185px;
     margin-right: 0;
     top: 0;
 }
@@ -431,19 +445,7 @@ hr {
     width:15em;
     height:5em;
 }
-/*Card Image Id's*/
-    .card #template {
-        background: url('../IMG/BWC1.jpg') 0px -35px;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-    .card #website {
-        background: url('../IMG/Website-code.png') 0px 0px;
-        filter: contrast(100%);
-        background-repeat: no-repeat;
-        background-size: 150%;
-        
-    }
+
 /****************************
     BOOTSTRAP OVERRIDE - btn
 ****************************/

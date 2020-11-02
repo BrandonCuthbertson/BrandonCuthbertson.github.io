@@ -44,6 +44,19 @@ hr {
 @-webkit-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-moz-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-o-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
+/*Card Image Id's*/
+.card #template {
+    background: url('../IMG/BWC1.jpg') 0px -35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card #website {
+    background: url('../IMG/Website-code.png') 0px -10px;
+    filter: invert(100%);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
 /****************************
     Profile Pictures
 ****************************/
@@ -230,7 +243,7 @@ hr {
     position: relative;
     border-bottom: solid 0.5em var(--nav-border);
     padding: 10px;
-    margin-left: 170px;
+    margin-left: 185px;
     margin-right: 0;
     top: 0;
 }
@@ -289,9 +302,9 @@ hr {
 }
     .skillBar::before {
         content: attr(data-skill);
-        background: repeating-linear-gradient( -45deg, var(--Light-color), var(--Light-color) 20px, var(--Font-color) 20px, var(--Font-color) 25px);
-        border: 2px solid var(--Font-color);
-        color: var(--blue);
+        background: linear-gradient( -125deg, var(--Light-color), var(--Light-color) 20px, var(--blue) 25px);
+        border: 2px solid var(--blue);
+        color: var(--Font-color);
         display: inline-block;
         padding: 5px 0 5px 10px;
         border-radius: inherit;
@@ -331,11 +344,11 @@ hr {
     color:var(--gold);
 }
     #Portfolio #Portfolio-Nav a:hover {
-        color: var(--Mono);
+        color: var(--Font-color);
         text-decoration: none;
     }
     #Portfolio #Portfolio-Nav .active {
-        color: var(--Mono);
+        color: var(--Font-color);
         text-decoration: none;
         font-weight: bold;
     }
@@ -435,19 +448,7 @@ hr {
     width:15em;
     height:5em;
 }
-/*Card Image Id's*/
-    .card #template {
-        background: url('../IMG/BWC1.jpg') 0px -35px;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-    .card #website {
-        background: url('../IMG/Website-code.png') 0px 0px;
-        filter: contrast(100%);
-        background-repeat: no-repeat;
-        background-size: 150%;
-        
-    }
+
 /****************************
     BOOTSTRAP OVERRIDE - btn
 ****************************/

@@ -10,6 +10,19 @@
     --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
     --Mono: Black; /*var(--Mono);*/
 }
+/*Card Image Id's*/
+.card #template {
+    background: url('../IMG/BWC1.jpg') 0px -35px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.card #website {
+    background: url('../IMG/Website-code.png') 0px 0px;
+    filter: invert(100%);
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
 /****************************
     Generic Attributes
 ****************************/
@@ -220,7 +233,7 @@ hr {
     position: relative;
     border-bottom: solid 0.5em var(--nav-border);
     padding: 10px;
-    margin-left: 170px;
+    margin-left: 185px;
     margin-right: 0;
     top: 0;
 }
@@ -270,18 +283,18 @@ hr {
 @-moz-keyframes load {from {width: 0%}}
 @-o-keyframes load {from {width: 0%}}
 .skillBar {
-    background-color: var(--White);
+    background-color: var(--Black);
     padding: 2px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid var(--Black);
+    border: 2px solid var(--White);
     
 }
     .skillBar::before {
         content: attr(data-skill);
-        background: repeating-linear-gradient( -45deg, var(--White), var(--White) 20px, var(--Black) 20px, var(--Black) 25px);
-        border: 2px solid var(--Black);
-        color: var(--Black);
+        background: var(--Black);
+        border: 2px solid var(--White);
+        color: var(--White);
         display: inline-block;
         padding: 5px 0 5px 10px;
         border-radius: inherit;
@@ -425,19 +438,7 @@ hr {
     width:15em;
     height:5em;
 }
-/*Card Image Id's*/
-    .card #template {
-        background: url('../IMG/BWC1.jpg') 0px -35px;
-        background-repeat: no-repeat;
-        background-size: 100%;
-    }
-    .card #website {
-        background: url('../IMG/Website-code.png') 0px 0px;
-        filter: contrast(100%);
-        background-repeat: no-repeat;
-        background-size: 150%;
-        
-    }
+
 /****************************
     BOOTSTRAP OVERRIDE - btn
 ****************************/
