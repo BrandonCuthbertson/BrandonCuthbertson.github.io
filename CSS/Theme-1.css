@@ -86,13 +86,49 @@ hr {
         padding-top: 5px;
         padding-bottom: 5px;
     }
+.navAbout:before {
+    /*<i class="fas fa-home"></i>*/
+    content: "\f007"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
 
+.navAbout:Hover {
+    color: var(--yellow);
+    cursor: pointer;
+    background-size: 100%;
+}
 
+.navPortfolio:before {
+    content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
 
+.navPortfolio:Hover {
+    color: var(--green);
+    cursor: pointer;
+    background-size: 100%;
+}
 
+.navResume:before {
+    /*<i class="fas fa-file-alt"></i>*/
+    content: "\f15c"; /* FontAwesome Unicode */
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
 
-
-
+.navResume:Hover {
+    color: var(--red);
+    cursor: pointer;
+    background-size: 100%;
+}
 /****************************
     Mobile Navigation Bar
 ****************************/
@@ -107,49 +143,6 @@ hr {
         font-size: 2em;
         text-decoration: none;
     }
-
-/****************************
-    Both Navigational Bars
-****************************/
-#navAbout:before {
-    /*<i class="fas fa-home"></i>*/
-    content: "\f007"; /* FontAwesome Unicode */
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-}
-#navAbout:Hover {
-    color: var(--yellow);
-    cursor: pointer;
-    background-size: 100%;
-}
-#navPortfolio:before {
-    content: "\f126"; /*<i class="fas fa-code-branch"></i>*/
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-}
-#navPortfolio:Hover {
-    color: var(--green);
-    cursor: pointer;
-    background-size: 100%;
-}
-#navResume:before {
-    /*<i class="fas fa-file-alt"></i>*/
-    content: "\f15c"; /* FontAwesome Unicode */
-    font-family: "Font Awesome 5 Free";
-    display: inline-block;
-    margin-left: -1.3em;
-    width: 1.3em;
-}
-#navResume:Hover {
-    color: var(--red);
-    cursor: pointer;
-    background-size: 100%;
-}
-
 #top-Contact {
     position: absolute;
     right: 4px;
@@ -159,45 +152,79 @@ hr {
     left: 0;
     text-align: center;
 }
+
+    #top-Contact.active {
+        background-color: var(--Font-color);
+        color: var(--Dark-color);
+        border-radius: 4px;
+    }
+
 @media (max-width: 767px) {
-    #navAbout {
+    .navAbout {
         color: var(--yellow);
         width: 1.5em;
         text-align: center;
     }
-        #navAbout:before {
-            content: " "; 
+
+        .navAbout:before {
+            content: " ";
             display: inline-block;
             margin-left: 0em;
             width: 0em;
         }
 
-    #navPortfolio {
+        .navAbout.active {
+            background-color: var(--yellow);
+            color: var(--Dark-color);
+            border-radius: 4px;
+        }
+
+    .navPortfolio {
         color: var(--green);
         width: 1.5em;
         text-align: center;
     }
-        #navPortfolio:before {
+
+        .navPortfolio:before {
             content: " ";
             display: inline-block;
             margin-left: 0em;
             width: 0em;
         }
 
-    #navResume {
+        .navPortfolio.active {
+            background-color: var(--green);
+            color: var(--Dark-color);
+            border-radius: 4px;
+        }
+
+    .navResume {
         color: var(--red);
         width: 1.5em;
         text-align: center;
     }
-        #navResume:before {
+
+        .navResume:before {
             content: " ";
             display: inline-block;
             margin-left: 0em;
             width: 0em;
         }
-}
 
-    /****************************
+        .navResume.active {
+            background-color: var(--red);
+            color: var(--Dark-color);
+            border-radius: 4px;
+        }
+}
+/****************************
+    Both Navigational Bars
+****************************/
+
+
+
+
+/****************************
     TABS
 ****************************/
     .tabcontent {
@@ -214,53 +241,9 @@ hr {
             opacity: 1;
         }
     }
-
-
-    /*Theme*/
-
-
-
-
-
-
-    /*--*/
-
-
-
-
-
-
-    /*Theme*/
     .active {
         color: var(--Mono);
     }
-
-    @media (max-width: 767px) {
-        #top-About.active {
-            background-color: var(--yellow);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-        #top-Portfolio.active {
-            background-color: var(--green);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-        #top-Resume.active {
-            background-color: var(--red);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-
-        #top-Contact.active {
-            background-color: var(--Font-color);
-            color: var(--Dark-color);
-            border-radius: 4px;
-        }
-    }
-
     .section-header {
         background-color: var(--section);
     }
