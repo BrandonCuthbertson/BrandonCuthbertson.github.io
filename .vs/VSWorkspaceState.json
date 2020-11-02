@@ -6,6 +6,10 @@
     "\\IMG",
     "\\JS"
   ],
+<<<<<<< HEAD
   "SelectedNode": "\\JS\\myScript.js",
+=======
+  "SelectedNode": "\\HTML\\About.html",
+>>>>>>> parent of ed5c2e2... Maybe fixed ios button change
   "PreviewInSolutionExplorer": false
 }
