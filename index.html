@@ -24,14 +24,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/js/all.min.js"></script>
 
     <!-- My styles sheet CSS/JS-->
-    <link rel="stylesheet" type="text/css" href="CSS/Theme.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/Theme-1.css" />
     <!--Javascript the NEEDS to Load before page-->
     <script src="JS/database.js"></script>
 </head>
 <body>
     <div class="d-none d-md-block">
         <!--Large Nav - Hides on Medium-->
-        <header class="sidebar text-center d-flex pt-5">
+        <header class="sideBar text-center d-flex pt-5">
             <nav>
                 <div class="py-3 ">
                     <img class="profile-picture m-3 " src="IMG/BWC1.jpg" />
@@ -45,7 +45,7 @@
                     </div>
                     <hr />
                     <div class="d-flex flex-column align-items-center">
-                        <ul class="ulNav text-left tab mb-5">
+                        <ul class="text-left tab mb-5">
                             <li id="navAbout" class="tablinks mx-2" onclick="openPage(event, 'About')">About Me </li>
                             <li id="navPortfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')">Portfolio</li>
                             <li id="navResume" class="tablinks mx-2" onclick="openPage(event, 'Resume')">Resume</li>
@@ -60,13 +60,13 @@
 
         </header>
     </div> <!--Small Nav - shows on medium-->
-    <nav class="topnav p-3 d-block d-md-none">
+    <nav class="mobileNav p-3 d-block d-md-none">
         <div class="row ">
             <div class="tab col-9 d-flex justify-items-left flex-row">
 
-                <a id="top-About" class="tablinks mx-2" onclick="openPage(event, 'About')"><i class="fas fa-home mx-1"></i></a>
-                <a id="top-Portfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')"><i class="fas fa-code-branch mx-1"></i></a>
-                <a id="top-Resume" class="tablinks mx-2" onclick="openPage(event, 'Resume')"><i class="fas fa-file-alt mx-1"></i></a>
+                <a id="navAbout" class="tablinks mx-2" onclick="openPage(event, 'About')"><i class="fas fa-home mx-1"></i></a>
+                <a id="navPortfolio" class="tablinks mx-2" onclick="openPage(event, 'Portfolio')"><i class="fas fa-code-branch mx-1"></i></a>
+                <a id="navResume" class="tablinks mx-2" onclick="openPage(event, 'Resume')"><i class="fas fa-file-alt mx-1"></i></a>
 
             </div>
             <div class="col-3 d-flex justify-text-right ">
@@ -547,7 +547,7 @@
 
 
 
-    <div id="footer-placeholder" class="container"></div>
+    <div id="footer-body" class="container"></div>
     <!-- JQuery, Poper and Bootstrap.js-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> <!--Use this instead of slim or else some functions wont work-->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
