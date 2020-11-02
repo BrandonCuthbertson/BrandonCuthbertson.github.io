@@ -6,10 +6,18 @@ var tabName;
 if (sessionStorage.current != null) {
 
     removeTabs();
-    tabName = sessionStorage.getItem("current");
-    document.getElementById(tabName).style.display = "block";
-    document.getElementById('nav' + tabName).className += " active";
-    document.getElementById('top-' + tabName).className += " active";
+    if (sessionStorage.current != 'Settings') {
+        tabName = sessionStorage.getItem("current");
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById('nav' + tabName).className += " active";
+        document.getElementById('top-' + tabName).className += " active";
+    }
+    else {
+        tabName = sessionStorage.getItem("current");
+        document.getElementById(tabName).style.display = "block";
+        document.getElementById('top-' + tabName).className += " active";
+    }
+    
 
 }
 else {
