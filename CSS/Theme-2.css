@@ -154,6 +154,8 @@ hr {
     overflow: auto;
     border-bottom: solid 0.5em var(--nav-border);
     background-color: var(--Font-color);
+    top:0;
+    z-index: 1;
 
 }
 
@@ -618,7 +620,7 @@ hr {
 .btn-Four {
     color: var(--Light-color);
     background-color: var(--Font-color);
-    border-color: var(--Font-color);
+    border-color: var(--Light-color);
     border-radius: 12px;
     border-width: 2px;
 }
