@@ -38,7 +38,7 @@ hr {
     background-color: var(--hr);
 }
 .rotate-effect {
-    animation: rotate 5s infinite linear;
+    animation: rotate 20s infinite linear;
 }
 @keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-webkit-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
@@ -103,7 +103,7 @@ hr {
     width: 180px;
     overflow-y: hidden;
     overflow-x: hidden;
-    z-index: 2;
+    z-index:2;
     background-color: var(--Font-color);
     color:var(--Light-color);
 }
@@ -159,6 +159,26 @@ hr {
     cursor: pointer;
     background-size: 100%;
 }
+#btn-theme {
+    position: fixed;
+    bottom: 20px;
+    left: 45px;
+
+}
+#card-theme .card {
+    background-color: var(--Font-color);
+    width: 140px;
+    height: 120px;
+}
+
+   
+
+    #card-theme .card .btn {
+            bottom: inherit;
+            position: inherit;
+            right: inherit;
+            left: inherit;
+        }
 /****************************
     Mobile Navigational Bar
 ****************************/
@@ -303,7 +323,7 @@ hr {
 }
     .skillBar::before {
         content: attr(data-skill);
-        background: linear-gradient( -125deg, var(--Light-color), var(--Light-color) 20px, var(--blue) 25px);
+        background: linear-gradient( -125deg, var(--Light-color), var(--Light-color) 40px, var(--blue) 40px);
         border: 2px solid var(--blue);
         color: var(--Font-color);
         display: inline-block;
@@ -413,6 +433,20 @@ hr {
     text-align: center;
     min-height: 50%;
     
+}
+.square {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    border: 2px solid var(--Mono);
+}
+
+@media (max-width: 767px) {
+    .square {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+    }
 }
 
 /*#Settings hr {

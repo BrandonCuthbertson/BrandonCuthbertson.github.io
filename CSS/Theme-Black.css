@@ -33,7 +33,7 @@ hr {
     background-color: var(--hr);
 }
 .rotate-effect {
-    animation: rotate 5s infinite linear;
+    animation: rotate 20s infinite linear;
 }
 @keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
 @-webkit-keyframes rotate {from {transform: rotate(0deg);}to {transform: rotate(359deg)}}
@@ -405,7 +405,20 @@ hr {
     min-height: 50%;
     
 }
+.square {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    border: 2px solid var(--Mono);
+}
 
+@media (max-width: 767px) {
+    .square {
+        height: 50px;
+        width: 50px;
+        border-radius: 5px;
+    }
+}
 /*#Settings hr {
     background-color: var(--White);
 }*/
