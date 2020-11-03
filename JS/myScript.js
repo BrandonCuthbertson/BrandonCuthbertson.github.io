@@ -27,10 +27,27 @@ else {
     document.getElementById("nav" + tabName).className += " active";
     document.getElementById("top-" + tabName).className += " active";
 }
+//Loads Favored theme
+if (sessionStorage.currentTheme != null) {
+    var currentTheme = sessionStorage.getItem("currentTheme");
+    document.getElementById("myStyleSheet").href = currentTheme;
+}
+else {
+    document.getElementById("myStyleSheet").href = 'CSS/Theme-1.css';
+}
+/*****************
+ * Theme
+ *****************/
+function changeTheme(evt, Theme) {
+    document.getElementById("myStyleSheet").href = Theme;
+    ///Saves Current Theme
+    sessionStorage.setItem("currentTheme", Theme);
+}
 
-/*
+
+/*****************
  * Different Tabs
- */
+ *****************/
 // Clears all Tabs on Main Page 
 function removeTabs() {
     // Declare all variables
@@ -62,9 +79,9 @@ function openPage(evt, pageName) {
 }
 
 
-/*
+/********************
  * PORTFOLIO CARDS
- */
+ ********************/
 //Sets all to hidden then shows selected
 function togglePortfolio(evt, portfolioItem) {
     // Declare all variables

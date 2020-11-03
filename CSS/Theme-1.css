@@ -158,6 +158,41 @@ hr {
     cursor: pointer;
     background-size: 100%;
 }
+#btn-theme {
+    position: fixed;
+    bottom: 20px;
+    left: 45px;
+}
+
+@media(min-height:900px) {
+    #btn-theme {
+        position: fixed;
+        top: 800px;
+        bottom: inherit;
+        left: 45px;
+    }
+}
+
+#card-theme .card {
+    width: 140px;
+    height: 120px;
+}
+
+    #card-theme .card .btn {
+        bottom: inherit;
+        position: inherit;
+        right: inherit;
+        left: inherit;
+    }
+
+@media(max-height:650px) {
+    #card-theme .card {
+        bottom: 0px;
+        position: fixed;
+        right: inherit;
+        left: 180px;
+    }
+}
 
 /****************************
     Mobile Navigational Bar
@@ -416,7 +451,7 @@ hr {
     height: 25px;
     width: 25px;
     border-radius: 5px;
-    border: 2px solid var(--Mono);
+    border: 2px solid var(--Font-color);
 }
 @media (max-width: 767px){
     .square {

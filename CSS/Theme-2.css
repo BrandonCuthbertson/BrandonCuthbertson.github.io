@@ -165,13 +165,19 @@ hr {
     left: 45px;
 
 }
+@media(min-height:900px){
+    #btn-theme {
+        position: fixed;
+        top: 800px;
+        bottom: inherit;
+        left: 45px;
+    }
+}
 #card-theme .card {
     background-color: var(--Font-color);
     width: 140px;
     height: 120px;
 }
-
-   
 
     #card-theme .card .btn {
             bottom: inherit;
@@ -179,6 +185,14 @@ hr {
             right: inherit;
             left: inherit;
         }
+@media(max-height:650px) {
+    #card-theme .card {
+        bottom: 0px;
+        position: fixed;
+        right: inherit;
+        left: 180px;
+    }
+}
 /****************************
     Mobile Navigational Bar
 ****************************/
