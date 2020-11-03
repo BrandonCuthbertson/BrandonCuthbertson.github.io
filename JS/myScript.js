@@ -33,7 +33,16 @@ if (sessionStorage.currentTheme != null) {
     document.getElementById("myStyleSheet").href = currentTheme;
 }
 else {
-    document.getElementById("myStyleSheet").href = 'CSS/Theme-1.css';
+    var day = new Date();
+    var hour = day.getHours();
+    if (hour <= 7 || hour >= 19) {
+        //sets night theme
+        document.getElementById("myStyleSheet").href = 'CSS/Theme-1.css';
+    }
+    else {
+        document.getElementById("myStyleSheet").href = 'CSS/Theme-2.css';
+    }
+    
 }
 /*****************
  * Theme
