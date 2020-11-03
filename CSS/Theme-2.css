@@ -167,7 +167,8 @@ hr {
     overflow: auto;
     border-bottom: solid 0.5em var(--nav-border);
     background-color: var(--Font-color);
-    top:0;
+    top:0px;
+    position:absolute;
     z-index: 1;
 
 }
