@@ -410,11 +410,22 @@ hr {
     min-height: 50%;
     
 }
-
+.square {
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    border: 2px solid var(--Mono);
+}
+@media (max-width: 767px){
+    .square {
+        height: 50px;
+        width: 50px;
+        border-radius:5px;
+    }
+}
 /*#Settings hr {
     background-color: var(--purple);
 }*/
-
 #Settings .font-weight-bold, #Settings .font-italic, #Settings p b, #Settings p i {
     color: var(--purple);
 }
