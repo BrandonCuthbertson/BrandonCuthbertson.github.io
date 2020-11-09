@@ -3,6 +3,7 @@ var tabName;
 
 
 // On page load will either load previous tab or default to About
+//you have to add meta tags like this or the site wont load them
 document.head.innerHTML = document.head.innerHTML +
     ' <meta name="description" content="A personal website and portfolio">' +
     '<meta name="keywords" content="HTML, CSS, JavaScript">' +
@@ -14,9 +15,12 @@ document.head.innerHTML = document.head.innerHTML +
     ' <link rel="shortcut icon" type="image/x-icon" href="Favicon/favicon.ico" />' +
     ' <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png" />' +
     ' <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png" />' +
-    ' <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png" />' +
-    ' <link rel="manifest" href="Favicon/site.webmanifest">';
-
+    '<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png" />' +
+    '<link rel="manifest" href="Favicon/site.webmanifest">' +
+    '<!--Open Grpah Meta Tags-->' +
+    '<meta property="og:title" content="Brandon Cuthbertson - Full Stack Developer"/>' +
+    '<meta property="og:description" content="https://brandoncuthbertson.github.io/" />' +
+    '<meta property="og:image" content="" />';
 if (sessionStorage.current != null) {
 
     removeTabs();
