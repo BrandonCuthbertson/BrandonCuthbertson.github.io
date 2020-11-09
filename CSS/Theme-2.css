@@ -544,7 +544,7 @@ hr {
         background-color: var(--blue);
         border-color: var(--blue);*/
         border-color: var(--blue);
-        color: var(--blue);
+        color: var(--Light-color);
         border-radius: 12px;
         border-width: 2px;
     }
@@ -597,7 +597,7 @@ hr {
             background-color: var(--gold);
             border-color: var(--gold);*/
         border-color: var(--gold);
-        color: var(--gold);
+        color: var(--Light-color);
         border-radius: 12px;
         border-width: 2px;
     }
@@ -648,7 +648,7 @@ hr {
             background-color: var(--green);
             border-color: var(--green);*/
         border-color: var(--green);
-        color: var(--green);
+        color: var(--Light-color);
         border-radius: 12px;
         border-width: 2px;
     }
