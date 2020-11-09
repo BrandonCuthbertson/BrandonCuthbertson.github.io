@@ -94,9 +94,7 @@ hr {
     Desktop Navigational Bar
 ****************************/
 .sideBar {
-    /*Layout*/
-    border-right: solid 0.5em var(--nav-border);
-    /*Theme*/
+   
     position: fixed;
     left: 0;
     top: 0;

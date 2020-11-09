@@ -13,7 +13,7 @@
     /*Other*/
     --nav-border: rgba(255, 255, 255, 0.02); /*var(--nav-border);*/
     --hr: rgba(255, 255, 255, 0.1); /*var(--hr);*/
-    --section: rgba(255, 255, 255, 0.01); /*var(--section);*/
+
     --Mono: white; /*var(--Mono);*/
 }
 /****************************
@@ -93,9 +93,7 @@ hr {
     Desktop Navigational Bar
 ****************************/
 .sideBar {
-    /*Layout*/
-    border-right: solid 0.5em var(--nav-border);
-    /*Theme*/
+    
     position: fixed;
     left: 0;
     top: 0;
@@ -103,9 +101,10 @@ hr {
     width: 180px;
     overflow-y: hidden;
     overflow-x: hidden;
-    z-index:2;
+    z-index: 2;
     background-color: var(--Font-color);
-    color:var(--Light-color);
+    color: var(--Light-color);
+    
 }
     .sideBar ul {
         list-style: none; /*removes ul dots*/
@@ -174,7 +173,7 @@ hr {
     }
 }
 #card-theme .card {
-    background-color: var(--Font-color);
+    background-color: var(--hr);
     width: 140px;
     height: 120px;
 }
@@ -271,8 +270,11 @@ hr {
     Main Body 
 ****************************/
 .section-header {
-    background-color: var(--section);
+    background-color: var(--Font-color);
+    color: var(--Light-color);
+    box-shadow: 0 0 0 0.1em var(--Light-color) inset;
 }
+
 
 .main-body {
     position: relative;
@@ -295,10 +297,11 @@ hr {
     About Page
 ****************************/
 #About .section-header {
-    border: 2px solid var(--blue);
+    border: 3px solid var(--blue);
     border-radius: 25px;
     right: 0;
     overflow: visible;
+
 }
 
 #About h4:before {
@@ -369,7 +372,7 @@ hr {
     Portfolio Page
 ****************************/
 #Portfolio .section-header {
-    border: 2px solid var(--gold);
+    border: 3px solid var(--gold);
     border-radius: 25px;
     right: 0;
     overflow: visible;
@@ -407,7 +410,7 @@ hr {
     Resume Page
 ****************************/
 #Resume .section-header {
-    border: 2px solid var(--green);
+    border: 3px solid var(--green);
     border-radius: 25px;
     right: 0;
     overflow: visible;
@@ -433,14 +436,14 @@ hr {
     Settings Page
 ****************************/
 #Settings .section-header {
-    border: 2px solid var(--red);
+    border: 3px solid var(--red);
     border-radius: 25px;
     right: 0;
     overflow: visible;
     text-align:center;
 }
 #Settings .Error-header {
-    border: 2px solid var(--Font-color);
+    border: 3px solid var(--Font-color);
     border-radius: 25px;
     right: 0;
     overflow: visible;
@@ -467,7 +470,7 @@ hr {
     background-color: var(--red);
 }*/
 
-#Settings .font-weight-bold, #Settings .font-italic, #Settings p b, #Settings p i {
+#Settings .font-weight-bold, #Settings .font-italic, #Settings p b, #Settings p i, #Settings h3 {
     color: var(--red);
 }
 #Settings .btn-Four{
@@ -487,11 +490,12 @@ hr {
     height: 20em;
     /*Remember the border-# for border colors*/
 }
+
     .card .btn {
         bottom: -0.5em;
         position: absolute;
-        right:2em;
-        left:2em;
+        right: 2em;
+        left: 2em;
     }
 .card img{
     width:15em;
