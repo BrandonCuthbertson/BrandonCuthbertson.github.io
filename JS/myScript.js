@@ -20,7 +20,7 @@ document.head.innerHTML = document.head.innerHTML +
     '<!--Open Grpah Meta Tags-->' +
     '<meta property="og:title" content="Brandon Cuthbertson - Full Stack Developer"/>' +
     '<meta property="og:description" content="https://brandoncuthbertson.github.io/" />' +
-    '<meta property="og:image" content="" />';
+    '<meta property="og:image" content="IMG/BWC.jpg" />';
 if (sessionStorage.current != null) {
 
     removeTabs();
