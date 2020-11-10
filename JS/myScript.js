@@ -19,7 +19,7 @@ document.head.innerHTML = document.head.innerHTML +
     '<link rel="manifest" href="Favicon/site.webmanifest">' +
     '<!--Open Grpah Meta Tags-->' +
     '<meta property="og:title" content="Brandon Cuthbertson - Full Stack Developer"/>' +
-    '<meta property="og:description" content="Hello, my name is Brandon Cuthbertson and I&apos;m a Junior Full Stack Developer" />' +
+    '<meta property="og:description" content="Hello, my name is Brandon Cuthbertson and I&apos;m a Junior Full-Stack Developer" />' +
     '<meta property="og:type" content="website" />'+
     '<meta property="og:url" content="https://brandoncuthbertson.github.io/" />'+
     '<meta property="og:image" content="IMG/BWC.jpg" />';
