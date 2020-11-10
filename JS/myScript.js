@@ -3,8 +3,28 @@ var tabName;
 
 
 // On page load will either load previous tab or default to About
-//you have to add meta tags like this or the site wont load them
+//you have to add meta tags like this or else github wont load them properly
+document.head.innerHTML = document.head.innerHTML +
 
+    '  <!--SITE FAVICON-->' +
+    '  <link rel="icon" type="image/x-icon" href="Favicon/favicon.ico" />' +
+    ' <link rel="shortcut icon" type="image/x-icon" href="Favicon/favicon.ico" />' +
+    ' <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png" />' +
+    ' <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png" />' +
+    '<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png" />' +
+    '<link rel="manifest" href="Favicon/site.webmanifest">' +
+    '<!--Open Graph Meta Tags-->' +
+    '<meta property="og:title" content="Brandon Cuthbertson - Full Stack Developer"/>' +
+    '<meta property="og:description" content="Hello, my name is Brandon Cuthbertson and I&apos;m a Junior Full-Stack Developer" />' +
+    '<meta property="og:type" content="website" />'+
+    '<meta property="og:url" content="https://brandoncuthbertson.github.io/" />'+
+    '<meta property="og:image" content="IMG/BWC.jpg" />' +
+    ' <meta name="description" content="A personal website and portfolio">' +
+    '<meta name="keywords" content="HTML, CSS, JavaScript">' +
+    '<meta name="author" content="Brandon Cuthbertson">' +
+    ' <meta name="viewport" content="width=device-width, initial-scale=1.0">' +
+
+    '';
 if (sessionStorage.current != null) {
 
     removeTabs();
