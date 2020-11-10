@@ -17,7 +17,7 @@ document.head.innerHTML = document.head.innerHTML +
     ' <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png" />' +
     '<link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png" />' +
     '<link rel="manifest" href="Favicon/site.webmanifest">' +
-    '<!--Open Grpah Meta Tags-->' +
+    '<!--Open Graph Meta Tags-->' +
     '<meta property="og:title" content="Brandon Cuthbertson - Full Stack Developer"/>' +
     '<meta property="og:description" content="Hello, my name is Brandon Cuthbertson and I&apos;m a Junior Full-Stack Developer" />' +
     '<meta property="og:type" content="website" />'+
