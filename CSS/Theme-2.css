@@ -342,6 +342,7 @@ hr {
         content: attr(data-skill);
         background: linear-gradient( -125deg, var(--Light-color), var(--Light-color) 40px, var(--blue) 40px);
         border: 2px solid var(--blue);
+        
         color: var(--Font-color);
         display: inline-block;
         padding: 5px 0 5px 10px;
@@ -530,7 +531,7 @@ hr {
     }
 
     .btn-One:focus, .btn-One.focus {
-        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+        box-shadow: 0 0 0 0.2rem rgba(3, 169, 244, 0.5);
     }
 
     .btn-One.disabled, .btn-One:disabled {
@@ -557,8 +558,7 @@ hr {
 
         .btn-One:not(:disabled):not(.disabled):active:focus, .btn-One:not(:disabled):not(.disabled).active:focus,
         .show > .btn-One.dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
-
+            box-shadow: 0 0 0 0.2rem rgba(3, 169, 244, 0.5);
         }
 
 /*************
@@ -583,7 +583,7 @@ hr {
 
 
     .btn-Two:focus, .btn-Two.focus {
-        box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
     }
 
     .btn-Two.disabled, .btn-Two:disabled {
@@ -611,7 +611,7 @@ hr {
 
         .btn-Two:not(:disabled):not(.disabled):active:focus, .btn-Two:not(:disabled):not(.disabled).active:focus,
         .show > .btn-Two.dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
         }
 
 /*************
@@ -634,7 +634,7 @@ hr {
         color: var(--green);
     }
     .btn-Three:focus, .btn-Three.focus {
-        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+        box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5);
     }
 
     .btn-Three.disabled, .btn-Three:disabled {
@@ -662,7 +662,7 @@ hr {
 
         .btn-Three:not(:disabled):not(.disabled):active:focus, .btn-Three:not(:disabled):not(.disabled).active:focus,
         .show > .btn-Three.dropdown-toggle:focus {
-            box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+            box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.5);
         }
 
 /*************
