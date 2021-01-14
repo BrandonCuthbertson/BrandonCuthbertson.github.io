@@ -25,7 +25,12 @@ document.head.innerHTML = document.head.innerHTML +
     ' <meta name="viewport" content="width=device-width, initial-scale=1.0">' +
 
     '';
-if (sessionStorage.current != null) {
+// Maked the footer dynamic
+
+var thisYear = new Date().getFullYear();
+document.getElementById('Copyright').innerHTML += thisYear.toString();
+
+if (sessionStorage.current != null) {//set the page to whats saved in session
 
     removeTabs();
     if (sessionStorage.current != 'Settings') {
@@ -34,7 +39,7 @@ if (sessionStorage.current != null) {
         document.getElementById('nav' + tabName).className += " active";
         document.getElementById('top-' + tabName).className += " active";
     }
-    else {
+    else { //settings is different because it is mobile only
         tabName = sessionStorage.getItem("current");
         document.getElementById(tabName).style.display = "block";
         document.getElementById('top-' + tabName).className += " active";
@@ -42,7 +47,7 @@ if (sessionStorage.current != null) {
     
 
 }
-else {
+else { //if no session id set to About page
     removeTabs();
     tabName = "About";
     document.getElementById(tabName).style.display = "block";
