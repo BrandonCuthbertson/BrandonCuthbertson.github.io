@@ -29,6 +29,12 @@
     background-repeat: no-repeat;
     background-size: 150%;
 }
+.card #ftfscraper {
+    background: url('../IMG/FTFscraper.png') 0px 0px;
+    filter: blur(75%);
+    background-repeat: no-repeat;
+    background-size: 125%;
+}
 /****************************
     Generic Attributes
 ****************************/
